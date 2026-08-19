@@ -1,0 +1,48 @@
+name: "Install Local Typst Package"
+description: "Installs the current repository as a local Typst package into the system package directory"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Package Locally
+      shell: bash
+      run: |
+        # 1. Parse name and version from typst.toml
+        PKG_NAME=$(grep -E '^[[:space:]]*name[[:space:]]*=' typst.toml | head -n1 | sed -E 's/.*=[[:space:]]*"([^"]+)".*/\1/')
+        PKG_VERSION=$(grep -E '^[[:space:]]*version[[:space:]]*=' typst.toml | head -n1 | sed -E 's/.*=[[:space:]]*"([^"]+)".*/\1/')
+
+        if [ -z "$PKG_NAME" ] || [ -z "$PKG_VERSION" ]; then
+          echo "::error::Could not extract package name or version from typst.toml"
+          exit 1
+        fi
+
+        # 2. Determine {data-dir} per Typst specification
+        if [ "$RUNNER_OS" = "macOS" ]; then
+          DATA_DIR="$HOME/Library/Application Support"
+        elif [ "$RUNNER_OS" = "Windows" ]; then
+          DATA_DIR="$APPDATA"
+        else
+          # Linux default ($XDG_DATA_HOME fallback)
+          DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}"
+        fi
+
+        TARGET_DIR="$DATA_DIR/typst/packages/local/$PKG_NAME/$PKG_VERSION"
+
+        echo "Installing to: $TARGET_DIR"
+
+        # 3. Clean and recreate directory
+        rm -rf "$TARGET_DIR"
+        mkdir -p "$TARGET_DIR"
+
+        # 4. Stream copy files while excluding development artifacts
+        tar -cf - \
+          --exclude='.git*' \
+          --exclude='.github' \
+          --exclude='tests' \
+          --exclude='examples' \
+          --exclude='*.pdf' \
+          --exclude='*.png' \
+          --exclude='target' \
+          . | tar -xf - -C "$TARGET_DIR"
+
+        echo "Installed @local/$PKG_NAME:$PKG_VERSION successfully."

@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+        
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v5
+  # Use the local action (or your-org/your-repo@v1 if stored in its own repository)
+      - uses: ./
+  
+      - name: Test import
+        run: |
+          typst compile - output.pdf << 'EOF'
+          #import "@local/mypkg:0.1.0": add
+          #assert(add(1, 2) == 3)
+          EOF

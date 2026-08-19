@@ -1,0 +1,11 @@
+[package]
+name = "mypkg"
+version = "0.1.0"
+entrypoint = "src/lib.typ"
+authors = ["Name <name@example.com>"]
+license = "MIT"
+description = "A short description."
+repository = "https://github.com/abhinandh-s/typst-package-template"
+keywords = []
+categories = []
+exclude = [ "examples/*", "tests/*" ]

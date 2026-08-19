@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+  workflow_dispatch:
+
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      COMMIT_BACK: "false"
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v5
+
+      - name: Run unit test assertions
+        run: |
+          typst compile --root . tests/add-test.typ test-out.pdf
+
+      - name: Build example document
+        run: |
+          typst compile --root . examples/sample.typ example-out.pdf
+
