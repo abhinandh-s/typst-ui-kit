@@ -14,8 +14,8 @@ jobs:
         
       - name: Setup Typst
         uses: typst-community/setup-typst@v5
-        # abhinandh-s/typst-ui-kit@master
-      - uses: ﻿./
+  # Use the local action (or your-org/your-repo@v1 if stored in its own repository)
+      - uses: ./
   
       - name: Test import
         run: |
