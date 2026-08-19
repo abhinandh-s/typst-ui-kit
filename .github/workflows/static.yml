@@ -49,7 +49,7 @@ jobs:
       #- run: typst compile main.typ output.pdf # <-- 01 change output name: 
 
       - name: Run typst bundle
-        run: typst compile examples/sample.typ dist --format bundle
+        run: typst --root . compile examples/sample.typ dist --format bundle
 
       - name: List output
         run: |
