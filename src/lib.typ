@@ -8,4 +8,4 @@
 }
 
 #import "checklist.typ": checklist
-#import "gfm.typ": * as alerts
+#import "gfm.typ" * as alerts
