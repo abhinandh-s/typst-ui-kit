@@ -8,3 +8,4 @@
 }
 
 #import "checklist.typ": checklist
+#import "gfm.typ": * as gfm
