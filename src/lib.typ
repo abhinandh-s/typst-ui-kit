@@ -74,7 +74,7 @@
 /// - [x] Checked item
 #let checklist(
   empty-path: "../assets/icons/square.svg",
-  checked-path: "../assets/icons/square-checked.svg",
+  checked-path: "../assets/icons/square-check.svg",
   body
 ) = {
   show list: it => {
