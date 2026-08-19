@@ -1,4 +1,4 @@
-name: CI
+name: Test Action
 
 on:
   push:
@@ -14,8 +14,8 @@ jobs:
         
       - name: Setup Typst
         uses: typst-community/setup-typst@v5
-        # ./ will also work
-      - uses: ﻿abhinandh-s/typst-ui-kit@master
+        # abhinandh-s/typst-ui-kit@master
+      - uses: ﻿./
   
       - name: Test import
         run: |
