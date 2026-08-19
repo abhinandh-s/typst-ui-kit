@@ -1,11 +1,11 @@
 [package]
-name = "mypkg"
+name = "ui"
 version = "0.1.0"
 entrypoint = "src/lib.typ"
-authors = ["Name <name@example.com>"]
+authors = ["Abhinandh S <abhinandhsuby@proton.me>"]
 license = "MIT"
-description = "A short description."
-repository = "https://github.com/abhinandh-s/typst-package-template"
+description = "Personal UI Components."
+repository = "https://github.com/abhinandh-s/typst-ui-kit"
 keywords = []
 categories = []
 exclude = [ "examples/*", "tests/*" ]
