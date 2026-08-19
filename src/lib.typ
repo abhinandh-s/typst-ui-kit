@@ -7,4 +7,4 @@
   a + b
 }
 
-import "checklist.typ": checklist
+#import "checklist.typ": checklist
