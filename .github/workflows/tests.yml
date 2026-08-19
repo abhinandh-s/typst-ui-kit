@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      COMMIT_BACK: "false"
+      COMMIT_BACK: "true"
       
     steps:
       - name: Checkout repository
@@ -28,3 +28,11 @@ jobs:
         run: |
           typst compile --root . examples/sample.typ example-out.pdf
 
+      - name: Commit generated files
+        if: env.COMMIT_BACK == 'true' 
+        uses: stefanzweifel/git-auto-commit-action@v5
+        continue-on-error: true 
+        with:
+          commit_message: "chore: compile typst to bundle"
+          add_options: '-f'
+          file_pattern: 'examples/' 
