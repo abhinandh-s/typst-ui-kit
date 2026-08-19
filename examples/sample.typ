@@ -16,6 +16,7 @@
 #html-page("index.html", [Home])[
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
+  #include "features.typ"
  
   = Addition Example
 
@@ -34,6 +35,7 @@ The sum of $4$ and $7$ is:
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
+  #include "features.typ"
 
 = Addition Example
 
