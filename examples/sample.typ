@@ -30,7 +30,6 @@ The sum of $4$ and $7$ is:
 - [x] Checked item
 
   #link(<book-pdf>)[single PDF].
-  #nav(none, <foreword>)
 ] <home>
 
 #document("ag.pdf", title: [Full Book])[
