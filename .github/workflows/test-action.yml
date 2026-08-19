@@ -20,6 +20,6 @@ jobs:
       - name: Test import
         run: |
           typst compile - output.pdf << 'EOF'
-          #import "@local/mypkg:0.1.0": add
+          #import "@local/ui:0.1.0": add
           #assert(add(1, 2) == 3)
           EOF
