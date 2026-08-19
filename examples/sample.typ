@@ -29,7 +29,7 @@ The sum of $4$ and $7$ is:
 - [ ] Unchecked item
 - [x] Checked item
 
-  #link(<book-pdf>)[single PDF].
+  #link(<pdf>)[single PDF].
 ] <home>
 
 #document("ag.pdf", title: [Full Book])[
@@ -47,4 +47,4 @@ The sum of $4$ and $7$ is:
 
 - [ ] Unchecked item
 - [x] Checked item
-]
+] <pdf>
