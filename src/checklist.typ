@@ -9,7 +9,7 @@
 #let _get-html-checkbox(checked: false) = {
   let attrs = (
     type: "checkbox",
-    style: "margin: 0 .2em .25em -1.4em; vertical-align: middle;",
+    style: "margin: 0 .2em .25em -1.4em; vertical-align: middle; pointer-events: none; cursor: not-allowed;",
   )
   if checked {
     attrs.insert("checked", "checked")
