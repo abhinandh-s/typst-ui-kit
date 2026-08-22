@@ -1,6 +1,6 @@
 #import "colors.typ": latte
 
-#let init() = context {
+#let css() = context {
   if target() == "html" {
     html.style("
       pre {
@@ -27,5 +27,12 @@
         text-align: center;
       }
     ")
+  }
+}
+
+
+#let js() = context {
+  if target() == "html" {
+    html.script("")
   }
 }
