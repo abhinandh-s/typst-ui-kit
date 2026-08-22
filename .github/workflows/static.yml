@@ -64,6 +64,7 @@ jobs:
       - name: Pretty print HTML with Deno
         run: |
           deno fmt "examples/dist/**/*.html"
+          cat examples/dist/index.html
           
       # Generate the timestamp for the tag
       - name: Get current time
