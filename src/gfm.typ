@@ -28,14 +28,14 @@
   "html" in dictionary(std) and target() == "html"
 }
 
-#let github-alert(kind, title, icon-file, accent-color, bg-color, body) = {
-  if _is-html() {
+#let github-alert(kind, title, icon-file, accent-color, bg-color, body) = context {
+  if target() == "html" {
     html.elem("div", attrs: (
       class: "gh-alert gh-alert-" + kind,
       style: "border-left-color: " + accent-color.to-hex() + "; background-color: " + bg-color.to-hex() + ";"
     ))[
       #html.elem("p", attrs: (class: "gh-alert-title"))[
-        #html.elem("img", attrs: (src: read(icon-file, encoding: none).encode-base64-uri-ish-thing, class: "gh-alert-icon"))
+        #html.elem("img", attrs: (src: "TODO", class: "gh-alert-icon"))
         #title
       ]
       #body
