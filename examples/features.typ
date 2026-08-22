@@ -2,7 +2,7 @@
 // #import "/src/topnav.typ": topnav
 // #topnav()
 
-#theme-switcher
+#theme-switcher()
 
 #init.css()
 #init.js()
