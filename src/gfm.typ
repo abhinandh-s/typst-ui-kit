@@ -15,7 +15,6 @@
   font-weight: 500;
   line-height: 1
 }
-/* Updated selector to target the <img> tag Typst generates */
 .markdown-alert .markdown-alert-title img {
   margin-right: 8px!important;
   margin-right: var(--base-size-8,8px) !important;
@@ -57,10 +56,17 @@
 }
 ")
 
+// Create a state to track if the CSS has been added to the document yet
+#let css-injected = state("github-alert-css", false)
+
 #let github-alert(kind, title, icon-file, accent-color, bg-color, body) = context {
   if target() == "html" {
-    // Inject the CSS directly into the document flow alongside the component
-    alert-css
+    
+    // Check state: if false, output CSS and flip state to true
+    if not css-injected.get() {
+      css-injected.update(true)
+      alert-css
+    }
 
     html.blockquote(
       class: "markdown-alert markdown-alert-" + kind,
