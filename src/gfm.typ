@@ -61,15 +61,15 @@
   if target() == "html" {
 
     html.blockquote(
-      class: "markdown-alert markdown-alert-caution",
+      class: "markdown-alert markdown-alert-" + kind,
       dir: auto
     )[
       #html.p(
         class: "markdown-alert-title", dir: auto)[
        #box(image("../assets/icons/caution.svg", height: 1em))
-CAUTION
+#title
       ]
-    #html.p()[Hello World]
+    #body
     ]
 
 
@@ -79,16 +79,7 @@ CAUTION
 
 
 
-    html.elem("div", attrs: (
-      class: "gh-alert gh-alert-" + kind,
-      style: "border-left-color: " + accent-color.to-hex() + "; background-color: " + bg-color.to-hex() + ";"
-    ))[
-      #html.elem("p", attrs: (class: "gh-alert-title"))[
-        #box(image(icon-file, height: 1.1em))
-        #title
-      ]
-      #body
-    ]
+ 
   } else {
     block(
       width: 100%,
