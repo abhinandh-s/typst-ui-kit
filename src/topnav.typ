@@ -21,9 +21,6 @@
 // ---------------------------------------------------------------------
 // 1. DESIGN TOKENS
 // ---------------------------------------------------------------------
-// Central place for theme ids/labels + the raw CSS variable blocks.
-// Add a new theme by adding one entry to `themes` and one `[data-theme]`
-// block to `theme-tokens-css()`.
 
 #let themes = (
   (id: "mocha",           label: "Catppuccin Mocha", swatch: rgb("#cba6f7")),
@@ -105,9 +102,6 @@
 // ---------------------------------------------------------------------
 // 2. COMPONENT CSS
 // ---------------------------------------------------------------------
-// Split into small, independently readable chunks and joined at the end.
-// Keeping the nav un-sticky is a deliberate omission: `.topnav` carries
-// no `position` property at all, so it stays in normal document flow.
 
 #let base-css() = "
 * { box-sizing: border-box; }
@@ -233,7 +227,6 @@ html, body {
 .drawer a:hover { background: var(--surface-2); }
 "
 
-// Joins every CSS chunk (tokens + components) into one stylesheet string.
 #let full-css() = (
   theme-tokens-css()
   + base-css()
@@ -247,9 +240,6 @@ html, body {
 // ---------------------------------------------------------------------
 // 3. CLIENT-SIDE JS
 // ---------------------------------------------------------------------
-// Split into a few focused snippets, joined into a single IIFE.
-// Swatch colors are injected from the `themes` array above so JS and
-// CSS never fall out of sync.
 
 #let theme-persistence-js() = "
   const THEMES = " + repr(themes.map(t => t.id)) + ".map(String);
@@ -342,7 +332,6 @@ html, body {
   }
 "
 
-// Wraps every JS chunk in a single IIFE.
 #let full-js() = (
   "(function () {"
   + theme-persistence-js()
@@ -355,8 +344,6 @@ html, body {
 // ---------------------------------------------------------------------
 // 4. INJECTION HELPERS
 // ---------------------------------------------------------------------
-// Small wrappers so the CSS/JS only get emitted (once) when we're
-// actually targeting HTML.
 
 #let inject-css() = context {
   if target() == "html" {
@@ -374,8 +361,6 @@ html, body {
 // ---------------------------------------------------------------------
 // 5. SMALL SVG ICON HELPERS
 // ---------------------------------------------------------------------
-// Each returns an <svg> as Typst HTML content. Keeping them as
-// standalone functions makes it trivial to swap an icon later.
 
 #let _svg-icon(view-box: "0 0 24 24", fill: "none", stroke: none, stroke-width: none, path-d: (), extra: none) = {
   let attrs = (
@@ -437,7 +422,6 @@ html, body {
 // 6. NAV BUTTON COMPONENTS
 // ---------------------------------------------------------------------
 
-// A plain icon button, e.g. hamburger / PDF export.
 #let nav-icon-button(
   icon,
   label: "",
@@ -456,7 +440,6 @@ html, body {
   }
 }
 
-// One row in the theme popup list.
 #let _theme-option-item(theme, selected: false) = context {
   if target() == "html" {
     html.li(
@@ -475,7 +458,6 @@ html, body {
   }
 }
 
-// The theme button: icon trigger + popup list of all registered themes.
 #let theme-button(initial: default-theme) = context {
   if target() == "html" {
     html.elem("div", attrs: (class: "panel-menu", "data-theme-panel": "true"))[
@@ -494,7 +476,6 @@ html, body {
   }
 }
 
-// Reserved slot for future buttons — visually present, functionally inert.
 #let nav-placeholder-slot(label: "More options (coming soon)") = nav-icon-button(
   icon-dots(),
   label: label,
@@ -504,9 +485,8 @@ html, body {
 
 
 // ---------------------------------------------------------------------
-// 7. HAMBURGER DRAWER (bare-bones side panel driven by the hamburger)
+// 7. HAMBURGER DRAWER
 // ---------------------------------------------------------------------
-// `links` is an array of (label, href) pairs.
 
 #let hamburger-drawer(title: "Menu", links: ()) = context {
   if target() == "html" {
@@ -524,9 +504,6 @@ html, body {
 // ---------------------------------------------------------------------
 // 8. TOP-LEVEL ASSEMBLY
 // ---------------------------------------------------------------------
-// `drawer-links`: array of (label, href) shown in the hamburger drawer.
-// `right-slots`: extra content (functions returning html content) to
-//                 append after the theme button, for buttons "yet to come".
 
 #let topnav(
   drawer-title: "Menu",
@@ -554,6 +531,6 @@ html, body {
       ]
     ]
 
-    #hamburger-drawer(title: drawer-title, links: drawer-links)
+    hamburger-drawer(title: drawer-title, links: drawer-links)
   }
 }
