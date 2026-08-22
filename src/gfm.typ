@@ -89,7 +89,7 @@
   }
 } 
 
-#let note(body) = github-alert("note", "Note", latte.blue, latte.blue.transparentize(80%), body)
+#let note(body) = github-alert("note", "Note", latte.blue, latte.blue.transparentize(90%), body)
 #let tip(body) = github-alert("tip", "Tip", latte.green, latte.green.transparentize(90%), body)
 #let important(body) = github-alert("important", "Important", latte.mauve, latte.mauve.transparentize(90%), body)
 #let warning(body) = github-alert("warning", "Warning", latte.yellow, latte.yellow.transparentize(90%), body)
