@@ -14,19 +14,15 @@
     font-weight: bold;
     margin: 0 0 8px 0;
   }
-  .gh-alert-icon {
-    width: 1.1em;
-    height: 1.1em;
+  .gh-alert-title {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
   }
   .gh-alert p:last-child {
     margin-bottom: 0;
   }
 ")
-
-// Helper to detect if the compiler target is HTML
-#let _is-html() = {
-  "html" in dictionary(std) and target() == "html"
-}
 
 #let github-alert(kind, title, icon-file, accent-color, bg-color, body) = context {
   if target() == "html" {
@@ -35,7 +31,7 @@
       style: "border-left-color: " + accent-color.to-hex() + "; background-color: " + bg-color.to-hex() + ";"
     ))[
       #html.elem("p", attrs: (class: "gh-alert-title"))[
-        #html.elem("img", attrs: (src: "TODO", class: "gh-alert-icon"))
+        #box(image(icon-file, height: 1.1em))
         #title
       ]
       #body
