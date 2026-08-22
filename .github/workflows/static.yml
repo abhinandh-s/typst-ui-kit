@@ -55,6 +55,15 @@ jobs:
         run: |
           ls
           ls examples/dist/
+
+      - name: Set up Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Pretty print HTML with Deno
+        run: |
+          deno fmt "examples/dist/**/*.html"
           
       # Generate the timestamp for the tag
       - name: Get current time
