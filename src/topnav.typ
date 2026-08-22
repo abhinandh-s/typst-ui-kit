@@ -525,7 +525,6 @@ html, body {
 ) = context {
   if target() == "html" {
     inject-css()
-    inject-js()
 
     html.elem("nav", attrs: (class: "topnav"))[
       #html.elem("div", attrs: (class: "topnav__left"))[
@@ -544,5 +543,7 @@ html, body {
     ]
 
     hamburger-drawer(title: drawer-title, links: drawer-links)
+
+    inject-js()
   }
 }
