@@ -1,7 +1,7 @@
 #import "/src/lib.typ": alerts,init, theme-switcher
-// #import "/src/topnav.typ": topnav
+#import "/src/topnav.typ": topnav
 
-// #topnav()
+#topnav()
 
 
 #init.css()
