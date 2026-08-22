@@ -15,6 +15,12 @@
 //
 // Everything below is a no-op when target() != "html" (e.g. PDF export),
 // so this file is safe to import unconditionally from a shared template.
+//
+// NOTE: this file uses html.elem("tag", attrs: (...), body) everywhere
+// instead of the typed html.button / html.a / html.h3 wrappers, because
+// the typed wrappers only expose a fixed set of semantic HTML attributes
+// (e.g. html.button has no `class` or generic aria-* parameter) and we
+// need arbitrary classes + aria attributes throughout.
 // =====================================================================
 
 
@@ -421,7 +427,10 @@ html, body {
 // ---------------------------------------------------------------------
 // 6. NAV BUTTON COMPONENTS
 // ---------------------------------------------------------------------
+// All built on html.elem, not the typed html.button/html.a wrappers,
+// since we need arbitrary classes + aria-* attributes.
 
+// A plain icon button, e.g. hamburger / PDF export.
 #let nav-icon-button(
   icon,
   label: "",
@@ -436,19 +445,20 @@ html, body {
     )
     if id != none { attrs.insert("id", id) }
     attrs += extra-attrs
-    html.button(attrs: attrs, icon)
+    html.elem("button", attrs: attrs, icon)
   }
 }
 
+// One row in the theme popup list.
 #let _theme-option-item(theme, selected: false) = context {
   if target() == "html" {
-    html.li(
+    html.elem("li",
       attrs: (
         role: "option",
         "data-theme-option": theme.id,
         "aria-selected": str(selected),
       ),
-      html.span(attrs: (
+      html.elem("span", attrs: (
         class: "menu__swatch",
         style: "background:" + theme.swatch.to-hex(),
       ))
@@ -458,16 +468,17 @@ html, body {
   }
 }
 
+// The theme button: icon trigger + popup list of all registered themes.
 #let theme-button(initial: default-theme) = context {
   if target() == "html" {
     html.elem("div", attrs: (class: "panel-menu", "data-theme-panel": "true"))[
-      #html.button(attrs: (
+      #html.elem("button", attrs: (
         class: "nav-btn",
         "aria-haspopup": "listbox",
         "aria-expanded": "false",
         "aria-label": "Choose theme",
       ))[#icon-palette()]
-      #html.ul(attrs: (class: "panel-menu__list", role: "listbox", hidden: "hidden"))[
+      #html.elem("ul", attrs: (class: "panel-menu__list", role: "listbox", hidden: "hidden"))[
         #for theme in themes [
           #_theme-option-item(theme, selected: theme.id == initial)
         ]
@@ -476,6 +487,7 @@ html, body {
   }
 }
 
+// Reserved slot for future buttons — visually present, functionally inert.
 #let nav-placeholder-slot(label: "More options (coming soon)") = nav-icon-button(
   icon-dots(),
   label: label,
@@ -492,9 +504,9 @@ html, body {
   if target() == "html" {
     html.elem("div", attrs: (class: "drawer-backdrop", id: "drawerBackdrop"))[]
     html.elem("aside", attrs: (class: "drawer", id: "drawer"))[
-      #html.h3()[#title]
+      #html.elem("h3")[#title]
       #for (text, href) in links [
-        #html.a(attrs: (href: href))[#text]
+        #html.elem("a", attrs: (href: href))[#text]
       ]
     ]
   }
