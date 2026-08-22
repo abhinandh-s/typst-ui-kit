@@ -28,7 +28,7 @@
     )[
       #html.p(
         class: "markdown-alert-title", dir: auto)[
-#image("../assets/icons/caution.svg")
+       #box(image("../assets/icons/caution.svg", height: 1em))
 CAUTION
       ]
     #html.p()[Hello World]
