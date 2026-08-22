@@ -1,4 +1,4 @@
-#html.style("
+#let alert-css = html.style("
   .markdown-alert {
   border-left: .25em solid var(--borderColor-default, var(--color-border-default));
   color: inherit;
@@ -15,10 +15,10 @@
   font-weight: 500;
   line-height: 1
 }
-.markdown-alert .markdown-alert-title svg.octicon {
+/* Updated selector to target the <img> tag Typst generates */
+.markdown-alert .markdown-alert-title img {
   margin-right: 8px!important;
   margin-right: var(--base-size-8,8px) !important;
-  fill: currentColor;
 }
 .markdown-alert.markdown-alert-note {
   border-left-color: var(--borderColor-accent-emphasis,var(--color-accent-emphasis))
@@ -59,6 +59,8 @@
 
 #let github-alert(kind, title, icon-file, accent-color, bg-color, body) = context {
   if target() == "html" {
+    // Inject the CSS directly into the document flow alongside the component
+    alert-css
 
     html.blockquote(
       class: "markdown-alert markdown-alert-" + kind,
@@ -67,19 +69,10 @@
       #html.p(
         class: "markdown-alert-title", dir: auto)[
        #box(image(icon-file, height: 1em))
-#title
+       #title
       ]
     #body
     ]
-
-
-
-
-
-
-
-
- 
   } else {
     block(
       width: 100%,
