@@ -456,7 +456,7 @@ html, body {
       attrs: (
         role: "option",
         "data-theme-option": theme.id,
-        "aria-selected": str(selected),
+        "aria-selected": if selected { "true" } else { "false" },
       ),
       html.elem("span", attrs: (
         class: "menu__swatch",
