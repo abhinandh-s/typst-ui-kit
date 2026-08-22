@@ -8,7 +8,7 @@
     [
       #text(fill: accent-color, weight: "bold")[
         // Injects the alert type (e.g., "gh-alert-note") into the invisible hook
-        #html.elem("span", attrs: (class: "gh-icon-hook gh-alert-" + kind))[\u{200B}]
+        // #html.elem("span", attrs: (class: "gh-icon-hook gh-alert-" + kind))[\u{200B}]
         #box(baseline: 0.25em)[#image(icon-file, width: 1.1em, height: 1.1em)] 
         #h(0.3em) #title
       ]
