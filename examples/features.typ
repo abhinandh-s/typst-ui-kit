@@ -1,6 +1,5 @@
-#import "/src/lib.typ": alerts
+#import "/src/lib.typ": alerts,init, theme-switcher
 
-#import "/src/lib.typ": init
 
 #init.css()
 #init.js()
