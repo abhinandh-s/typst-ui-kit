@@ -299,6 +299,8 @@ body {
 
 #let theme-switcher() = context {
   if target() = "html" {
+    css()
+    js()
     html.elem("div",
   attrs: (
     class: "panel-menu",
