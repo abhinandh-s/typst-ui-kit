@@ -1,4 +1,4 @@
-#import "colors.typ": mocha
+#import "colors.typ": latte
 
 #let _icons = (
   // Octicons use a 16x16 viewbox
@@ -89,9 +89,9 @@
   }
 } 
 
-#let note(body) = github-alert("note", "Note", mocha.blue, mocha.blue.transparentize(80%), body)
-#let tip(body) = github-alert("tip", "Tip", mocha.green, mocha.green.transparentize(90%), body)
-#let important(body) = github-alert("important", "Important", mocha.mauve, mocha.mauve.transparentize(90%), body)
-#let warning(body) = github-alert("warning", "Warning", mocha.yellow, mocha.yellow.transparentize(90%), body)
-#let caution(body) = github-alert("caution", "Caution",  mocha.red, mocha.red.transparentize(90%), body)
+#let note(body) = github-alert("note", "Note", latte.blue, latte.blue.transparentize(80%), body)
+#let tip(body) = github-alert("tip", "Tip", latte.green, latte.green.transparentize(90%), body)
+#let important(body) = github-alert("important", "Important", latte.mauve, latte.mauve.transparentize(90%), body)
+#let warning(body) = github-alert("warning", "Warning", latte.yellow, latte.yellow.transparentize(90%), body)
+#let caution(body) = github-alert("caution", "Caution",  latte.red, latte.red.transparentize(90%), body)
 #let quote(body) = github-alert("quote", "Quote", rgb("#656d76"), rgb("#656d761a"), body)
