@@ -7,7 +7,7 @@
 /*
   THEME TOKENS
   ============
-  Each [data-theme="…"] block is a complete, self-contained theme.
+  Each [data-theme=\"…\"] block is a complete, self-contained theme.
   Add a theme: copy a block, rename it, add its id/label to THEMES in the script below.
 */
 :root {
