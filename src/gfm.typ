@@ -82,7 +82,7 @@
     )[
       #html.p(
         class: "markdown-alert-title",
-        style: "  color: " + bg-color + ";",
+        style: "  color: " + bg-color.to-hex() + ";",
  dir: auto)[
        #html.elem(
   "svg",
