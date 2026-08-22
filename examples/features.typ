@@ -20,6 +20,8 @@
   ],
 )
 
+= Admonishments / Alerts
+
 #alerts.note[
   This is a GitHub-style note alert.
 ]
