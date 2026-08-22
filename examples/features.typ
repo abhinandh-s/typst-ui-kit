@@ -3,6 +3,7 @@
 #import "/src/lib.typ": init
 
 #init.css()
+#init.js()
 
 #figure(
   image("8c346ecdd3a859b4d076baf9eb9698e1.jpg", width: 100%, height: auto),
