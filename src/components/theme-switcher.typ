@@ -263,27 +263,26 @@ body {
   }
 }
 
-
 #let _list-item(name: "Dracula", short: "dracula") = context {
   if target() == "html" {
-    html.li(.. (
+    // 1. Use html.elem because of data-theme-option
+    html.elem("li", attrs: (
       role: "option",
       "data-theme-option": short,
-      "aria-selected": true,
+      "aria-selected": "true", // Back to string for html.elem
     ))[
-      #html.span(
-        .. (
+      // 2. Use html.elem because of data-swatch
+      #html.elem("span", attrs: (
           class: "menu__swatch",
           "data-swatch": short
-        )
-      )
+      ))
       #name
       #html.elem(
         "svg",
          attrs: (
            viewBox: "0 0 24 24",
-           stroke:"currentColor", 
-           "stroke-width":"2",
+           stroke: "currentColor", 
+           "stroke-width": "2",
            class: "check",
            fill: "none",
          ),
@@ -300,17 +299,17 @@ body {
   if target() == "html" {
     css()
     js()
-    html.elem("div",
-      attrs: (
+    // 3. Use html.elem because of data-theme-panel
+    html.elem("div", attrs: (
         class: "panel-menu",
         "data-theme-panel": "data-theme-panel"
-      )
-    )[  
+    ))[  
+      // html.button works fine because aria-* are standard global attributes
       #html.button(
         .. (
           class: "btn-theme btn-theme--circle",
           "aria-haspopup": "listbox",
-          "aria-expanded": false,
+          "aria-expanded": false, // Typed layer needs actual boolean here
           "aria-label": "Choose theme",
         )
       )[
