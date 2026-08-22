@@ -23,11 +23,11 @@
   if target() == "html" {
 
     html.blockquote(
-      class: "markdown-alert markdown-alert-caution"
+      class: "markdown-alert markdown-alert-caution",
       dir: "auto"
     )[
       #html.p(
-        class: "markdown-alert-title" dir: "auto")[
+        class: "markdown-alert-title", dir: "auto")[
 #image("../assets/icons/caution.svg")
 CAUTION
       ]
