@@ -168,7 +168,7 @@ body {
 .panel-menu__list li:hover,
 .panel-menu__list li:focus-visible { background: var(--accent-soft); outline: none; }
 .panel-menu__list li .check { width: 15px; height: 15px; margin-left: auto; opacity: 0; color: var(--accent); }
-.panel-menu__list li[aria-selected="true"] .check { opacity: 1; }
+.panel-menu__list li[aria-selected=\"true\"] .check { opacity: 1; }
 
 
     ")
