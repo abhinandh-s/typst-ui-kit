@@ -1,5 +1,9 @@
 #import "/src/lib.typ": alerts
 
+#import "/src/lib.typ": css
+
+#css.init()
+
 #html.style("
   figure img {
     max-width: 100%;
