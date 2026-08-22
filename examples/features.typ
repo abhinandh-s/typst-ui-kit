@@ -1,8 +1,8 @@
 #import "/src/lib.typ": alerts,init, theme-switcher
-#import "/src/topnav.typ": topnav
+// #import "/src/topnav.typ": topnav
+// #topnav()
 
-#topnav()
-
+#theme-switcher
 
 #init.css()
 #init.js()
@@ -16,8 +16,6 @@
 )
 
 = Headers
-
-#theme-switcher
 
 = First level title
 == Second level title
