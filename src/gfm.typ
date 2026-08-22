@@ -83,7 +83,7 @@
     )[
       #html.p(
         class: "markdown-alert-title",
-        style: "color: " + accent-color.to-hex() + "; display: flex; align-items: center; font-weight: 600; margin-bottom: 8px;",
+        style: "font-family: monospace; color: " + accent-color.to-hex() + "; display: flex; align-items: center; font-weight: 600; margin-bottom: 8px;",
    dir: auto)[
        #html.elem(
   "svg",
