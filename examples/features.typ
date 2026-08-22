@@ -44,3 +44,8 @@
   This is a very important message.
 ]
 
+#alerts.decree[
+  This is a very important message. \
+  - point 01
+  - point 02
+]
