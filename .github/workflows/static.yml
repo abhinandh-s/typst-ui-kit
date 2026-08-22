@@ -33,7 +33,7 @@ jobs:
     env:
       TYPST_FEATURES: "bundle,html"
       CREATE_RELEASE: "false"
-      COMMIT_BACK: "false"
+      COMMIT_BACK: "true"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -49,12 +49,12 @@ jobs:
       #- run: typst compile main.typ output.pdf # <-- 01 change output name: 
 
       - name: Run typst bundle
-        run: typst compile --root . examples/sample.typ dist --format bundle
+        run: typst compile --root . examples/sample.typ examples/dist --format bundle
 
       - name: List output
         run: |
           ls
-          ls dist/
+          ls examples/dist/
           
       # Generate the timestamp for the tag
       - name: Get current time
@@ -71,7 +71,7 @@ jobs:
         with:
           commit_message: "chore: compile typst to bundle"
           add_options: '-f'
-          file_pattern: 'dist/' 
+          file_pattern: 'examples/dist/' 
 
       # Use the timestamp as the tag
       - name: Create Release
@@ -81,7 +81,7 @@ jobs:
           tag_name: ${{ steps.date.outputs.timestamp }}
           name: "Release: ${{ steps.date.outputs.timestamp }}"
           body: "Automated build for commit ${{ github.sha }}"
-          files: dist/output.pdf # <-- 02 change output name
+          files: examples/dist/output.pdf # <-- 02 change output name
 
           generate_release_notes: true
         env:
@@ -95,7 +95,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./dist
+          path: ./examples/dist
 
   deploy:
     environment:
