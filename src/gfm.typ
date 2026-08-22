@@ -66,7 +66,7 @@
     )[
       #html.p(
         class: "markdown-alert-title", dir: auto)[
-       #box(image("../assets/icons/caution.svg", height: 1em))
+       #box(image(icon-file, height: 1em))
 #title
       ]
     #body
