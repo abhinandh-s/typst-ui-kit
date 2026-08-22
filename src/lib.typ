@@ -13,4 +13,4 @@
 #import "initial.typ" as init
 
 
-#import "components/theme-switcher": theme-switcher
+#import "components/theme-switcher.typ": theme-switcher
