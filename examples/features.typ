@@ -1,8 +1,8 @@
 #import "/src/lib.typ": alerts
 
-#import "/src/lib.typ": css
+#import "/src/lib.typ": init
 
-#css.init()
+#init.css()
 
 #figure(
   image("8c346ecdd3a859b4d076baf9eb9698e1.jpg", width: 100%, height: auto),
