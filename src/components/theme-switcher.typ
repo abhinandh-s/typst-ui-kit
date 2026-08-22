@@ -264,6 +264,81 @@ body {
 }
 
 
+#let _list-item(name: "Dracula", short: "dracula") = context {
+  if target() == "html" {
+    html.li(attrs: (
+      role: "option",
+      data-theme-option: short,
+      aria-selected: "true",
+    ))[
+      #html.span(
+        attrs: (
+          class:"menu__swatch",
+          data-swatch: short
+        )
+      )
+      #name
+      #html.elem(
+        "svg",
+         attrs: (
+           viewBox: "0 0 24 24",
+           stroke:"currentColor", 
+           stroke-width:"2",
+           class: "check",
+           fill: "none",
+           
+         ),
+         html.elem(
+           "path", 
+           attrs: (d: "M20 6L9 17l-5-5")
+         )
+       )
+     ]
+  }
+}
+
+#let theme-switcher() = context {
+  if target() = "html" {
+    html.elem("div",
+  attrs: (
+    class: "panel-menu",
+    "data-theme-panel": "data-theme-panel"
+  )
+)[  
+    #html.button(attrs: (
+      class: "btn-theme btn-theme--circle",
+      aria-haspopup: "listbox",
+      aria-expanded: "false",
+      aria-label: "Choose theme",
+    ))[
+      #html.elem(
+         "svg",
+         attrs: (
+           viewBox: "0 0 576 512",
+           class: "icon",
+           fill: "currentColor",
+         ),
+         html.elem(
+           "path", 
+           attrs: (d: "M480.5 10.3L259.1 158c-29.1 19.4-47.6 50.9-50.6 85.3 62.3 12.8 111.4 61.9 124.3 124.3 34.5-3 65.9-21.5 85.3-50.6L565.7 95.5c6.7-10.1 10.3-21.9 10.3-34.1 0-33.9-27.5-61.4-61.4-61.4-12.1 0-24 3.6-34.1 10.3zM288 400c0-61.9-50.1-112-112-112S64 338.1 64 400c0 3.9 .2 7.8 .6 11.6 1.8 17.5-10.2 36.4-27.8 36.4L32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0c61.9 0 112-50.1 112-112z")
+         )
+       )
+     ]
+    #html.ul(
+      attrs: (
+        class: "panel-menu__list",
+        role: "listbox",
+        hidden: "hidden"
+      )
+    )[
+      #_list-item(name: "Catppuccin Mocha", short: "mocha")
+      #_list-item(name: "Catppuccin Latte", short: "latte")
+      #_list-item(name: "Nord", short: "nord")
+      #_list-item(name: "Dracula", short: "dracula")
+    ]
+  ]
+  }
+}
 
 
   
