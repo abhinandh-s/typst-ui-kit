@@ -61,19 +61,14 @@
 
 #let github-alert(kind, title, icon-file, accent-color, bg-color, body) = context {
   if target() == "html" {
-    
-    // Check state: if false, output CSS and flip state to true
-    if not css-injected.get() {
-      css-injected.update(true)
-      alert-css
-    }
-
     html.blockquote(
       class: "markdown-alert markdown-alert-" + kind,
       dir: auto
     )[
       #html.p(
-        class: "markdown-alert-title", dir: auto)[
+        class: "markdown-alert-title",
+        style: "  color: " + bg-color + ";",
+ dir: auto)[
        #box(image(icon-file, height: 1em))
        #title
       ]
