@@ -330,7 +330,7 @@ body {
       #html.ul(
         class: "panel-menu__list",
         role: "listbox",
-        hidden: "hidden"
+        hidden: true
       )[
         #_list-item(name: "Catppuccin Mocha", short: "mocha")
         #_list-item(name: "Catppuccin Latte", short: "latte")
