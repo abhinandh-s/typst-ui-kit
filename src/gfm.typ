@@ -67,4 +67,4 @@
 #let important(body) = github-alert("important", "Important", rgb("#8250df"), rgb("#8250df1a"), body)
 #let warning(body) = github-alert("warning", "Warning", rgb("#bf8700"), rgb("#bf87001a"), body)
 #let caution(body) = github-alert("caution", "Caution",  rgb("#d1242f"), rgb("#d1242f1a"), body)
-// #let quote(body) = github-alert("quote", "Quote", rgb("#656d76"), rgb("#656d761a"), body)
+#let quote(body) = github-alert("quote", "Quote", rgb("#656d76"), rgb("#656d761a"), body)
