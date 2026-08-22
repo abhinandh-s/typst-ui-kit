@@ -14,6 +14,7 @@
   if checked {
     attrs.insert("checked", "checked")
   }
+  attrs.insert("readonly", "readonly")
   box(html.elem("input", attrs: attrs))
 }
 
