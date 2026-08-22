@@ -266,11 +266,11 @@ body {
 
 #let _list-item(name: "Dracula", short: "dracula") = context {
   if target() == "html" {
-    html.li(attrs: (
+    html.li(
       role: "option",
       "data-theme-option": short,
       "aria-selected": "true",
-    ))[
+    )[
       #html.span(
         attrs: (
           class:"menu__swatch",
@@ -307,12 +307,12 @@ body {
     "data-theme-panel": "data-theme-panel"
   )
 )[  
-    #html.button(attrs: (
+    #html.button(
       class: "btn-theme btn-theme--circle",
       "aria-haspopup": "listbox",
       "aria-expanded": "false",
       "aria-label": "Choose theme",
-    ))[
+    )[
       #html.elem(
          "svg",
          attrs: (
@@ -327,11 +327,9 @@ body {
        )
      ]
     #html.ul(
-      attrs: (
         class: "panel-menu__list",
         role: "listbox",
         hidden: "hidden"
-      )
     )[
       #_list-item(name: "Catppuccin Mocha", short: "mocha")
       #_list-item(name: "Catppuccin Latte", short: "latte")
