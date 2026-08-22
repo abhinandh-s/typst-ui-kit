@@ -63,7 +63,8 @@ jobs:
 
       - name: Pretty print HTML with Deno
         run: |
-          deno fmt "examples/dist/**/*.html"
+          deno run -A npm:prettier --write "examples/dist/**/*.html"
+          # deno fmt "examples/dist/**/*.html"
           cat examples/dist/index.html
           
       # Generate the timestamp for the tag
