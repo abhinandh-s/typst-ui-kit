@@ -18,7 +18,6 @@
 === Third level title
 ==== Fourth level title
 ===== Fifth level title
-====== Sixth level title
 
 = Code
 
