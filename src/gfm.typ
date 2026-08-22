@@ -1,22 +1,60 @@
 #html.style("
-  .gh-alert {
-    margin: 16px 0;
-    padding: 0.6em 1em 0.8em;
-    border-left: 4px solid;
-    border-radius: 0 3px 3px 0;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .gh-alert-title {
-    display: flex;
-    align-items: center;
-    gap: 0.3em;
-    font-weight: bold;
-    margin: 0 0 8px 0;
-  }
-  .gh-alert p:last-child {
-    margin-bottom: 0;
-  }
+  .markdown-alert {
+  border-left: .25em solid var(--borderColor-default, var(--color-border-default));
+  color: inherit;
+  margin-bottom: 16px;
+  padding: .5rem 1em
+}
+.markdown-alert>:last-child {
+  margin-bottom: 0!important
+}
+.markdown-alert .markdown-alert-title {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1
+}
+.markdown-alert .markdown-alert-title svg.octicon {
+  margin-right: 8px!important;
+  margin-right: var(--base-size-8,8px) !important;
+  fill: currentColor;
+}
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--borderColor-accent-emphasis,var(--color-accent-emphasis))
+}
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+  color: var(--fgColor-accent,var(--color-accent-fg))
+}
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--borderColor-success-emphasis,var(--color-success-emphasis))
+}
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+  color: var(--fgColor-success,var(--color-success-fg))
+}
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--borderColor-done-emphasis,var(--color-done-emphasis))
+}
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+  color: var(--fgColor-done,var(--color-done-fg))
+}
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--borderColor-attention-emphasis,var(--color-attention-emphasis))
+}
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+  color: var(--fgColor-attention,var(--color-attention-fg))
+}
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--borderColor-danger-emphasis,var(--color-danger-emphasis))
+}
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+  color: var(--fgColor-danger,var(--color-danger-fg))
+}
 ")
 
 #let github-alert(kind, title, icon-file, accent-color, bg-color, body) = context {
