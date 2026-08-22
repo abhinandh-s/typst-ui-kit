@@ -64,13 +64,13 @@
 
 #let get_icon(name) = if name == "note" {
   _note-path
-} else if name = "tip" {
+} else if name == "tip" {
   _tip-path
-} else if name = "important" {
+} else if name == "important" {
   _important-path 
-} else if name = "warning" {
+} else if name == "warning" {
   _warning-path 
-} else if name = "caution" { 
+} else if name == "caution" { 
   _caution-path 
 }
 
