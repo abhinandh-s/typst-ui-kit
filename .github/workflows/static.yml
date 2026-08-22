@@ -78,7 +78,7 @@ jobs:
         # while we are just trying to read the tree output!
         continue-on-error: true 
         with:
-          commit_message: "chore: compile typst to bundle"
+          commit_message: "chore: compile typst to bundle [skip ci]"
           add_options: '-f'
           file_pattern: 'examples/dist/' 
 
