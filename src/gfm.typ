@@ -83,8 +83,8 @@
     )[
       #html.p(
         class: "markdown-alert-title",
-        style: "  color: " + accent-color.to-hex() + ";",
- dir: auto)[
+        style: "color: " + accent-color.to-hex() + "; display: flex; align-items: center; font-weight: 600; margin-bottom: 8px;",
+   dir: auto)[
        #html.elem(
   "svg",
   attrs: (
@@ -92,7 +92,8 @@
     width: "16",
     height: "16",
     class: "octicon",
-    fill: "currentColor"
+    fill: "currentColor",
+    style: "margin-right: 8px;"
   ),
   html.elem(
     "path", 
