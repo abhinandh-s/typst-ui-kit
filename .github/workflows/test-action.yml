@@ -1,8 +1,8 @@
 name: CI
 
 on:
-  #push:
-    #branches: [ master ]
+  push:
+    branches: [ mar ]
   #pull_request:
 
 jobs:
