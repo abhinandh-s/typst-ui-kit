@@ -1,3 +1,5 @@
+#import "colors.typ": mocha
+
 #let _icons = (
   // Octicons use a 16x16 viewbox
   note: (
@@ -87,7 +89,7 @@
   }
 } 
 
-#let note(body) = github-alert("note", "Note", rgb("#0969da"), rgb("#0969da1a"), body)
+#let note(body) = github-alert("note", "Note", mocha.blue, mocha.blue.transparentize(80%), body)
 #let tip(body) = github-alert("tip", "Tip", rgb("#1a7f37"), rgb("#1a7f371a"), body)
 #let important(body) = github-alert("important", "Important", rgb("#8250df"), rgb("#8250df1a"), body)
 #let warning(body) = github-alert("warning", "Warning", rgb("#bf8700"), rgb("#bf87001a"), body)
