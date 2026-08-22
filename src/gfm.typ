@@ -99,4 +99,4 @@
 #let warning(body) = github-alert("warning", "Warning", latte.yellow, latte.yellow.transparentize(90%), body)
 #let caution(body) = github-alert("caution", "Caution",  latte.red, latte.red.transparentize(90%), body)
 #let quote(body) = github-alert("quote", "Quote", rgb("#656d76"), rgb("#656d761a"), body)
-#let decree(body) = github-alert("quote", "Quote", latte.flamingo, latte.flamingo.transparentize(90%), body)
+#let decree(body) = github-alert("decree", "Court Ruling", latte.flamingo, latte.flamingo.transparentize(90%), body)
