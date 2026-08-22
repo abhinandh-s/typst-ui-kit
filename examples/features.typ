@@ -1,4 +1,7 @@
 #import "/src/lib.typ": alerts,init, theme-switcher
+#import "/src/topnav.typ": topnav
+
+#topnav()
 
 
 #init.css()
@@ -13,6 +16,9 @@
 )
 
 = Headers
+
+#theme-switcher
+
 = First level title
 == Second level title
 === Third level title
