@@ -40,7 +40,7 @@
   Be careful doing this!
 ]
 
-// #alerts.quote[
-//   This is a very important message.
-// ]
+#alerts.quote[
+  This is a very important message.
+]
 
