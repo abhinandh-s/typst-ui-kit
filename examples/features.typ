@@ -31,3 +31,16 @@
 #alerts.important[
   This is a very important message.
 ]
+
+#alerts.tip[
+  This is a GitHub-style note alert.
+]
+
+#alerts.caution[
+  Be careful doing this!
+]
+
+#alerts.quote[
+  This is a very important message.
+]
+
