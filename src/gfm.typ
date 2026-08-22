@@ -1,21 +1,62 @@
+#html.style("
+  .gh-alert {
+    margin: 16px 0;
+    padding: 0.6em 1em 0.8em;
+    border-left: 4px solid;
+    border-radius: 0 3px 3px 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .gh-alert-title {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+  }
+  .gh-alert-icon {
+    width: 1.1em;
+    height: 1.1em;
+  }
+  .gh-alert p:last-child {
+    margin-bottom: 0;
+  }
+")
+
+// Helper to detect if the compiler target is HTML
+#let _is-html() = {
+  "html" in dictionary(std) and target() == "html"
+}
+
 #let github-alert(kind, title, icon-file, accent-color, bg-color, body) = {
-  block(
-    width: 100%,
-    stroke: (left: 4pt + accent-color),
-    inset: (x: 1em, top: 0.6em, bottom: 0.8em),
-    fill: bg-color,
-    radius: (right: 3pt),
-    [
-      #text(fill: accent-color, weight: "bold")[
-        // Injects the alert type (e.g., "gh-alert-note") into the invisible hook
-        // #html.elem("span", attrs: (class: "gh-icon-hook gh-alert-" + kind))[\u{200B}]
-        #box(baseline: 0.25em)[#image(icon-file, width: 1.1em, height: 1.1em)] 
-        #h(0.3em) #title
+  if _is-html() {
+    html.elem("div", attrs: (
+      class: "gh-alert gh-alert-" + kind,
+      style: "border-left-color: " + accent-color.to-hex() + "; background-color: " + bg-color.to-hex() + ";"
+    ))[
+      #html.elem("p", attrs: (class: "gh-alert-title"))[
+        #html.elem("img", attrs: (src: read(icon-file, encoding: none).encode-base64-uri-ish-thing, class: "gh-alert-icon"))
+        #title
       ]
-      #v(0.5em, weak: true)
       #body
     ]
-  )
+  } else {
+    block(
+      width: 100%,
+      stroke: (left: 4pt + accent-color),
+      inset: (x: 1em, top: 0.6em, bottom: 0.8em),
+      fill: bg-color,
+      radius: (right: 3pt),
+      [
+        #text(fill: accent-color, weight: "bold")[
+          #box(baseline: 0.25em)[#image(icon-file, width: 1.1em, height: 1.1em)]
+          #h(0.3em) #title
+        ]
+        #v(0.5em, weak: true)
+        #body
+      ]
+    )
+  }
 }
 
 #let note(body) = github-alert("note", "Note", "../assets/icons/note.svg", rgb("#0969da"), rgb("#0969da1a"), body)
