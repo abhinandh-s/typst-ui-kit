@@ -21,7 +21,7 @@
   ""
 }
 
-#let github-alert(kind, title, icon-file, accent-color, bg-color, body) = context {
+#let github-alert(kind, title, accent-color, bg-color, body) = context {
   if target() == "html" {
     html.blockquote(
       class: "markdown-alert markdown-alert-" + kind,
@@ -33,20 +33,20 @@
         style: "font-family: monospace; color: " + accent-color.to-hex() + "; display: flex; align-items: center; font-weight: 600; margin-bottom: 8px;",
    dir: auto)[
        #html.elem(
-  "svg",
-  attrs: (
-    viewBox: "0 0 16 16",
-    width: "16",
-    height: "16",
-    class: "octicon",
-    fill: "currentColor",
-    style: "margin-right: 8px;"
-  ),
-  html.elem(
-    "path", 
-    attrs: (d: get_icon(kind))
-  )
-)
+         "svg",
+         attrs: (
+           viewBox: "0 0 16 16",
+           width: "16",
+           height: "16",
+           class: "octicon",
+           fill: "currentColor",
+           style: "margin-right: 8px;"
+         ),
+         html.elem(
+           "path", 
+           attrs: (d: get_icon(kind))
+         )
+       )
        #title
       ]
     #body
@@ -63,8 +63,8 @@
       [
         #text(fill: accent-color, weight: "bold")[
           #box(baseline: 0.25em)[
-#image(bytes(dynamic-svg), format: "svg", width: 1.1em, height: 1.1em)
-]
+          #image(bytes(dynamic-svg), format: "svg", width: 1.1em, height: 1.1em)
+          ]
           #h(0.3em) #title
         ]
         #v(0.5em, weak: true)
@@ -74,9 +74,9 @@
   }
 } 
 
-#let note(body) = github-alert("note", "Note", "../assets/icons/note.svg", rgb("#0969da"), rgb("#0969da1a"), body)
-#let tip(body) = github-alert("tip", "Tip", "../assets/icons/tip.svg", rgb("#1a7f37"), rgb("#1a7f371a"), body)
-#let important(body) = github-alert("important", "Important", "../assets/icons/important.svg", rgb("#8250df"), rgb("#8250df1a"), body)
-#let warning(body) = github-alert("warning", "Warning", "../assets/icons/warning.svg", rgb("#bf8700"), rgb("#bf87001a"), body)
-#let caution(body) = github-alert("caution", "Caution", "../assets/icons/caution.svg", rgb("#d1242f"), rgb("#d1242f1a"), body)
-// #let quote(body) = github-alert("quote", "Quote", "../assets/icons/quote.svg", rgb("#656d76"), rgb("#656d761a"), body)
+#let note(body) = github-alert("note", "Note", rgb("#0969da"), rgb("#0969da1a"), body)
+#let tip(body) = github-alert("tip", "Tip", rgb("#1a7f37"), rgb("#1a7f371a"), body)
+#let important(body) = github-alert("important", "Important", rgb("#8250df"), rgb("#8250df1a"), body)
+#let warning(body) = github-alert("warning", "Warning", rgb("#bf8700"), rgb("#bf87001a"), body)
+#let caution(body) = github-alert("caution", "Caution",  rgb("#d1242f"), rgb("#d1242f1a"), body)
+// #let quote(body) = github-alert("quote", "Quote", rgb("#656d76"), rgb("#656d761a"), body)
