@@ -268,13 +268,13 @@ body {
   if target() == "html" {
     html.li(attrs: (
       role: "option",
-      data-theme-option: short,
-      aria-selected: "true",
+      "data-theme-option": short,
+      "aria-selected": "true",
     ))[
       #html.span(
         attrs: (
           class:"menu__swatch",
-          data-swatch: short
+          "data-swatch": short
         )
       )
       #name
@@ -283,7 +283,7 @@ body {
          attrs: (
            viewBox: "0 0 24 24",
            stroke:"currentColor", 
-           stroke-width:"2",
+           "stroke-width":"2",
            class: "check",
            fill: "none",
            
@@ -309,9 +309,9 @@ body {
 )[  
     #html.button(attrs: (
       class: "btn-theme btn-theme--circle",
-      aria-haspopup: "listbox",
-      aria-expanded: "false",
-      aria-label: "Choose theme",
+      "aria-haspopup": "listbox",
+      "aria-expanded": "false",
+      "aria-label": "Choose theme",
     ))[
       #html.elem(
          "svg",
