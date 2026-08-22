@@ -14,11 +14,6 @@
     font-weight: bold;
     margin: 0 0 8px 0;
   }
-  .gh-alert-title {
-    display: flex;
-    align-items: center;
-    gap: 0.3em;
-  }
   .gh-alert p:last-child {
     margin-bottom: 0;
   }
