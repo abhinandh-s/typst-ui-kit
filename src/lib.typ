@@ -9,3 +9,5 @@
 
 #import "checklist.typ": checklist
 #import "gfm.typ" as alerts
+#import "colors.typ": *
+#import "initial.typ" as css
