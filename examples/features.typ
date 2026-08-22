@@ -1,7 +1,7 @@
 #import "/src/lib.typ": alerts
 
 #figure(
-  image("8c346ecdd3a859b4d076baf9eb9698e1.jpg", width: 100%),
+  image("8c346ecdd3a859b4d076baf9eb9698e1.jpg", width: 100%, height: auto),
   caption: [
     A step in the molecular testing
     pipeline of our lab.
