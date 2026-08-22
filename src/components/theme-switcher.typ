@@ -241,7 +241,7 @@ body {
       } else if (e.key === `Escape`) {
         closePanel();
         trigger.focus();
-      } else if (e.key === `ArrowDown` || e.key === "ArrowUp") {
+      } else if (e.key === `ArrowDown` || e.key === `ArrowUp`) {
         e.preventDefault();
         const dir = e.key === `ArrowDown` ? 1 : -1;
         const idx = options.indexOf(document.activeElement);
