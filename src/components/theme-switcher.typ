@@ -269,7 +269,7 @@ body {
     html.li(.. (
       role: "option",
       "data-theme-option": short,
-      "aria-selected": "true",
+      "aria-selected": true,
     ))[
       #html.span(
         .. (
@@ -310,7 +310,7 @@ body {
         .. (
           class: "btn-theme btn-theme--circle",
           "aria-haspopup": "listbox",
-          "aria-expanded": "false",
+          "aria-expanded": false,
           "aria-label": "Choose theme",
         )
       )[
