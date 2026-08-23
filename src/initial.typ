@@ -16,11 +16,11 @@
       }
 
       body {
-        width: 600px;
+        width: 100%;
+        max-width: 600px;
         margin: 0 auto;
         background-color: " + latte.base.to-hex() + ";
         padding: 0 20px 20px 20px;
-        border: 5px solid black;
       }
 
       /* Headings/paragraphs get predictable wrapping */
