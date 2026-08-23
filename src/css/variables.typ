@@ -1,4 +1,4 @@
-#let init = html.style("
+#let init = "
 /* --- Dark (Default) --- */
 :root, :root[data-theme=\"dark\"] { 
   color-scheme: dark; 
@@ -47,4 +47,4 @@
   --green: #40a02b;
   --red: #d20f39;
 }
-")
+"
