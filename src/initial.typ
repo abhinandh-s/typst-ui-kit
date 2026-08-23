@@ -12,7 +12,7 @@
 
       /* Remove default margin on everything, then re-add sane ones below */
       * {
-        margin: 0;
+        margin: 2em;
       }
 
       /* Headings/paragraphs get predictable wrapping */
