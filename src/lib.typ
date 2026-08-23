@@ -15,4 +15,4 @@
 #import "js/mod.typ" as js
 
 
-#import "components/theme-switcher.typ": theme-switcher
+// #import "components/theme-switcher.typ": theme-switcher
