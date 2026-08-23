@@ -1,0 +1,21 @@
+/* unvisited link */
+  a:link {
+    color: var(--accent);
+  }
+
+  /* visited link */
+  a:visited {
+    color: var(--accent);
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  /* selected link */
+  a:active {
+    color: var(--accent);
+    text-decoration: underline;
+  }
