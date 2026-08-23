@@ -1,2 +1,4 @@
-#let pre-hook = html.script(read("theme-pre.js"))
-#let post-hook = html.script(read("theme.js"))
+#let init = html.script(
+  read("theme.js")
+  + read("toggle-sidebar.js")
+)
