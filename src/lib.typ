@@ -11,6 +11,7 @@
 #import "gfm.typ" as alerts
 #import "colors.typ": *
 #import "initial.typ" as init
+#import "css/mod.typ" as css
 
 
 #import "components/theme-switcher.typ": theme-switcher
