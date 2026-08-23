@@ -9,11 +9,10 @@
   border-bottom: 2px solid var(--fg);
 }
 
-/* New layout for the right-side buttons */
 .top-bar-right {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between the PDF and Theme icons */
+  gap: 5px; /* Space between the PDF and Theme icons */
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
