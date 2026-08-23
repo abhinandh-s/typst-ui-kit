@@ -1,11 +1,12 @@
 #import "/src/lib.typ": add, checklist
-#import "/src/lib.typ": css
+#import "/src/lib.typ": css, js
 #import "/src/components/topbar.typ" as bar
 
 #let html-page(filename, page-title, body) = {
   document(filename, title: page-title)[
     #set heading(numbering: "1.", bookmarked: false)
     #css.init
+    #js.pre-hook
     #bar.init
     #html.elem("nav", attrs: (id: "sidebar"))[
       #outline(target: heading.where(bookmarked: false, outlined: true))
@@ -14,6 +15,7 @@
       #bar.topbar
       #body
     ]
+    #js.post-hook
   ]
 }
 
