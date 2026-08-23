@@ -2,7 +2,7 @@
 // , theme-switcher
 
 #import "/src/components/topbar.typ": top-bar-nav
-#top-bar-nav()
+#top-bar-nav
 
 // #theme-switcher()
 
