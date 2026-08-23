@@ -1,22 +1,5 @@
 #import "../icons.typ" as icon
 
-#let _topbar-js = html.script("
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleBtn = document.getElementById('sidebar-toggle');
-  const sidebar = document.getElementById('sidebar');
-
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('sidebar-toggled');
-  });
-
-  sidebar.addEventListener('click', (event) => {
-    if (event.target.closest('a')) {
-      document.body.classList.remove('sidebar-toggled');
-    }
-  });
-});
-")
-
 #let _topbar-css = html.style(read("topbar.css"))
 
 #let topbar = context {
@@ -40,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 #let init = context {
   if target() == "html" {
-    _topbar-js
     _topbar-css
   }
 }
