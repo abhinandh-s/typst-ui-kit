@@ -5,73 +5,75 @@
 // #theme-switcher()
 
 
-
 #let _fw-js = html.script("
-  const island = document.getElementById('island');
-  const overlay = document.getElementById('overlay');
-  const floatingWindow = document.getElementById('floatingWindow');
-  const fwClose = document.getElementById('fwClose');
-  const fwBody = document.getElementById('fwBody');
-  const fwProgressBar = document.getElementById('fwProgressBar');
+  document.addEventListener('DOMContentLoaded', () => {
+    const island = document.getElementById('island');
+    const overlay = document.getElementById('overlay');
+    const floatingWindow = document.getElementById('floatingWindow');
+    const fwClose = document.getElementById('fwClose');
+    const fwBody = document.getElementById('fwBody');
+    const fwProgressBar = document.getElementById('fwProgressBar');
 
-  // Scroll progress indicator for floating window content
-  function updateProgress() {
-    const scrollable = fwBody.scrollHeight - fwBody.clientHeight;
-    const pct = scrollable > 0 ? (fwBody.scrollTop / scrollable) * 100 : 0;
-    fwProgressBar.style.width = pct + '%';
-  }
+    // Scroll progress indicator for floating window content
+    function updateProgress() {
+      const scrollable = fwBody.scrollHeight - fwBody.clientHeight;
+      const pct = scrollable > 0 ? (fwBody.scrollTop / scrollable) * 100 : 0;
+      fwProgressBar.style.width = pct + '%';
+    }
 
-  fwBody.addEventListener('scroll'updateProgress, { passive: true });
+    fwBody.addEventListener('scroll', updateProgress, { passive: true });
 
-  // Scroll show/hide
-  let lastScrollY = window.scrollY;
-  let ticking = false;
-  const threshold = 6; // ignore tiny scroll jitter
+    // Scroll show/hide
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const threshold = 6; // ignore tiny scroll jitter
 
-  function onScroll() {
-    const currentY = window.scrollY;
-    const diff = currentY - lastScrollY;
+    function onScroll() {
+      const currentY = window.scrollY;
+      const diff = currentY - lastScrollY;
 
-    if (Math.abs(diff) > threshold) {
-      if (diff > 0 && currentY > 40) {
-        // scrolling down the page -> hide
-        island.classList.add('hidden');
-      } else {
-        // scrolling up -> show
-        island.classList.remove('hidden');
+      if (Math.abs(diff) > threshold) {
+        if (diff > 0 && currentY > 40) {
+          // scrolling down the page -> hide
+          island.classList.add('hidden');
+        } else {
+          // scrolling up -> show
+          island.classList.remove('hidden');
+        }
+        lastScrollY = currentY;
       }
-      lastScrollY = currentY;
+      ticking = false;
     }
-    ticking = false;
-  }
 
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(onScroll);
-      ticking = true;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Open / close floating window
+    function openWindow() {
+      overlay.classList.add('show');
+      floatingWindow.classList.add('show');
+      fwBody.scrollTop = 0;
+      updateProgress();
     }
-  }, { passive: true });
 
-  // Open / close floating window
-  function openWindow() {
-    overlay.classList.add('show');
-    floatingWindow.classList.add('show');
-    fwBody.scrollTop = 0;
-    updateProgress();
-  }
+    function closeWindow() {
+      overlay.classList.remove('show');
+      floatingWindow.classList.remove('show');
+    }
 
-  function closeWindow() {
-    overlay.classList.remove('show');
-    floatingWindow.classList.remove('show');
-  }
+    island.addEventListener('click', openWindow);
+    fwClose.addEventListener('click', closeWindow);
+    overlay.addEventListener('click', closeWindow);
 
-  island.addEventListener('click', openWindow);
-  fwClose.addEventListener('click', closeWindow);
-  overlay.addEventListener('click', closeWindow);
-
-  // Prevent clicks inside the window from bubbling to overlay
-  floatingWindow.addEventListener('click', (e) => e.stopPropagation());
+    // Prevent clicks inside the window from bubbling to overlay
+    floatingWindow.addEventListener('click', (e) => e.stopPropagation());
+  });
 ")
+
 
 #let _fw-css = html.style("
   :root {
