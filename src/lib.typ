@@ -12,6 +12,7 @@
 #import "colors.typ": *
 #import "initial.typ" as init
 #import "css/mod.typ" as css
+#import "js/mod.typ" as js
 
 
 #import "components/theme-switcher.typ": theme-switcher
