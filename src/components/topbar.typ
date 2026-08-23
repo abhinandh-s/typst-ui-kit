@@ -106,7 +106,7 @@ body.sidebar-toggled #sidebar {
 
 #let topbar = context {
   if target() == "html" {
-html.elem("div", attrs: (class: "top-bar"))[
+    html.elem("div", attrs: (class: "top-bar"))[
   
   #html.button(id: "sidebar-toggle", class: "btn icon-btn")[
     #icon.menu
