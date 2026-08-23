@@ -10,6 +10,7 @@
   --sidebar-fg: #c8c9db;
 
   /* the defaults for alerts are set from catppuccin latte theme, so no need to set again */
+ /*
   --note-accent: #89b4fa;
   --note-bg: rgba(137, 180, 250, 0.1);
   --tip-accent: #a6e3a1;
@@ -24,7 +25,7 @@
   --quote-bg: rgba(166, 173, 200, 0.1);
   --decree-accent: #f2cdcd;
   --decree-bg: rgba(242, 205, 205, 0.1);
-
+  */
 
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;
