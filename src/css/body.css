@@ -55,3 +55,14 @@ th, td {
 table, th, td {
   border: 1px solid var(--fg);
 }
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;      /* row-gap column-gap */
+  margin: 0;
+}
+
+dt { font-weight: 600; }
+
+dd { margin: 0; }
