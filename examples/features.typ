@@ -1,4 +1,4 @@
-#import "/src/lib.typ": alerts, init, checklist, add
+#import "/src/lib.typ": alerts, css, checklist, add
 // , theme-switcher
 // #import "/src/topnav.typ": topnav
 // #topnav()
@@ -7,8 +7,10 @@
 #import "/src/toc.typ": floating-toc
 #floating-toc()
 
-#init.css()
-#init.js()
+#css.init
+
+// #init.css()
+// #init.js()
 
 #figure(
   image("8c346ecdd3a859b4d076baf9eb9698e1.jpg", width: 100%, height: auto),
