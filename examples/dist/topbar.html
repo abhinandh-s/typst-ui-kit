@@ -219,6 +219,123 @@
           </li>
         </ol>
       </nav>
+      <style>
+        /* --- Dark (Default) --- */
+        :root,
+        :root[data-theme="dark"] {
+          color-scheme: dark;
+          --bg: #0b0706;
+          --fg: #bcbdd0;
+          --secondary-bg: #181010;
+          --sidebar-bg: #181010;
+          --sidebar-fg: #c8c9db;
+          --accent: #e05060;
+
+          --base: #1e1e2e;
+          --mantle: #181825;
+          --text: #cdd6f4;
+          --subtext0: #a6adc8;
+          --surface0: #313244;
+          --surface1: #45475a;
+          --mauve: #cba6f7;
+          --blue: #8caaee;
+          --sapphire: #74c7ec;
+          --peach: #fab387;
+          --green: #a6e3a1;
+          --red: #f38ba8;
+        }
+
+        /* --- Light Mode --- */
+        :root[data-theme="light"] {
+          color-scheme: light;
+          --bg: #eff1f5;
+          --fg: #4c4f69;
+          --secondary-bg: #fafafa;
+          --sidebar-bg: #fafafa;
+          --sidebar-fg: #a1adb8;
+          --accent: #d20f39;
+
+          --base: #eff1f5;
+          --mantle: #e6e9ef;
+          --text: #4c4f69;
+          --subtext0: #6c6f85;
+          --surface0: #ccd0da;
+          --surface1: #bcc0cc;
+          --mauve: #8839ef;
+          --blue: #1e66f5;
+          --sapphire: #209fb5;
+          --peach: #fe640b;
+          --green: #40a02b;
+          --red: #d20f39;
+        }</style
+      ><style>
+        /* Box sizing everywhere */
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        /* Remove default margin on everything, then re-add sane ones below */
+        * {
+          /* margin: 0; */
+        }
+
+        body {
+          width: 100%;
+          max-width: 920px;
+          margin: 0 auto;
+          background-color: #eff1f5;
+          padding: 0 20px 20px 20px;
+        }</style
+      ><style>
+        /* unvisited link */
+        a:link {
+          color: #d20f39;
+        }
+
+        /* visited link */
+        a:visited {
+          color: #dc8a78;
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: #209fb5;
+          text-decoration: underline;
+        }
+
+        /* selected link */
+        a:active {
+          color: #40a02b;
+          text-decoration: underline;
+        }</style
+      ><style>
+        pre {
+          line-height: 1.2;
+          background: #e6e9ef;
+          padding: 1.33em;
+          border-radius: 0.33em;
+          font-family: monospace;
+          page-break-inside: avoid;
+          overflow: auto;
+          overflow-x: auto;
+          white-space: pre-wrap;
+          display: block;
+          word-wrap: break-word;
+          max-width: 100%;
+        }</style
+      ><style>
+        figure img {
+          max-width: 100%;
+          height: auto !important;
+        }
+        figcaption {
+          font-style: italic;
+          padding: 2px;
+          text-align: center;
+        }
+      </style>
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           const toggleBtn = document.getElementById("sidebar-toggle");
