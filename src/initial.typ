@@ -3,6 +3,18 @@
 #let css() = context {
   if target() == "html" {
     html.style("
+       /* Box sizing everywhere */
+       *,
+       *::before,
+       *::after {
+         box-sizing: border-box;
+       }
+
+      /* Remove default margin on everything, then re-add sane ones below */
+      * {
+        margin: 0;
+      }
+
       pre {
         line-height: 1.2;
         background: " + latte.base.to-hex() + ";
