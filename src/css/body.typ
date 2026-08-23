@@ -17,7 +17,7 @@
     width: 100%;
     max-width: 920px;
     margin: 0 auto;
-    background-color: " + latte.base.to-hex() + ";
+    background-color: var(--bg);
     padding: 0 20px 20px 20px;
   }
 ")
