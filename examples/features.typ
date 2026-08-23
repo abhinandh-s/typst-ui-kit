@@ -311,23 +311,14 @@
   }
 ")
 #let _fw-header = html.elem("div", attrs: (class: "fw-header"))[
-      #html.h2()[Details]
+      #html.h2()[Toc]
       #html.button(class: "fw-close", id: "fwClose")[✕]
 ]
 #let _fw-progress-track = html. elem("div", attrs: (class: "fw-progress-track"))[
       #html.elem("div", attrs: (class: "fw-progress-bar", id: "fwProgressBar"))
 ]
 #let _fw-body = html.elem("div", attrs: (class: "fw-body", id: "fwBody"))[
-      #html.p()[This is the floating window content. It opens when you tap the pill.]
-      #html.p()[It takes up to half the screen height on mobile, and closes when you tap the close button or tap anywhere outside it.]
-      #html.p()[Swap this content for whatever you actually need — a status, a mini player, notifications, etc.]
-      #html.p()[Here's some extra filler text so you can see the scroll behavior in action. Scroll within this box and watch the green bar under the header fill up.]
-      #html.p()[Paragraph five. The scrollbar itself is also styled thin and subtle so it doesn't look like a default browser scrollbar.]
-      #html.p()[Paragraph six. On iOS Safari the native scrollbar is usually invisible until you scroll, so this progress bar is the more reliable indicator there.]
-      #html.p()[Paragraph seven. Keep scrolling.]
-      #html.p()[Paragraph eight. Almost at the bottom now.]
-      #html.p()[Paragraph nine. The bar should be nearly full.]
-      #html.p()[Paragraph ten — the last one. The bar should now be at 100%.]
+        #outline(target: heading.where(bookmarked: false, outlined: true))
 ]
 #let _floating-window = html.elem("div", attrs: (class: "floating-window", id: "floatingWindow"))[
   #_fw-header
@@ -339,7 +330,7 @@
 #let _island-wrap = html.elem("div", attrs: (class: "island-wrap"))[
     #html.elem("div", attrs: (class: "island", id: "island"))[
       #html.span(class:"dot")
-      #html.span(class: "label")[Tap for details]
+      #html.span(class: "label")[Table of Contents]
     ]
 ]
 #let _toc() = context {
