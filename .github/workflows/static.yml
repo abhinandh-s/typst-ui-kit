@@ -33,7 +33,7 @@ jobs:
     env:
       TYPST_FEATURES: "bundle,html"
       CREATE_RELEASE: "false"
-      COMMIT_BACK: "false"
+      COMMIT_BACK: "true"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
