@@ -69,35 +69,6 @@
 
 
 #let _fw-css = html.style("
-  /* Reset default indentation */
-ul, ol {
-  padding-left: 0;
-  margin-left: 0;
-  list-style-position: inside; /* Aligns markers with text */
-}
-
-/* Optional: Add custom indentation for nested levels if desired */
-ul ul, ol ol {
-  margin-left: 1.5em; 
-}   
-
-
-
-
-
-  :root {
-    color-scheme: dark;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;
-    background: #0b0b0d;
-    color: #f2f2f2;
-  }
-
   /* ---------- Page content (just to allow scrolling) ---------- */
   .content {
     padding: 24px;
