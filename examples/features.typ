@@ -1,4 +1,4 @@
-#import "/src/lib.typ": alerts, init, checklist
+#import "/src/lib.typ": alerts, init, checklist, add
 // , theme-switcher
 // #import "/src/topnav.typ": topnav
 // #topnav()
