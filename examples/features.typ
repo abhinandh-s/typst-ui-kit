@@ -6,7 +6,7 @@
 
 
 
-#let _fw-js() = html.script("
+#let _fw-js = html.script("
   const island = document.getElementById('island');
   const overlay = document.getElementById('overlay');
   const floatingWindow = document.getElementById('floatingWindow');
@@ -73,7 +73,7 @@
   floatingWindow.addEventListener('click', (e) => e.stopPropagation());
 ")
 
-#let _fw-css() = html.style("
+#let _fw-css = html.style("
   :root {
     color-scheme: dark;
   }
@@ -342,8 +342,8 @@
 ]
 #let _toc() = context {
   if target() == "html" {
-    _fw-js()
-    _fw-css()
+    _fw-js
+    _fw-css
     _island-wrap
     _overlay
     _floating-window
