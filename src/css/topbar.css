@@ -57,6 +57,11 @@ body.sidebar-toggled .top-bar-right {
   visibility: hidden;
 }
 
+body.sidebar-toggled .top-bar-right a {
+  color: var(--fg);
+}
+
+
 /* Push main content right so it doesn't get covered */
 body.sidebar-toggled #content {
   transform: translateX(250px);
