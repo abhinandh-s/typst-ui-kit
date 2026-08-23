@@ -1,4 +1,4 @@
-import "../colors.typ": latte
+#import "../colors.typ": latte
 
 #let init = html.style("
   /* unvisited link */
