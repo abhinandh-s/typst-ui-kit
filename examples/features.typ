@@ -1,7 +1,7 @@
 #import "/src/lib.typ": alerts, css, checklist, add
 // , theme-switcher
 
-#import "/src/components/topbar.typ": as bar
+#import "/src/components/topbar.typ" as bar
 #bar.init
 #bar.topbar
 
