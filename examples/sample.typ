@@ -5,15 +5,13 @@
 #let html-page(filename, page-title, body) = {
   document(filename, title: page-title)[
     #set heading(numbering: "1.", bookmarked: false)
+    #css.init
+    #bar.init
     #html.elem("nav", attrs: (id: "sidebar"))[
       #outline(target: heading.where(bookmarked: false, outlined: true))
- 
-#css.init
-#bar.init
-#bar.topbar
     ]
-    // Main Content Container
     #html.elem("main", attrs: (id: "content"))[
+      #bar.topbar
       #body
     ]
   ]
