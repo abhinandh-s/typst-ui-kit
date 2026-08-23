@@ -9,6 +9,23 @@
   --sidebar-bg: #181010;
   --sidebar-fg: #c8c9db;
 
+  /* the defaults for alerts are set from catppuccin latte theme, so no need to set again */
+  --note-accent: #89b4fa;
+  --note-bg: rgba(137, 180, 250, 0.1);
+  --tip-accent: #a6e3a1;
+  --tip-bg: rgba(166, 227, 161, 0.1);
+  --important-accent: #cba6f7;
+  --important-bg: rgba(203, 166, 247, 0.1);
+  --warning-accent: #f9e2af;
+  --warning-bg: rgba(249, 226, 175, 0.1);
+  --caution-accent: #f38ba8;
+  --caution-bg: rgba(243, 139, 168, 0.1);
+  --quote-accent: #a6adc8;
+  --quote-bg: rgba(166, 173, 200, 0.1);
+  --decree-accent: #f2cdcd;
+  --decree-bg: rgba(242, 205, 205, 0.1);
+
+
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;
   --ctp-pink: #f5c2e7;
