@@ -15,6 +15,25 @@
         margin: 0;
       }
 
+      /* Headings/paragraphs get predictable wrapping */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+
+/* Remove list styling/padding, add [role=list] back for a11y when needed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
       pre {
         line-height: 1.2;
         background: " + latte.base.to-hex() + ";
