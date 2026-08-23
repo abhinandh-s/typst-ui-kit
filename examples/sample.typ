@@ -1,10 +1,16 @@
 #import "/src/lib.typ": add, checklist
+#import "/src/lib.typ": css
+#import "/src/components/topbar.typ" as bar
 
 #let html-page(filename, page-title, body) = {
   document(filename, title: page-title)[
     #set heading(numbering: "1.", bookmarked: false)
     #html.elem("nav", attrs: (id: "sidebar"))[
       #outline(target: heading.where(bookmarked: false, outlined: true))
+ 
+#css.init
+#bar.init
+#bar.topbar
     ]
     // Main Content Container
     #html.elem("main", attrs: (id: "content"))[
