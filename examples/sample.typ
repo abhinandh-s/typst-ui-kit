@@ -1,6 +1,7 @@
 #import "/src/lib.typ": add, checklist
 #import "/src/lib.typ": css, js
 #import "/src/components/topbar.typ" as bar
+#import "/src/toc.typ": floating-toc
 
 #let html-page(filename, page-title, body) = {
   document(filename, title: page-title)[
@@ -12,6 +13,7 @@
     #html.elem("nav", attrs: (id: "sidebar"))[
       #outline(target: heading.where(bookmarked: false, outlined: true))
     ]
+    #floating-toc
     #html.elem("main", attrs: (id: "content"))[
       #bar.topbar
       #body
