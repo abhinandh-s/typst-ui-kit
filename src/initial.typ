@@ -17,7 +17,7 @@
 
       body {
         width: 100%;
-        max-width: 600px;
+        max-width: 920px;
         margin: 0 auto;
         background-color: " + latte.base.to-hex() + ";
         padding: 0 20px 20px 20px;
