@@ -1,3 +1,5 @@
+#import "/src/lib.typ": alerts
+
 = Lorem Ipsum
 
 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
