@@ -2,6 +2,6 @@
 
 #let init = context {
   if target() == "html" {
-    #link.init
+    link.init
   }
 }
