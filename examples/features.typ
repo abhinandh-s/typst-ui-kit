@@ -1,4 +1,4 @@
-#import "/src/lib.typ": alerts,init
+#import "/src/lib.typ": alerts, init, checklist
 // , theme-switcher
 // #import "/src/topnav.typ": topnav
 // #topnav()
@@ -95,3 +95,14 @@ public static void sort(byte[] a) {
   - point 01
   - point 02
 ]
+
+  = Addition Example
+
+The sum of $4$ and $7$ is:
+
+  $4 + 7 = #add(4, 7)$
+
+#show: checklist
+
+- [ ] Unchecked item
+- [x] Checked item
