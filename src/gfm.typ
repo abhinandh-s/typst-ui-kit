@@ -21,7 +21,7 @@
     html.blockquote(
       class: "markdown-alert markdown-alert-" + kind,
       dir: auto,
-      style: "border-left: 0.25em solid " + accent-color.to-hex() + "; margin-bottom: 16px; background-color: " + bg-color.to-hex() + ";"
+      style: "border-left: 0.25em solid " + accent-color.to-hex() + "; margin-bottom: 16px; padding: 0.5rem 1em; background-color: " + bg-color.to-hex() + ";"
     )[
       #html.p(
         class: "markdown-alert-title",
