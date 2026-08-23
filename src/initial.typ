@@ -15,6 +15,14 @@
         margin: 0;
       }
 
+      body {
+        width: 600px;
+        margin: 0 auto;
+        background-color: " latte.crust.to-hex() ";
+        padding: 0 20px 20px 20px;
+        border: 5px solid black;
+      }
+
       /* Headings/paragraphs get predictable wrapping */
 p,
 h1,
