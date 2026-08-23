@@ -316,10 +316,10 @@
       #html.elem("div", attrs: (class: "fw-progress-bar", id: "fwProgressBar"))
 ]
 #let _fw-body = html.elem("div", attrs: (class: "fw-body", id: "fwBody"))[
-      #h.p()[This is the floating window content. It opens when you tap the pill.]
-      #h.p()[It takes up to half the screen height on mobile, and closes when you tap the close button or tap anywhere outside it.]
-      #h.p()[Swap this content for whatever you actually need — a status, a mini player, notifications, etc.]
-      #h.p()[Here's some extra filler text so you can see the scroll behavior in action. Scroll within this box and watch the green bar under the header fill up.]
+      #html.p()[This is the floating window content. It opens when you tap the pill.]
+      #html.p()[It takes up to half the screen height on mobile, and closes when you tap the close button or tap anywhere outside it.]
+      #html.p()[Swap this content for whatever you actually need — a status, a mini player, notifications, etc.]
+      #html.p()[Here's some extra filler text so you can see the scroll behavior in action. Scroll within this box and watch the green bar under the header fill up.]
       #html.p()[Paragraph five. The scrollbar itself is also styled thin and subtle so it doesn't look like a default browser scrollbar.]
       #html.p()[Paragraph six. On iOS Safari the native scrollbar is usually invisible until you scroll, so this progress bar is the more reliable indicator there.]
       #html.p()[Paragraph seven. Keep scrolling.]
