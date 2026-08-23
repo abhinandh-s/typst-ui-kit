@@ -1,3 +1,5 @@
+#import "../icons.typ" as icon
+
 #let _topbar-js = html.script("
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('sidebar-toggle');
@@ -105,14 +107,14 @@ body.sidebar-toggled #sidebar {
   #_topbar-js
   #_topbar-css
   #html.button(id: "sidebar-toggle", class: "btn icon-btn")[
-    #icon-menu
+    #icon.menu
   ]
   #html.elem("div", attrs: (class: "top-bar-right"))[
     #html.elem("a", attrs: (href: "ag.pdf", class: "btn icon-btn", target: "_blank", title: "Download PDF"))[
-      #icon-pdf
+      #icon.pdf
     ]
     #html.button(id: "theme-toggle", class: "btn icon-btn")[
-      #icon-palette
+      #icon.palette
     ]
   ]
 ]
