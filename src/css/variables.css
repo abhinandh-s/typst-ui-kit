@@ -2,6 +2,7 @@
 :root, :root[data-theme="dark"] { 
   color-scheme: dark;
   --accent: #e05060;
+  --text-hl: var(--ctp-yellow);
   --bg: var(--ctp-crust);
   --fg: var(--ctp-text);
   --secondary-bg: #181010;
@@ -41,6 +42,7 @@
 :root[data-theme="light"] {
   color-scheme: light;
   --accent: #d20f39;
+  --text-hl: var(--ctp-yellow);
   --bg: var(--ctp-crust);
   --fg: var(--ctp-text);
   --secondary-bg: #fafafa;
