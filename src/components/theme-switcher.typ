@@ -3,17 +3,16 @@
 
 #let _list-item(name: "Dracula", short: "dracula") = context {
   if target() == "html" {
-    // 1. Use html.elem because of data-theme-option
-    html.elem("li", attrs: (
+    html.li(
       role: "option",
-      "data-theme-option": short,
-      "aria-selected": "true", // Back to string for html.elem
-    ))[
-      // 2. Use html.elem because of data-swatch
-      #html.elem("span", attrs: (
+      "data-theme-option": "short",
+      "aria-selected": true,
+    )[
+      
+      #html.span(
           class: "menu__swatch",
-          "data-swatch": short
-      ))
+          "data-swatch": "short"
+      )
       #name
       #html.elem(
         "svg",
@@ -35,14 +34,10 @@
 
 #let theme-switcher() = context {
   if target() == "html" {
-    css()
-    js()
-    // 3. Use html.elem because of data-theme-panel
     html.elem("div", attrs: (
         class: "panel-menu",
         "data-theme-panel": "data-theme-panel"
     ))[  
-      // html.button works fine because aria-* are standard global attributes
       #html.button(
         .. (
           class: "btn-theme btn-theme--circle",
