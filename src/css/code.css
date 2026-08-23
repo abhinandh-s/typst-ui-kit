@@ -1,7 +1,4 @@
-#import "../colors.typ": latte
-
-#let init = html.style("
-  pre {
+pre {
     line-height: 1.2;
     background: " + latte.mantle.to-hex() + ";
     padding: 1.33em;
@@ -14,5 +11,4 @@
     display: block;
     word-wrap: break-word;
     max-width: 100%;
-  }
-")
+}
