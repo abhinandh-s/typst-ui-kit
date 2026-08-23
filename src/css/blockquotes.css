@@ -1,12 +1,34 @@
 .markdown-alert .markdown-alert-note {
-  --note: var(--ctp-blue) !important;
-  --note-bg: none;
-  --tip: var(--ctp-green) !important;
-  --note-bg: none;
-  --important: var(--ctp-muave) !important;
-  --warning: var(--ctp-yellow) !important;
-  --caution: var(--ctp-red) !important;
-  --quote: #656d76 !important;
-  --quote-bg: #656d761a !important;
-  --decree: var(--ctp-flamingo) !important;
+  color: var(--ctp-blue) !important;
+  background-color: none;
+}
+
+.markdown-alert .markdown-alert-tip {
+  color: var(--ctp-green) !important;
+  background-color:
+}
+
+.markdown-alert .markdown-alert-important {
+  color: var(--ctp-muave) !important;
+  background-color:
+}
+
+.markdown-alert .markdown-alert-warning {
+  color: var(--ctp-yellow) !important;
+  background-color:
+}
+
+.markdown-alert .markdown-alert-caution {
+  color: var(--ctp-red) !important;
+  background-color:
+}
+
+.markdown-alert .markdown-alert-quote {
+  color: #656d76 !important;
+  background-color: #656d761a !important;
+}
+
+.markdown-alert .markdown-alert-decree {
+  color: var(--ctp-flamingo) !important;
+  background-color:
 }
