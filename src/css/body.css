@@ -39,4 +39,5 @@ blockquote:not([class]) + p {
   text-align: right;
   font-style: italic;
   margin-top: -0.5em;
+  margin-right: 10%;
 }
