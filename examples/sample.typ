@@ -17,18 +17,6 @@
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
   #include "features.typ"
- 
-  = Addition Example
-
-The sum of $4$ and $7$ is:
-
-  $4 + 7 = #add(4, 7)$
-
-#show: checklist
-
-- [ ] Unchecked item
-- [x] Checked item
-
   #link(<pdf>)[single PDF].
 ] <home>
 
