@@ -1,6 +1,6 @@
 #let init = html.style("
 /* --- Dark (Default) --- */
-:root, :root[data-theme="dark"] { 
+:root, :root[data-theme=\"dark\"] { 
   color-scheme: dark; 
   --bg: #0B0706;
   --fg: #bcbdd0;
@@ -25,7 +25,7 @@
 
 
 /* --- Light Mode --- */
-:root[data-theme="light"] {
+:root[data-theme=\"light\"] {
   color-scheme: light;
   --bg: #eff1f5;
   --fg: #4c4f69;
