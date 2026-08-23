@@ -25,9 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   justify-content: space-between; 
   align-items: center;
   transition: transform 0.3s ease;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   background: var(--bg);
 }
 
