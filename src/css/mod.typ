@@ -6,10 +6,10 @@
 
 #let init = context {
   if target() == "html" {
-    variables.init
-    body.init
-    link.init
-    code.init
-    figure.init
+    html.style(variables.init + body.init)
+    
+    // link.init
+    // code.init
+    // figure.init
   }
 }
