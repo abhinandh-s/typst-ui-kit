@@ -124,7 +124,7 @@ html.elem("div", attrs: (class: "top-bar"))[
 
 #let init = context {
   if target() == "html" {
-    #_topbar-js
-    #_topbar-css
+    _topbar-js
+    _topbar-css
   }
 }
