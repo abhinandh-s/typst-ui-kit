@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // NEW: close when clicking outside the sidebar
+    // close when clicking outside the sidebar
     document.addEventListener("click", (event) => {
       const isOpen = document.body.classList.contains("sidebar-toggled");
       if (!isOpen) return;
