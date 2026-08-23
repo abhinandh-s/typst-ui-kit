@@ -146,6 +146,274 @@
           </li>
         </ol>
       </nav>
+      <style>
+        /* --- Dark (Default) --- */
+        :root,
+        :root[data-theme="dark"] {
+          color-scheme: dark;
+          --bg: #0b0706;
+          --fg: #bcbdd0;
+          --secondary-bg: #181010;
+          --sidebar-bg: #181010;
+          --sidebar-fg: #c8c9db;
+          --accent: #e05060;
+
+          --base: #1e1e2e;
+          --mantle: #181825;
+          --text: #cdd6f4;
+          --subtext0: #a6adc8;
+          --surface0: #313244;
+          --surface1: #45475a;
+          --mauve: #cba6f7;
+          --blue: #8caaee;
+          --sapphire: #74c7ec;
+          --peach: #fab387;
+          --green: #a6e3a1;
+          --red: #f38ba8;
+        }
+
+        /* --- Light Mode --- */
+        :root[data-theme="light"] {
+          color-scheme: light;
+          --bg: #eff1f5;
+          --fg: #4c4f69;
+          --secondary-bg: #fafafa;
+          --sidebar-bg: #fafafa;
+          --sidebar-fg: #a1adb8;
+          --accent: #d20f39;
+
+          --base: #eff1f5;
+          --mantle: #e6e9ef;
+          --text: #4c4f69;
+          --subtext0: #6c6f85;
+          --surface0: #ccd0da;
+          --surface1: #bcc0cc;
+          --mauve: #8839ef;
+          --blue: #1e66f5;
+          --sapphire: #209fb5;
+          --peach: #fe640b;
+          --green: #40a02b;
+          --red: #d20f39;
+        }</style
+      ><style>
+        /* Box sizing everywhere */
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        /* Remove default margin on everything, then re-add sane ones below */
+        * {
+          /* margin: 0; */
+        }
+
+        body {
+          width: 100%;
+          max-width: 920px;
+          margin: 0 auto;
+          background-color: var(--bg);
+          padding: 0 20px 20px 20px;
+        }</style
+      ><style>
+        /* unvisited link */
+        a:link {
+          color: #d20f39;
+        }
+
+        /* visited link */
+        a:visited {
+          color: #dc8a78;
+        }
+
+        /* mouse over link */
+        a:hover {
+          color: #209fb5;
+          text-decoration: underline;
+        }
+
+        /* selected link */
+        a:active {
+          color: #40a02b;
+          text-decoration: underline;
+        }</style
+      ><style>
+        pre {
+          line-height: 1.2;
+          background: #e6e9ef;
+          padding: 1.33em;
+          border-radius: 0.33em;
+          font-family: monospace;
+          page-break-inside: avoid;
+          overflow: auto;
+          overflow-x: auto;
+          white-space: pre-wrap;
+          display: block;
+          word-wrap: break-word;
+          max-width: 100%;
+        }</style
+      ><style>
+        figure img {
+          max-width: 100%;
+          height: auto !important;
+        }
+        figcaption {
+          font-style: italic;
+          padding: 2px;
+          text-align: center;
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggleBtn = document.getElementById("sidebar-toggle");
+          const sidebar = document.getElementById("sidebar");
+
+          toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("sidebar-toggled");
+          });
+
+          sidebar.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+              document.body.classList.remove("sidebar-toggled");
+            }
+          });
+        });
+      </script>
+      <style>
+        .top-bar {
+          /* padding: 15px 10px; */
+          /* flex + space-between pushes left child (menu) and right child (.top-bar-right) to opposite ends */
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: transform 0.3s ease;
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          background: var(--bg);
+        }
+
+        /* New layout for the right-side buttons */
+        .top-bar-right {
+          display: flex;
+          align-items: center;
+          gap: 10px; /* Space between the PDF and Theme icons */
+          transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+        }
+
+        .icon-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px;
+          cursor: pointer;
+          background: transparent;
+          border: none;
+          border-radius: 8px;
+          color: var(--fg, #333);
+          text-decoration: none; /* Prevents underline on the <a> tag version */
+          transition:
+            background-color 0.2s,
+            opacity 0.3s ease;
+        }
+
+        .icon-btn:hover {
+          color: var(--accent);
+        }
+
+        .material-symbols-outlined {
+          font-size: 28px;
+        }
+
+        /* Sizing and coloring the inline SVG */
+        .svg-icon {
+          width: 24px;
+          height: 24px;
+          fill: currentColor; /* Forces the SVG to match the color/hover states of text */
+        }
+
+        /* Push top-bar right by the exact width of the sidebar (250px) */
+        body.sidebar-toggled .top-bar {
+          transform: translateX(250px);
+        }
+
+        /* Fade out both the PDF and theme buttons completely when sidebar is open */
+        body.sidebar-toggled .top-bar-right {
+          opacity: 0;
+          pointer-events: none;
+          visibility: hidden;
+        }
+
+        /* Push main content right so it doesn't get covered */
+        body.sidebar-toggled #content {
+          transform: translateX(250px);
+        }
+
+        #sidebar {
+          width: 250px;
+          height: 100vh;
+          position: fixed;
+          left: 0;
+          top: 0;
+          padding: 20px;
+          background: var(--sidebar-bg);
+          border-right: 1px solid var(--fg);
+          box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+          overflow-y: auto;
+          z-index: 999;
+
+          transition: transform 0.3s ease;
+          transform: translateX(-100%);
+        }
+
+        body.sidebar-toggled #sidebar {
+          transform: translateX(0);
+        }
+      </style>
+      <div class="top-bar">
+        <p>
+          <button id="sidebar-toggle" class="btn icon-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="octicon"
+            >
+              <path
+                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+              ></path>
+            </svg>
+          </button>
+        </p>
+        <div class="top-bar-right">
+          <a
+            href="ag.pdf"
+            class="btn icon-btn"
+            target="_blank"
+            title="Download PDF"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="octicon"
+            >
+              <path
+                d="M240 112L128 112C119.2 112 112 119.2 112 128L112 512C112 520.8 119.2 528 128 528L208 528L208 576L128 576C92.7 576 64 547.3 64 512L64 128C64 92.7 92.7 64 128 64L261.5 64C278.5 64 294.8 70.7 306.8 82.7L429.3 205.3C441.3 217.3 448 233.6 448 250.6L448 400.1L400 400.1L400 272.1L312 272.1C272.2 272.1 240 239.9 240 200.1L240 112.1zM380.1 224L288 131.9L288 200C288 213.3 298.7 224 312 224L380.1 224zM272 444L304 444C337.1 444 364 470.9 364 504C364 537.1 337.1 564 304 564L292 564L292 592C292 603 283 612 272 612C261 612 252 603 252 592L252 464C252 453 261 444 272 444zM304 524C315 524 324 515 324 504C324 493 315 484 304 484L292 484L292 524L304 524zM400 444L432 444C460.7 444 484 467.3 484 496L484 560C484 588.7 460.7 612 432 612L400 612C389 612 380 603 380 592L380 464C380 453 389 444 400 444zM432 572C438.6 572 444 566.6 444 560L444 496C444 489.4 438.6 484 432 484L420 484L420 572L432 572zM508 464C508 453 517 444 528 444L576 444C587 444 596 453 596 464C596 475 587 484 576 484L548 484L548 508L576 508C587 508 596 517 596 528C596 539 587 548 576 548L548 548L548 592C548 603 539 612 528 612C517 612 508 603 508 592L508 464z"
+              ></path></svg></a
+          ><span style="white-space: pre-wrap">&#x20;</span
+          ><button id="theme-toggle" class="btn icon-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="octicon"
+            >
+              <path
+                d="M512.5 74.3L291.1 222C262 241.4 243.5 272.9 240.5 307.3C302.8 320.1 351.9 369.2 364.8 431.6C399.3 428.6 430.7 410.1 450.1 381L597.7 159.5C604.4 149.4 608 137.6 608 125.4C608 91.5 580.5 64 546.6 64C534.5 64 522.6 67.6 512.5 74.3zM320 464C320 402.1 269.9 352 208 352C146.1 352 96 402.1 96 464C96 467.9 96.2 471.8 96.6 475.6C98.4 493.1 86.4 512 68.8 512L64 512C46.3 512 32 526.3 32 544C32 561.7 46.3 576 64 576L208 576C269.9 576 320 525.9 320 464z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </nav>
     <main id="content">
       <h1>Home</h1>
