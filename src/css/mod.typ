@@ -6,7 +6,8 @@
       + read("link.css")
       + read("code.css")
       + read("figure.css")
-      + read("lists.css") 
+      + read("lists.css")
+      + read("topbar.css")
     )
   }
 }
