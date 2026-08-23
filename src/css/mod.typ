@@ -1,5 +1,7 @@
 #import "link.typ" as link
 
-#let init = [
-  #link.init
-]
+#let init = context {
+  if target() == "html" {
+    #link.init
+  }
+}
