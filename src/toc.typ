@@ -69,6 +69,22 @@
 
 
 #let _fw-css = html.style("
+  /* Reset default indentation */
+ul, ol {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside; /* Aligns markers with text */
+}
+
+/* Optional: Add custom indentation for nested levels if desired */
+ul ul, ol ol {
+  margin-left: 1.5em; 
+}   
+
+
+
+
+
   :root {
     color-scheme: dark;
   }
