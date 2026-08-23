@@ -1,15 +1,16 @@
 #import "/src/lib.typ": alerts, css, checklist, add
 // , theme-switcher
 
-#import "/src/components/topbar.typ": top-bar-nav
-#top-bar-nav
+#import "/src/components/topbar.typ": as bar
+#bar.init
+#bar.topbar
 
 // #theme-switcher()
 
-#import "/src/toc.typ": floating-toc
-#floating-toc()
+// #import "/src/toc.typ": floating-toc
+// #floating-toc()
 
-#css.init
+// #css.init
 
 // #init.css()
 // #init.js()
