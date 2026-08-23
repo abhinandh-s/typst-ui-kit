@@ -103,9 +103,8 @@ body.sidebar-toggled #sidebar {
 }
 ")
 
-#let top-bar-nav = html.elem("div", attrs: (class: "top-bar"))[
-  #_topbar-js
-  #_topbar-css
+#let topbar = html.elem("div", attrs: (class: "top-bar"))[
+  
   #html.button(id: "sidebar-toggle", class: "btn icon-btn")[
     #icon.menu
   ]
@@ -118,3 +117,10 @@ body.sidebar-toggled #sidebar {
     ]
   ]
 ]
+
+#let init = context {
+  if target() == "html" {
+    #_topbar-js
+    #_topbar-css
+  }
+}
