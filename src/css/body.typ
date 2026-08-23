@@ -1,6 +1,6 @@
 #import "../colors.typ": latte
 
-#let init = html.style("
+#let init = "
   /* Box sizing everywhere */
   *,
   *::before,
@@ -20,4 +20,4 @@
     background-color: var(--bg);
     padding: 0 20px 20px 20px;
   }
-")
+"
