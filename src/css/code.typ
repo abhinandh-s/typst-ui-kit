@@ -3,7 +3,7 @@
 #let init = html.style("
   pre {
     line-height: 1.2;
-    background: " + latte.base.to-hex() + ";
+    background: " + latte.surface0.to-hex() + ";
     padding: 1.33em;
     border-radius: 0.33em;
     font-family: monospace; 
