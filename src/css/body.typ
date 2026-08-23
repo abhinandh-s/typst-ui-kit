@@ -1,4 +1,4 @@
-#import "colors.typ": latte
+#import "../colors.typ": latte
 
 #let init = html.style("
   /* Box sizing everywhere */
@@ -10,7 +10,7 @@
 
   /* Remove default margin on everything, then re-add sane ones below */
   * {
-    margin: 0;
+   /* margin: 0; */
   }
 
   body {
