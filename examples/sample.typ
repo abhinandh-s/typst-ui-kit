@@ -13,7 +13,7 @@
     ]
     #floating-toc()
     #html.elem("main", attrs: (id: "content"))[
-      #bar.topbar
+      #bar.topbar()
       #body
     ]
    
