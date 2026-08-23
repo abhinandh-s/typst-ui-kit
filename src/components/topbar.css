@@ -6,7 +6,7 @@
   align-items: center;
   transition: transform 0.3s ease;
   background: var(--bg);
-  border-bottom: 2px solid var(--fg);
+  border-bottom: 0.5px solid var(--fg);
 }
 
 .top-bar-right {
