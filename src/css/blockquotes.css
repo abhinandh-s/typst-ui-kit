@@ -1,0 +1,12 @@
+.markdown-alert .markdown-alert-note {
+  --note: var(--ctp-blue) !important;
+  --note-bg: none;
+  --tip: var(--ctp-green) !important;
+  --note-bg: none;
+  --important: var(--ctp-muave) !important;
+  --warning: var(--ctp-yellow) !important;
+  --caution: var(--ctp-red) !important;
+  --quote: #656d76 !important;
+  --quote-bg: #656d761a !important;
+  --decree: var(--ctp-flamingo) !important;
+}
