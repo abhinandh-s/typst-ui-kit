@@ -8,6 +8,7 @@ function toggleTheme() {
 
   document.documentElement.setAttribute('data-theme', currentTheme);
   localStorage.setItem('theme', currentTheme);
+  console.log(`[theme]: set to ${currentTheme}`)
 }
 
 window.addEventListener('DOMContentLoaded', () => {
