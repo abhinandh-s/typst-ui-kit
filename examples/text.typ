@@ -2,8 +2,9 @@
 
 = Lorem Ipsum
 
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+#quote(attribution: [Lorem])["Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."]
+
+#quote(block: true, attribution: [Ipsum])["There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."]
 
 *Lorem ipsum* dolor sit amet, consectetur adipiscing elit. Sed eu ante ut sapien dignissim dapibus quis ut sem. Nullam justo lectus, mattis non nisi sit amet, lacinia pulvinar tellus. Vestibulum pellentesque aliquam velit, a commodo felis feugiat a. Nunc lobortis nunc sem, non pellentesque nisl pharetra non. Fusce laoreet porta tortor id hendrerit. Sed neque velit, viverra a nunc et, convallis varius neque. In finibus tellus ut consectetur bibendum. Integer euismod leo nec euismod tristique. Fusce dignissim, felis et tempor fermentum, turpis metus feugiat leo, vel luctus magna neque ut sapien. Phasellus porttitor commodo ornare. Sed ultricies neque neque, et ornare libero aliquet quis. Pellentesque cursus sollicitudin metus at ultricies. Suspendisse vel imperdiet lorem, vitae convallis leo.
 
