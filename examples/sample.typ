@@ -20,6 +20,12 @@
   #link(<pdf>)[single PDF].
 ] <home>
 
+#html-page("topbar.html", [Top Bar])[
+  #title()
+  #outline(target: heading.where(bookmarked: false, outlined: true))
+  #include "topbar.typ"
+]
+
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
