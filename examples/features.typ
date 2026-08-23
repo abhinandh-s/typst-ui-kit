@@ -21,7 +21,7 @@
     fwProgressBar.style.width = pct + '%';
   }
 
-  fwfwBody.addEventListener('scroll'updateProgress, { passive: true });
+  fwBody.addEventListener('scroll'updateProgress, { passive: true });
 
   // Scroll show/hide
   let lastScrollY = window.scrollY;
@@ -342,11 +342,11 @@
 ]
 #let _toc() = context {
   if target() == "html" {
-    _fw-js
     _fw-css
     _island-wrap
     _overlay
     _floating-window
+    _fw-js
   }
 }
 
