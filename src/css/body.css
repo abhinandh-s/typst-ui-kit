@@ -1,20 +1,23 @@
+/* Box sizing everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  /* Box sizing everywhere */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+/* Remove default margin on everything, then re-add sane ones below */
+* {
+  margin: 0;
+}
 
-  /* Remove default margin on everything, then re-add sane ones below */
-  * {
-    margin: 0;
-  }
+body {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--bg);
+  padding: 0 20px 20px 20px;
+}
 
-  body {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: var(--bg);
-    padding: 0 20px 20px 20px;
-  }
+h1, h2, h3, h4, h5 ,h6 {
+  margin-top: 1em;
+}
