@@ -8,7 +8,7 @@
 
   /* Remove default margin on everything, then re-add sane ones below */
   * {
-   /* margin: 0; */
+    margin: 0 auto;
   }
 
   body {
