@@ -26,12 +26,10 @@
 
 #html-page("topbar.html", [Top Bar])[
   #title()
-  #outline(target: heading.where(bookmarked: false, outlined: true))
   #include "topbar.typ"
 ]
 #html-page("text.html", [Text Formating])[
   #title()
-  #outline(target: heading.where(bookmarked: false, outlined: true))
   #include "text.typ"
 ]
 
