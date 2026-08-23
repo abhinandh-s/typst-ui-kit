@@ -320,12 +320,12 @@
       #h.p()[It takes up to half the screen height on mobile, and closes when you tap the close button or tap anywhere outside it.]
       #h.p()[Swap this content for whatever you actually need — a status, a mini player, notifications, etc.]
       #h.p()[Here's some extra filler text so you can see the scroll behavior in action. Scroll within this box and watch the green bar under the header fill up.]
-      #h.p()[Paragraph five. The scrollbar itself is also styled thin and subtle so it doesn't look like a default browser scrollbar.]
-      #h.p()[Paragraph six. On iOS Safari the native scrollbar is usually invisible until you scroll, so this progress bar is the more reliable indicator there.]
-      #h.p()[Paragraph seven. Keep scrolling.]
-      #h.p()[Paragraph eight. Almost at the bottom now.]
-      #h.p()[Paragraph nine. The bar should be nearly full.]
-      #h.p()[Paragraph ten — the last one. The bar should now be at 100%.]
+      #html.p()[Paragraph five. The scrollbar itself is also styled thin and subtle so it doesn't look like a default browser scrollbar.]
+      #html.p()[Paragraph six. On iOS Safari the native scrollbar is usually invisible until you scroll, so this progress bar is the more reliable indicator there.]
+      #html.p()[Paragraph seven. Keep scrolling.]
+      #html.p()[Paragraph eight. Almost at the bottom now.]
+      #html.p()[Paragraph nine. The bar should be nearly full.]
+      #html.p()[Paragraph ten — the last one. The bar should now be at 100%.]
 ]
 #let _floating-window = html.elem("div", attrs: (class: "floating-window", id: "floatingWindow"))[
   #_fw-header
