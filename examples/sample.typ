@@ -29,6 +29,11 @@
   #outline(target: heading.where(bookmarked: false, outlined: true))
   #include "topbar.typ"
 ]
+#html-page("text.html", [Text Formating])[
+  #title()
+  #outline(target: heading.where(bookmarked: false, outlined: true))
+  #include "text.typ"
+]
 
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
