@@ -68,6 +68,7 @@ dt { font-weight: 600; }
 dd { margin: 0; }
 
 hr {
-  color: var(--fg);
-  border-width: 1px;
+  background: var(--fg);
+  border: 0;
+  height: 1px;
 }
