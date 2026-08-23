@@ -14,5 +14,5 @@
     display: block;
     word-wrap: break-word;
     max-width: 100%;
-}
+  }
 ")
