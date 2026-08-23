@@ -7,6 +7,7 @@
     #set heading(numbering: "1.", bookmarked: false)
     #css.init
     #js.pre-hook
+    #js.post-hook
     #bar.init
     #html.elem("nav", attrs: (id: "sidebar"))[
       #outline(target: heading.where(bookmarked: false, outlined: true))
@@ -15,7 +16,7 @@
       #bar.topbar
       #body
     ]
-    #js.post-hook
+   
   ]
 }
 
