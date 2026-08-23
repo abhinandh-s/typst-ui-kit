@@ -1,7 +1,9 @@
 #import "/src/lib.typ": alerts, css, checklist, add
 // , theme-switcher
-// #import "/src/topnav.typ": topnav
-// #topnav()
+
+#import "/src/components/topbar.typ": top-bar-nav
+#top-bar-nav()
+
 // #theme-switcher()
 
 #import "/src/toc.typ": floating-toc
