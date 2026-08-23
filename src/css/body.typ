@@ -1,0 +1,23 @@
+#import "colors.typ": latte
+
+#let init = html.style("
+  /* Box sizing everywhere */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margin on everything, then re-add sane ones below */
+  * {
+    margin: 0;
+  }
+
+  body {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    background-color: " + latte.base.to-hex() + ";
+    padding: 0 20px 20px 20px;
+  }
+")
