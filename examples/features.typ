@@ -341,7 +341,7 @@
     ]
 ]
 #let _toc() = context {
-  if target() = "html" {
+  if target() == "html" {
     _fw-js()
     _fw-css()
     _island-wrap
