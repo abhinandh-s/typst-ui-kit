@@ -1,27 +1,6 @@
 #import "../colors.typ": latte
 #import "../icons.typ" as icon
 
-#let css() = context {
-  if target() == "html" {
-    html.style("
-      
-
-
-
-    ")
-  }
-}
-
-
-#let js() = context {
-  if target() == "html" {
-    html.script("
-
-
-")
-  }
-}
-
 #let _list-item(name: "Dracula", short: "dracula") = context {
   if target() == "html" {
     // 1. Use html.elem because of data-theme-option
