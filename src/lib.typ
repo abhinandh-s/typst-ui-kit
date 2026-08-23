@@ -10,7 +10,6 @@
 #import "checklist.typ": checklist
 #import "gfm.typ" as alerts
 #import "colors.typ": *
-#import "initial.typ" as init
 #import "css/mod.typ" as css
 #import "js/mod.typ" as js
 
