@@ -85,13 +85,14 @@ body.sidebar-toggled #sidebar {
   border-bottom: 1px solid var(--surface0);
 }
 
+// "TABLE OF CONTENTS"
 .sidebar-header h2 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--subtext0);
+  color: var(--text);
 }
 
 .sidebar-scroll {
