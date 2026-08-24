@@ -27,7 +27,7 @@
           #html.button(
             id: "theme-toggle", 
             class: "btn icon-btn tb-trigger", 
-            attrs: ("aria-haspopup": "listbox", "aria-expanded": "false", "aria-label": "Choose theme")
+            // attrs: ("aria-haspopup": "listbox", "aria-expanded": "false", "aria-label": "Choose theme")
           )[ #icon.paintbrush-24px ]
 
           #html.elem("ul", attrs: (class: "tb-list", role: "listbox", hidden: "true"))[
