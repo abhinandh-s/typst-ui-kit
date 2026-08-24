@@ -97,7 +97,8 @@
     left: 50%;
     width: min(90vw, 380px);
     max-height: 50vh; /* half screen on mobile */
-    background: #1c1c1f;
+    color: var(--fg);
+    background: var(--sidebar-bg);
     border-radius: 22px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     z-index: 160;
