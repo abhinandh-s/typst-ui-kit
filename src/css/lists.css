@@ -1,12 +1,15 @@
-/* https://www.w3schools.com/tags/tag_ol.asp */
-ol { 
-  padding-left: 10px;
-}
+/* we had reseted margin-[left | right] to zero. Try to bring back the Default inside #content
 
-/* https://www.w3schools.com/tags/tag_ul.asp */
-ul {
-  padding-left: 10px;
-}
+
+Source - https://stackoverflow.com/a/72522106
+Posted by SNikhill
+Retrieved 2026-08-24, License - CC BY-SA 4.0
+*/
+
+#content ol, ul, li, {
+ margin: revert;
+ padding: revert; /* Padding is what gives the indentation */ 
+} 
 
 /* Target's TOC H1 header entry's and make's it bold.
 
