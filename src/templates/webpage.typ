@@ -1,4 +1,4 @@
-import "/src/lib.typ": *
+#import "/src/lib.typ": *
 
 #let webpage(filename, page-title, body) = {
   document(filename, title: page-title)[
