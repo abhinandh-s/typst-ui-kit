@@ -10,7 +10,7 @@
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  min-width: 220px;
+  min-width: 180px;      /* Reduced slightly so it isn't overly wide */
   width: max-content;
   max-height: 380px;
   overflow-y: auto;
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 10px;
+  padding: 8px 12px;     /* Evened out horizontal padding */
   border-radius: 6px;
   font-size: 0.85rem;
   cursor: pointer;
@@ -61,14 +61,16 @@
   flex-grow: 1;
 }
 
+/* Checkmark */
 .tb-check {
   width: 14px;
   height: 14px;
-  margin-left: auto;
-  opacity: 0;
+  margin-left: 8px;      /* Fixed gap instead of auto-pushing to the edge */
+  display: none;         /* Totally removes element footprint when inactive */
   color: var(--accent);
 }
 
-.tb-option[aria-selected="true"] .tb-check {
-  opacity: 1;
+.tb-option[aria-selected="true"] .tb-check, 
+.tb-option.is-active .tb-check {
+  display: block;        /* Only takes up space when actually selected */
 }
