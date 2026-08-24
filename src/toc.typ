@@ -105,7 +105,6 @@
 ]
 #let floating-toc() = context {
   if target() == "html" {
-    _fw-css
     _island-wrap
     _overlay
     _floating-window
