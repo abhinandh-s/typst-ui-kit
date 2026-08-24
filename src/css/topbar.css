@@ -36,7 +36,11 @@
 
 /* PDF icon */
 .top-bar a.icon-btn {
-  color: inherit;
+  color: var(--fg);
+}
+
+.octicon {
+  color: var(--fg);
 }
 
 .material-symbols-outlined {
