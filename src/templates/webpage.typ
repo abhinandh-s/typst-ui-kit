@@ -14,7 +14,7 @@
     ]
     #floating-toc
     #html.elem("main", attrs: (id: "content"))[
-      #topbar(pdf-path)
+      #topbar(pdf-path: pdf-path)
       #body
     ]
 
