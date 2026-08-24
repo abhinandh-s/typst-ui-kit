@@ -4,7 +4,7 @@
 #import "../components/floating-toc.typ": floating-toc
 #import "../components/topbar.typ": topbar
 
-#let webpage(filename, page-title, body) = {
+#let webpage(filename, page-title, pdf-path: "book.pdf", body) = {
   document(filename, title: page-title)[
     #set heading(numbering: "1.", bookmarked: false)
     #css.init
@@ -14,7 +14,7 @@
     ]
     #floating-toc
     #html.elem("main", attrs: (id: "content"))[
-      #topbar(pdf-path: "ag.pdf")
+      #topbar(pdf-path: "book.pdf")
       #body
     ]
 
