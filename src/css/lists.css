@@ -27,3 +27,8 @@ nav[role="doc-toc"] a {
   color: var(--text);
   text-decoration: none;
 }
+
+
+.prefix span {
+   padding-right: 1em;
+}
