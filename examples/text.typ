@@ -2,7 +2,7 @@
 
 = Lorem Ipsum
 
-#quote(attribution: [Lorem])["Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."]
+#quote(attribution: [Lorem])[Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...]
 
 #quote(block: true, attribution: [Ipsum])["There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."]
 
@@ -133,12 +133,16 @@ Function call.
 )[B]
 
 #table(
-  columns: 4,
-  [], [Exam 1], [Exam 2], [Exam 3],
-
-  [John], [], a, [],
-  [Mary], [], a, a,
-  [Robert], b, a, b,
+  columns: (1.2fr, 1fr, 1fr, 1fr, 1.2fr, 1.8fr),
+  align: (left, center, center, center, left, left),
+  [*Type*], [*Contributes Capital*], [*Takes parts in Mngt.*], [*Known to public*], [*Liability*], [*Special Point*],
+  [Active/Working], [yes], [yes], [yes], [unlimited], [shares profits and losses of firm],
+  [Sleeping/Dormant], [yes], [no], [no], [unlimited], [shares profits and losses of firm],
+  [Secret], [yes], [yes], [no], [unlimited], [shares profits and losses of firm],
+  [Limited], [yes], [no], [possible], [limited to share & profit], [],
+  [Partner in Profit], [yes (or goodwill)], [no], [possible], [unlimited], [shares profits only],
+  [Nominal], [no], [no], [yes], [unlimited (to outsiders only)], [Does not shares profits and losses of firm],
+  [Minor], [yes], [no], [possible], [limited to share & profit], [Shares profits only],
 )
 
 
