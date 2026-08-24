@@ -13,8 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const header = document.createElement("div");
     header.className = "sidebar-header";
-    header.innerHTML = `<h2>Contents</h2>`;
+    header.innerHTML = `
+      <h2>Table of Contents</h2>
+      <button class="sidebar-close" aria-label="Close sidebar">✕</button>
+    `;
     sidebar.insertBefore(header, scrollWrap);
+
+    header.querySelector(".sidebar-close").addEventListener("click", () => {
+      body.classList.remove("sidebar-toggled");
+    });
   }
 
   // Toggle sidebar open/closed on button click
