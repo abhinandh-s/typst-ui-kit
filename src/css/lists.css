@@ -31,7 +31,7 @@ nav[role="doc-toc"] li,
 nav[role="doc-toc"] a,
 nav[role="doc-toc"] a:link,
 nav[role="doc-toc"] a:visited {
-  color: var(--text) !important;
+  color: var(--subtext1) !important;
   text-decoration: none;
 }
 
