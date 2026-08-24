@@ -18,4 +18,4 @@
 #import "components/navigation.typ": *
 #import "components/copyrights.typ" as copyright
 
-#import " templates/webpage.typ": webpage
+#import "templates/webpage.typ": webpage
