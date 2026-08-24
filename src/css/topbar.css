@@ -43,10 +43,8 @@
   font-size: 28px; 
 }
 
-/* Sizing and coloring the inline SVG */
+/* coloring the inline SVG */
 .svg-icon {
-  width: 24px;
-  height: 24px;
   fill: currentColor; /* Forces the SVG to match the color/hover states of text */
 }
 
