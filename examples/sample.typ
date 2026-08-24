@@ -1,4 +1,4 @@
-#import "/src/lib.typ": add, checklist, css, js, topbar, floating-toc
+#import "/src/lib.typ": *
 
 #let webpage(filename, page-title, body) = {
   document(filename, title: page-title)[
@@ -22,12 +22,14 @@
   #outline(target: heading.where(bookmarked: false, outlined: true))
   #include "features.typ"
   #link(<pdf>)[single PDF].
+
+  #nav(none, <text>)
 ] <home>
 
 #webpage("text.html", [Text Formating])[
   #title()
   #include "text.typ"
-]
+] <text>
 
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
