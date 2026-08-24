@@ -2,6 +2,7 @@
   read("theme.js")
   + read("toggle-sidebar.js")
   + read("floating-toc.js")
-  + read("comment-box.js")
   + read("fixes.js")
+  // must be last, position is important!
+  + read("comment-box.js")
 )
