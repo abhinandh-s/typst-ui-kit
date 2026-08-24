@@ -3,4 +3,5 @@
   + read("toggle-sidebar.js")
   + read("floating-toc.js")
   + read("comment-box.js")
+  + read("fixes.js")
 )
