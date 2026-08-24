@@ -106,38 +106,18 @@ body.sidebar-toggled #sidebar {
 .sidebar-scroll::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 6px; }
 .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
 
-nav[role="doc-toc"] ol {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-nav[role="doc-toc"] ol ol {
-  margin-left: 14px;
-  padding-left: 8px;
-  border-left: 1px solid var(--surface1);
-  margin-top: 2px;
-  margin-bottom: 4px;
-}
-
 nav[role="doc-toc"] a {
   display: block;
   padding: 6px 10px 6px 6px;
-  color: var(--base);
+  color: var(--subtext1);
   text-decoration: none;
   border-radius: 7px;
   overflow-wrap: break-word;
 }
 
 nav[role="doc-toc"] a:hover {
-  background: var(--surface0);
+  background: var(--accent);
 }
-
-nav[role="doc-toc"] .prefix {
-  color: var(--overlay1);
-  margin-right: 6px;
-}
-
 
 /*  button */
 
