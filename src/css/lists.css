@@ -1,5 +1,10 @@
 /* https://www.w3schools.com/tags/tag_ol.asp */
-ol { padding-left: 15px; }
+ol { padding-left: 10px; }
 
 /* https://www.w3schools.com/tags/tag_ul.asp */
-ul { padding-left: 15px; }
+ul { padding-left: 10px; }
+
+/* targets TOC H1 header's entry and make's it bold  */
+nav[role="doc-toc"] > ol > li {
+  font-weight: bold;
+}
