@@ -6,6 +6,6 @@ ul { padding-left: 10px; }
 
 /* targets TOC H1 header's entry and make's it bold  */
 /* Bolds only the 2nd top-level item */
-nav[role="doc-toc"] > ol > li:nth-child(2) {
+nav[role="doc-toc"] > ol > li:nth-child(1) {
   font-weight: bold;
 }
