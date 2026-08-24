@@ -8,7 +8,7 @@
       + read("figure.css")
       + read("lists.css")
       + read("topbar.css")
-      + read("floating-window.css")
+      + read("floating-toc.css")
     )
   }
 }
