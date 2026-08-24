@@ -13,5 +13,5 @@
 #import "css/mod.typ" as css
 #import "js/mod.typ" as js
 
-
-// #import "components/theme-switcher.typ": theme-switcher
+#import "components/floating-toc.typ": floating-toc
+#import "components/topbar.typ": topbar
