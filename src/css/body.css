@@ -80,5 +80,5 @@ hr {
 }
 
 #content p {
-  text-align: justify;
+  /* text-align: justify; it sucks */
 }
