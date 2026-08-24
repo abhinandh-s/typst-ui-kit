@@ -72,3 +72,8 @@ hr {
   border: 0;
   height: 1px;
 }
+
+
+#content p {
+  text-align: justify;
+}
