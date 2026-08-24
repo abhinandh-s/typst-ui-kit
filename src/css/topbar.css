@@ -66,6 +66,7 @@ body.sidebar-toggled #content {
 }
 
 /* ---------------- Sidebar ---------------- */
+
 #sidebar {
   width: 280px;
   height: 100vh;
@@ -74,7 +75,6 @@ body.sidebar-toggled #content {
   top: 0;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--fg);
-  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
   z-index: 999;
 
   display: flex;
@@ -91,12 +91,12 @@ body.sidebar-toggled #sidebar {
 
 .sidebar-header {
   flex-shrink: 0;
-  padding: 20px 20px 14px 20px;
+  padding: 18px 20px;
   border-bottom: 1px solid var(--surface0);
 }
 
 .sidebar-header h2 {
-  margin: 0 0 10px 0;
+  margin: 0;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: .06em;
@@ -104,40 +104,10 @@ body.sidebar-toggled #sidebar {
   color: var(--subtext0);
 }
 
-.sidebar-search {
-  position: relative;
-}
-
-.sidebar-search input {
-  width: 100%;
-  padding: 7px 10px 7px 30px;
-  font-size: 13px;
-  border-radius: 7px;
-  border: 1px solid var(--surface1);
-  background: var(--base);
-  color: var(--fg);
-  outline: none;
-}
-
-.sidebar-search input:focus {
-  border-color: var(--accent);
-}
-
-.sidebar-search svg {
-  position: absolute;
-  left: 9px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  color: var(--overlay1);
-  pointer-events: none;
-}
-
 .sidebar-scroll {
   flex: 1;
   overflow-y: auto;
-  padding: 12px 12px 24px 12px;
+  padding: 8px 12px 24px 12px;
   scrollbar-width: thin;
   scrollbar-color: var(--surface2) transparent;
 }
@@ -146,7 +116,6 @@ body.sidebar-toggled #sidebar {
 .sidebar-scroll::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 6px; }
 .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
 
-/* Tree structure — reuses your existing <ol>/<li> from doc-toc */
 nav[role="doc-toc"] ol {
   list-style: none;
   margin: 0;
@@ -160,10 +129,6 @@ nav[role="doc-toc"] ol ol {
   border-left: 1px solid var(--surface1);
   margin-top: 2px;
   margin-bottom: 4px;
-}
-
-nav[role="doc-toc"] li {
-  position: relative;
 }
 
 nav[role="doc-toc"] a {
@@ -186,39 +151,4 @@ nav[role="doc-toc"] .prefix {
   margin-right: 6px;
   font-variant-numeric: tabular-nums;
   font-size: 12px;
-}
-
-/* Active page (JS adds this class to the matching <a>) */
-nav[role="doc-toc"] a.active {
-  background: color-mix(in srgb, var(--mantle) 16%, transparent);
-  color: var(--fg);
-  font-weight: 600;
-}
-
-nav[role="doc-toc"] a.active::before {
-  content: "";
-  position: absolute;
-  left: -8px;
-  top: 4px;
-  bottom: 4px;
-  width: 3px;
-  border-radius: 3px;
-  background: var(--mantle);
-}
-
-/* Search filtering (JS adds .filtered-out to non-matching <li>) */
-nav[role="doc-toc"] li.filtered-out {
-  display: none;
-}
-
-.sidebar-empty {
-  padding: 16px 10px;
-  font-size: 13px;
-  color: var(--overlay1);
-  text-align: center;
-  display: none;
-}
-
-.sidebar-empty.show {
-  display: block;
 }
