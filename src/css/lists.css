@@ -1,14 +1,15 @@
 /* https://www.w3schools.com/tags/tag_ol.asp */
 ol { 
   padding-left: 10px;
-  
 }
 
 /* https://www.w3schools.com/tags/tag_ul.asp */
-ul { padding-left: 10px; }
+ul {
+  padding-left: 10px;
+}
 
-/* targets TOC H1 header's entry and make's it bold  */
-/*
+/* Target's TOC H1 header entry's and make's it bold.
+
 Source - https://stackoverflow.com/a/37993820
 Posted by Stickers
 Retrieved 2026-08-24, License - CC BY-SA 3.0
