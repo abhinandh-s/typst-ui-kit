@@ -21,7 +21,7 @@
       #html.span(class: "label")[Table of Contents]
     ]
 ]
-#let floating-toc() = context {
+#let floating-toc = context {
   if target() == "html" {
     _island-wrap
     _overlay
