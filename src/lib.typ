@@ -16,3 +16,4 @@
 #import "components/floating-toc.typ": floating-toc
 #import "components/topbar.typ": topbar
 #import "components/navigation.typ": *
+#import "components/copyrights.typ" as copyright
