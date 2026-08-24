@@ -3,9 +3,9 @@
 #import "/src/components/topbar.typ" as bar
 #import "/src/toc.typ": floating-toc
 
-#let html-page(filename, page-title, body) = {
+#let webpage(filename, page-title, body) = {
   document(filename, title: page-title)[
-    #set heading(numbering: "1.", bookmarked: false)
+    #set heading(numbering: "1", bookmarked: false)
     #css.init
     #js.init
     #html.elem("nav", attrs: (id: "sidebar"))[
@@ -20,18 +20,14 @@
   ]
 }
 
-#html-page("index.html", [Home])[
+#webpage("index.html", [Home])[
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
   #include "features.typ"
   #link(<pdf>)[single PDF].
 ] <home>
 
-#html-page("topbar.html", [Top Bar])[
-  #title()
-  #include "topbar.typ"
-]
-#html-page("text.html", [Text Formating])[
+#webpage("text.html", [Text Formating])[
   #title()
   #include "text.typ"
 ]
