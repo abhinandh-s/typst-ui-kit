@@ -28,15 +28,19 @@ nav[role="doc-toc"] a {
 nav[role="doc-toc"],
 nav[role="doc-toc"] ol,
 nav[role="doc-toc"] li,
-nav[role="doc-toc"] a {
-  color: var(--text);
+nav[role="doc-toc"] a,
+nav[role="doc-toc"] a:link,
+nav[role="doc-toc"] a:visited {
+  color: var(--text) !important;
   text-decoration: none;
 }
 
 nav[role="doc-toc"] a:hover {
-  color: var(--accent);
+  color: var(--accent) !important;
+  text-decoration: none;
 }
- 
-.prefix span {
-   padding-right: 1em;
+
+span.prefix {
+  display: inline-block;
+  margin-right: 0.5em;
 }
