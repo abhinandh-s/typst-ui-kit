@@ -107,11 +107,8 @@ body.sidebar-toggled #sidebar {
 .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
 
 nav[role="doc-toc"] a {
-  display: block;
-  padding: 6px 10px 6px 6px;
   color: var(--subtext1);
   text-decoration: none;
-  border-radius: 7px;
   overflow-wrap: break-word;
 }
 
