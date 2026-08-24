@@ -1,5 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
+  const body = document.body;
+
+  document.addEventListener("click", (e) => {
+    const isOpen = body.classList.contains("sidebar-toggled");
+    if (!isOpen) return;
+
+    const clickedInsideSidebar = sidebar.contains(e.target);
+    const clickedToggleBtn = document.getElementById("sidebar-toggle").contains(e.target);
+
+    if (!clickedInsideSidebar && !clickedToggleBtn) {
+      body.classList.remove("sidebar-toggled");
+    }
+  });
+
+  sidebar.addEventListener("click", (e) => {
+    if (e.target.closest("a")) {
+      body.classList.remove("sidebar-toggled");
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("sidebar-toggle");
+  const body = document.body;
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("sidebar-toggled");
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.getElementById("sidebar");
   const tocNav = sidebar.querySelector('nav[role="doc-toc"]');
   if (!tocNav) return;
 
