@@ -37,7 +37,7 @@
   .island {
     pointer-events: auto;
     background: #000;
-    color: var(--fg);
+    color: #fff;
     border-radius: 999px;
     display: flex;
     align-items: center;
