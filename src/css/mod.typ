@@ -6,6 +6,7 @@
       + read("link.css")
       + read("code.css")
       + read("figure.css")
+      + read("blockquotes.css")
       + read("lists.css")
       + read("topbar.css")
       + read("floating-toc.css")
