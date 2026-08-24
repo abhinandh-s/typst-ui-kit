@@ -1,0 +1,1 @@
+Typst html elements mostly dont have classes, so use `:not([class])` to target those specifically.
