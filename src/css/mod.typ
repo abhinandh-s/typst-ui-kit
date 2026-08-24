@@ -10,6 +10,7 @@
       + read("topbar.css")
       + read("floating-toc.css")
       + read("theme-button.css")
+      + read("comment-box.css")
     )
   }
 }
