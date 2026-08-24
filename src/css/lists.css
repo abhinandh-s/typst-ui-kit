@@ -16,11 +16,14 @@ Retrieved 2026-08-24, License - CC BY-SA 3.0
 */
 
 nav[role="doc-toc"] ol {
+  color: var(--text);
   font-weight: bold;
 } 
 nav[role="doc-toc"] ol ol {
+  color: var(--text);
   font-weight: normal;
 }
 nav[role="doc-toc"] a {
+  color: var(--text);
   text-decoration: none;
 }
