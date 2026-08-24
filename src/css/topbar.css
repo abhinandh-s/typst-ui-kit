@@ -35,15 +35,17 @@
 }
 
 /* PDF icon */
-
+/*
 .top-bar a.icon-btn {
   color: var(--fg) !important;
 }
-/*
 .octicon {
   color: var(--fg);
 }
 */
+.top-bar a.icon-btn:hover {
+  color: var(--accent);
+}
 
 .material-symbols-outlined {
   font-size: 28px; 
