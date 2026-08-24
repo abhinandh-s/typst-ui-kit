@@ -5,7 +5,15 @@ ol { padding-left: 10px; }
 ul { padding-left: 10px; }
 
 /* targets TOC H1 header's entry and make's it bold  */
-/* Bolds only the 2nd top-level item */
-nav[role="doc-toc"] > ol > li:nth-child(1) {
+/*
+Source - https://stackoverflow.com/a/37993820
+Posted by Stickers
+Retrieved 2026-08-24, License - CC BY-SA 3.0
+*/
+
+nav[role="doc-toc"] ol {
   font-weight: bold;
+} 
+nav[role="doc-toc"] ol ol {
+  font-weight: normal;
 }
