@@ -11,6 +11,7 @@
   top: calc(100% + 8px);
   right: 0;
   min-width: 220px;
+  width: max-content;
   max-height: 380px;
   overflow-y: auto;
   margin: 0;
@@ -29,6 +30,7 @@
 
 /* List Items */
 .tb-option {
+  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 10px;
