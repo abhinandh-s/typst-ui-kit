@@ -16,19 +16,27 @@ Retrieved 2026-08-24, License - CC BY-SA 3.0
 */
 
 nav[role="doc-toc"] ol {
-  color: var(--text);
   font-weight: bold;
 } 
 nav[role="doc-toc"] ol ol {
-  color: var(--text);
   font-weight: normal;
 }
+nav[role="doc-toc"] a {
+  text-decoration: none;
+}
+
+nav[role="doc-toc"],
+nav[role="doc-toc"] ol,
+nav[role="doc-toc"] li,
 nav[role="doc-toc"] a {
   color: var(--text);
   text-decoration: none;
 }
 
-
+nav[role="doc-toc"] a:hover {
+  color: var(--accent);
+}
+ 
 .prefix span {
    padding-right: 1em;
 }
