@@ -1,9 +1,11 @@
+#import "../icons.typ" as icon
+
 #let prev(target) = link(target)[
-  #html.elem("div", attrs: (class: "nav-btn"))[#icon-prev]
+  #html.elem("div", attrs: (class: "nav-btn"))[ #icon.prev ]
 ]
 
 #let next(target) = link(target)[
-  #html.elem("div", attrs: (class: "nav-btn"))[#icon-next]
+  #html.elem("div", attrs: (class: "nav-btn"))[ #icon.next ]
 ]
 
 #let nav(p, n) = html.elem("div", attrs: (class: "bottom-nav"))[
