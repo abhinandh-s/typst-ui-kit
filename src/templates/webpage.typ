@@ -1,4 +1,8 @@
-#import "../lib.typ": css, js, floating-toc, topbar
+#import "../css/mod.typ" as css
+#import "../js/mod.typ" as js
+
+#import "../components/floating-toc.typ": floating-toc
+#import "../components/topbar.typ": topbar
 
 #let webpage(filename, page-title, body) = {
   document(filename, title: page-title)[
