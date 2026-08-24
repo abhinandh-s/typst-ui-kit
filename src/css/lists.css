@@ -1,5 +1,4 @@
-/* we had reseted margin-[left | right] to zero. Try to bring back the Default inside #content
-
+/* We had reseted margin-[left | right] to zero for all elements at beginning. Here we are bring back the Default margin of lists inside #content.
 
 Source - https://stackoverflow.com/a/72522106
 Posted by SNikhill
