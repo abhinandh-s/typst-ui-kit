@@ -45,11 +45,6 @@
   fill: currentColor;
 }
 
-/* Push top-bar right by the exact width of the sidebar (280px) */
-body.sidebar-toggled .top-bar {
-  transform: translateX(280px);
-}
-
 body.sidebar-toggled .top-bar-right {
   opacity: 0;
   pointer-events: none;
@@ -58,11 +53,6 @@ body.sidebar-toggled .top-bar-right {
 
 body.sidebar-toggled .top-bar-right a {
   color: var(--fg);
-}
-
-/* Push main content right so it doesn't get covered */
-body.sidebar-toggled #content {
-  transform: translateX(280px);
 }
 
 /* ---------------- Sidebar ---------------- */
@@ -151,4 +141,33 @@ nav[role="doc-toc"] .prefix {
   margin-right: 6px;
   font-variant-numeric: tabular-nums;
   font-size: 12px;
+}
+
+
+/*  button */
+
+.sidebar-header {
+  flex-shrink: 0;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--surface0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--subtext0);
+}
+
+.sidebar-close:hover {
+  color: var(--accent);
+  background: var(--surface0);
 }
