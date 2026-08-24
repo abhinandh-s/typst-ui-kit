@@ -11,11 +11,11 @@
   /* mouse over link */
   a:hover:not([class]) {
     color: var(--accent);
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   /* selected link */
   a:active:not([class]) {
     color: var(--accent);
-    text-decoration: underline;
+    text-decoration: none;
   }
