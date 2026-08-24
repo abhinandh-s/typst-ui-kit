@@ -3,10 +3,10 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: var(--content-max-width);
+  /* max-width: var(--content-max-width); */
 
   padding-top: 20px;
-  border-top: 1px solid var(--fg);
+  border-top: 1px solid var(--text);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -15,7 +15,7 @@
 .custom-comment-box h3 {
   margin: 0;
   font-size: 1.2em;
-  color: var(--fg);
+  color: var(--text);
 }
 
 .custom-comment-box textarea {
@@ -23,15 +23,15 @@
   width: 100%;
   padding: 10px;
   border: 1px solid var(--accent);
-  background-color: var(--secondary-bg);
-  color: var(--fg);
+  background-color: var(--base);
+  color: var(--text);
   border-radius: 5px;
   font-family: inherit;
   resize: vertical;
 }
 
 .custom-comment-box textarea:focus {
-  outline: 1px solid var(--theme-hover);
+  /* outline: 1px solid var(--accent); */
 }
 
 .custom-comment-box button {
