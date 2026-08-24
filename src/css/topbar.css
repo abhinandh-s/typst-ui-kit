@@ -171,7 +171,7 @@ nav[role="doc-toc"] a {
   padding: 6px 10px 6px 6px;
   font-size: 13.5px;
   line-height: 1.4;
-  color: var(--sidebar-fg);
+  color: var(--base);
   text-decoration: none;
   border-radius: 7px;
   overflow-wrap: break-word;
@@ -190,7 +190,7 @@ nav[role="doc-toc"] .prefix {
 
 /* Active page (JS adds this class to the matching <a>) */
 nav[role="doc-toc"] a.active {
-  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  background: color-mix(in srgb, var(--mantle) 16%, transparent);
   color: var(--fg);
   font-weight: 600;
 }
@@ -203,7 +203,7 @@ nav[role="doc-toc"] a.active::before {
   bottom: 4px;
   width: 3px;
   border-radius: 3px;
-  background: var(--accent);
+  background: var(--mantle);
 }
 
 /* Search filtering (JS adds .filtered-out to non-matching <li>) */
