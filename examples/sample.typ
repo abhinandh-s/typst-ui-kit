@@ -29,6 +29,7 @@
 #webpage("text.html", [Text Formating])[
   #title()
   #include "text.typ"
+  #nav(<home>, none)
 ] <text>
 
 #document("ag.pdf", title: [Full Book])[
