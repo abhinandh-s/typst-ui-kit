@@ -1,76 +1,85 @@
 #let _fw-js = html.script("
   document.addEventListener('DOMContentLoaded', () => {
-    const island = document.getElementById('island');
-    const overlay = document.getElementById('overlay');
-    const floatingWindow = document.getElementById('floatingWindow');
-    const fwClose = document.getElementById('fwClose');
-    const fwBody = document.getElementById('fwBody');
-    const fwProgressBar = document.getElementById('fwProgressBar');
+  const island = document.getElementById('island');
+  const overlay = document.getElementById('overlay');
+  const floatingWindow = document.getElementById('floatingWindow');
+  const fwClose = document.getElementById('fwClose');
+  const fwBody = document.getElementById('fwBody');
+  const fwProgressBar = document.getElementById('fwProgressBar');
 
-    // Scroll progress indicator for floating window content
-    function updateProgress() {
-      const scrollable = fwBody.scrollHeight - fwBody.clientHeight;
-      const pct = scrollable > 0 ? (fwBody.scrollTop / scrollable) * 100 : 0;
-      fwProgressBar.style.width = pct + '%';
-    }
+  // Start hidden on page load
+  island.classList.add('hidden');
 
-    fwBody.addEventListener('scroll', updateProgress, { passive: true });
+  // Scroll progress indicator for floating window content
+  function updateProgress() {
+    const scrollable = fwBody.scrollHeight - fwBody.clientHeight;
+    const pct = scrollable > 0 ? (fwBody.scrollTop / scrollable) * 100 : 0;
+    fwProgressBar.style.width = pct + '%';
+  }
 
-    // Scroll show/hide
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-    const threshold = 6; // ignore tiny scroll jitter
+  fwBody.addEventListener('scroll', updateProgress, { passive: true });
 
-    function onScroll() {
-      const currentY = window.scrollY;
-      const diff = currentY - lastScrollY;
+  // Scroll show/hide
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  const jitterThreshold = 6; // ignore tiny scroll jitter
+  const showThreshold = 120; // minimum scroll distance from top before showing
 
-      if (Math.abs(diff) > threshold) {
-        if (diff > 0 && currentY > 40) {
-          // scrolling down the page -> hide
-          island.classList.add('hidden');
-        } else {
-          // scrolling up -> show
-          island.classList.remove('hidden');
-        }
-        lastScrollY = currentY;
-      }
+  function onScroll() {
+    const currentY = window.scrollY;
+    const diff = currentY - lastScrollY;
+
+    // Hide if user is near the very top of the page
+    if (currentY < showThreshold) {
+      island.classList.add('hidden');
+      lastScrollY = currentY;
       ticking = false;
+      return;
     }
 
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(onScroll);
-        ticking = true;
+    // Handle scroll direction when past the threshold
+    if (Math.abs(diff) > jitterThreshold) {
+      if (diff > 0) {
+        // Scrolling down -> hide
+        island.classList.add('hidden');
+      } else {
+        // Scrolling up -> show
+        island.classList.remove('hidden');
       }
-    }, { passive: true });
-
-    // Open / close floating window
-    function openWindow() {
-      overlay.classList.add('show');
-      floatingWindow.classList.add('show');
-      fwBody.scrollTop = 0;
-      updateProgress();
+      lastScrollY = currentY;
     }
+    ticking = false;
+  }
 
-    function closeWindow() {
-      overlay.classList.remove('show');
-      floatingWindow.classList.remove('show');
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
     }
+  }, { passive: true });
 
-    island.addEventListener('click', openWindow);
-    fwClose.addEventListener('click', closeWindow);
-    overlay.addEventListener('click', closeWindow);
+  // Open / close floating window
+  function openWindow() {
+    overlay.classList.add('show');
+    floatingWindow.classList.add('show');
+    fwBody.scrollTop = 0;
+    updateProgress();
+  }
 
-    // Prevent clicks inside the window from bubbling to overlay
-    floatingWindow.addEventListener('click', (e) => e.stopPropagation());
-  });
+  function closeWindow() {
+    overlay.classList.remove('show');
+    floatingWindow.classList.remove('show');
+  }
+
+  island.addEventListener('click', openWindow);
+  fwClose.addEventListener('click', closeWindow);
+  overlay.addEventListener('click', closeWindow);
+
+  // Prevent clicks inside the window from bubbling to overlay
+  floatingWindow.addEventListener('click', (e) => e.stopPropagation());
+});
 ")
 
-
-#let _fw-css = html.style("
-
-")
 #let _fw-header = html.elem("div", attrs: (class: "fw-header"))[
       #html.h2()[Table of Contents]
       #html.button(class: "fw-close", id: "fwClose")[✕]
