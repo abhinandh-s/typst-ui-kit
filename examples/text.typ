@@ -1,12 +1,52 @@
 #import "/src/lib.typ": alerts
 
+
+= Text Formatting
+
+*For getting loud* - bold \
+_Mamma Mia!_ - italics \
+This is #highlight[important]. - highlight \
+#overline[A line over text.] - overline \
+#smallcaps[Hello] - small capital \
+This is #strike[not] relevant. - strikethrough \
+Revenue#sub[yearly] - subscript \
+1#super[st] try! - superscript \
+This is #underline[important]. - underline \
+
+= Code & Pre
+
+Adding `rbx` to `rcx` gives
+the desired result.
+
+What is ```rust fn main()``` in Rust
+would be ```c int main()``` in C.
+
+```rust
+fn main() {
+    println!("Hello World!");
+}
+```
+
+This has ``` `backticks` ``` in it
+(but the spaces are trimmed). And
+``` here``` the leading space is
+also trimmed.
+
+= Structure
+
+title - H1
+
+= Heading Level 01
+
 = Lorem Ipsum
 
 #quote(attribution: [Lorem])[Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...]
 
 #quote(block: true, attribution: [Ipsum])["There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."]
 
-*Lorem ipsum* dolor sit amet, consectetur adipiscing elit. Sed eu ante ut sapien dignissim dapibus quis ut sem. Nullam justo lectus, mattis non nisi sit amet, lacinia pulvinar tellus. Vestibulum pellentesque aliquam velit, a commodo felis feugiat a. Nunc lobortis nunc sem, non pellentesque nisl pharetra non. Fusce laoreet porta tortor id hendrerit. Sed neque velit, viverra a nunc et, convallis varius neque. In finibus tellus ut consectetur bibendum. Integer euismod leo nec euismod tristique. Fusce dignissim, felis et tempor fermentum, turpis metus feugiat leo, vel luctus magna neque ut sapien. Phasellus porttitor commodo ornare. Sed ultricies neque neque, et ornare libero aliquet quis. Pellentesque cursus sollicitudin metus at ultricies. Suspendisse vel imperdiet lorem, vitae convallis leo.
+
+
+
 
 Donec _posuere mauris auctor quam malesuada_ faucibus. Nulla sollicitudin mauris quam, sed rhoncus nisi posuere in. Sed fringilla placerat metus sit amet accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean placerat finibus viverra. Donec lacinia libero ut diam ultrices eleifend. Curabitur tincidunt tellus eu sem mattis, eu dignissim enim faucibus. Vestibulum molestie, arcu in consequat auctor, lacus sapien tempus neque, sit amet ornare enim ante ac diam. Integer ligula mauris, imperdiet in ex eu, suscipit maximus lectus.#footnote[Vestibulum molestie, arcu in consequat auctor, lacus sapien tempus neque, sit amet ornare enim ante ac diam.]
 
