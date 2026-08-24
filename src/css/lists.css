@@ -1,5 +1,8 @@
 /* https://www.w3schools.com/tags/tag_ol.asp */
-ol { padding-left: 10px; }
+ol { 
+  padding-left: 10px;
+  
+}
 
 /* https://www.w3schools.com/tags/tag_ul.asp */
 ul { padding-left: 10px; }
@@ -16,4 +19,7 @@ nav[role="doc-toc"] ol {
 } 
 nav[role="doc-toc"] ol ol {
   font-weight: normal;
+}
+nav[role="doc-toc"] a {
+  text-decoration: none;
 }
