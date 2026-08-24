@@ -1,3 +1,5 @@
+#import "../lib.typ": *
+
 #let webpage(filename, page-title, body) = {
   document(filename, title: page-title)[
     #set heading(numbering: "1.", bookmarked: false)
