@@ -154,3 +154,13 @@ Function call.
 
 
 This is #highlight[important].
+
+#let today = datetime.today()
+
+// Default ISO format (YYYY-MM-DD)
+Today's date: #today.display()
+
+// Custom formatted
+Today's date: #today.display("[month repr:long] [day], [year]")
+// Output: August 24, 2026
+
