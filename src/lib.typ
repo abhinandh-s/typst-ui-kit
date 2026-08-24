@@ -17,3 +17,5 @@
 #import "components/topbar.typ": topbar
 #import "components/navigation.typ": *
 #import "components/copyrights.typ" as copyright
+
+#import " templates/webpage.typ": webpage
