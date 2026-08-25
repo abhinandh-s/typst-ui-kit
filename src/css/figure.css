@@ -6,7 +6,7 @@ img, figure img {
 img {
   background-color: var(--base);
   padding: 6px 6px 6px 6px; /* t r b l */
-  border-radius: 2px;
+  border-radius: 4px;
 } 
 
 figcaption {
