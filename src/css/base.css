@@ -5,11 +5,12 @@
   box-sizing: border-box;
 }
 
-/* Remove default margin on everything, then re-add sane ones below */
+/* Remove default margin and padding [left & right] on everything, then re-add sane ones below */
 * {
-  margin-right: 0;
-  margin-left: 0;
+  margin-inline: 0;
+  padding-inline: 0;
 }
+
 
 /*
 body {
