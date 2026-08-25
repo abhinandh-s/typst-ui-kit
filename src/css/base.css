@@ -74,3 +74,56 @@ main#content {
   max-width: 600px;
   margin: 0 auto;
 }
+
+blockquote:not([class]) {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+blockquote:not([class]) + p {
+  text-align: right !important; /* cuz we set `#content p` to justify */
+  font-style: italic;
+  margin-top: -0.5em;
+  margin-right: 10%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 5px;
+}
+
+table, th, td {
+  border: 1px solid var(--fg);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;      /* row-gap column-gap */
+  margin: 0;
+}
+
+dt { font-weight: 600; }
+
+dd { margin: 0; }
+
+hr {
+  background: var(--fg);
+  border: 0;
+  height: 1px;
+}
+
+main#content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+main#content p {
+  /* text-align: justify; it sucks */
+}
