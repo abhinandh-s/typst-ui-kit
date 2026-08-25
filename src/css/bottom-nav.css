@@ -1,0 +1,32 @@
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--surface1, #ddd); /* Subtle divider line */
+}
+
+/* Typst wraps the buttons in an <a> tag. We need to remove default link styling */
+.bottom-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background-color: var(--surface1, #f0f0f0);
+  border-radius: 8px;
+  color: var(--text, #333);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-btn:hover {
+  /* Slightly darker background on hover */
+  background-color: var(--accent); 
+  transform: scale(1.05); /* Slight pop effect */
+}
