@@ -3,6 +3,7 @@
     html.style(
       read("variables.css")
       + read("base.css")
+      + read("alerts.css")
       + read("topbar.css")
       + read("theme-button.css")
       + read("comment-box.css")
