@@ -46,7 +46,7 @@ nav[role="doc-toc"] a {
 }
 
 ol ul {
-  padding-left: 2em; /* 2 fonts width */
+  padding-left: 20px; /* 2em 2 fonts width */
   list-style-position: inside;
 }
 
