@@ -23,7 +23,7 @@
   width: 100%;
   padding: 10px;
   /* border: 1px solid var(--accent); */
-  background-color: var(--base);
+  background-color: var(--mantle);
   color: var(--text);
   border-radius: 5px;
   font-family: inherit;
