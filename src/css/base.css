@@ -31,8 +31,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-
-math {
+math[display="block"] {
+  text-align: center;
   background-color: var(--mantle);
   padding: 1rem 1em 1em 1em; /* t r b l */
   width: 100%;
