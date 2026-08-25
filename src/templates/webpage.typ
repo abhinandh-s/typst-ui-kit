@@ -6,6 +6,10 @@
 
 #let webpage(filename, page-title, pdf-path: "book.pdf", body) = {
   document(filename, title: page-title)[
+    #html.head([
+      #html.link(rel: "icon", href: "images/favicon.svg", type: "image/svg+xml")
+      #html.link(rel: "icon", href: "images/favicon.ico", type: "image/x-icon")
+    ])
     #set heading(numbering: "1.", bookmarked: false)
     #css.init
     #js.init
