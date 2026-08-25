@@ -47,6 +47,7 @@ nav[role="doc-toc"] a {
 
 ol ul {
   padding-left: 2em; /* 2 fonts width */
+  list-style-position: inside;
 }
 
 /* Target's TOC H1 header entry's and make's it bold.
