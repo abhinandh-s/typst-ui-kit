@@ -1,5 +1,6 @@
   /* ---------- Page content (just to allow scrolling) ---------- */
-  .content {
+  /*
+.content {
     padding: 24px;
     max-width: 640px;
     margin: 0 auto;
@@ -21,6 +22,7 @@
     color: #666;
     font-size: 14px;
   }
+*/
 
   /* ---------- The Pill ---------- */
   .island-wrap {
@@ -36,8 +38,8 @@
 
   .island {
     pointer-events: auto;
-    background: #000;
-    color: #fff;
+    background: var(--base);
+    color: var(--text);
     border-radius: 999px;
     display: flex;
     align-items: center;
@@ -64,7 +66,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #34c759;
+    background: var(--accent);
     flex: none;
   }
 
@@ -97,8 +99,8 @@
     left: 50%;
     width: min(90vw, 380px);
     max-height: 50vh; /* half screen on mobile */
-    color: var(--fg);
-    background: var(--sidebar-bg);
+    color: var(--text);
+    background: var(--base);
     border-radius: 22px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     z-index: 160;
@@ -124,7 +126,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid var(--text);
     flex: none;
   }
 
@@ -138,9 +140,9 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.08);
+    background: var(--crust);
     border: none;
-    color: var(--fg);
+    color: var(--text);
     font-size: 15px;
     cursor: pointer;
     display: flex;
@@ -169,7 +171,7 @@
     overflow-y: auto;
     font-size: 14px;
     line-height: 1.6;
-    color: var(--fg);
+    color: var(--text);
 
     /* Firefox scrollbar */
     scrollbar-width: thin;
@@ -203,8 +205,8 @@
     top: 14px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--sidebar-bg);
-    color: var(--fg);
+    background: var(--base);
+    color: var(--text);
     font-size: 13px;
     padding: 10px 16px;
     border-radius: 999px;
