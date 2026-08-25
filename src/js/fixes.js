@@ -14,3 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.appendChild(nav);
     }
 });
+
+// inject favicon into `<head>`
+const addFavicon = (href, type) => {
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.href = href;
+  if (type) link.type = type;
+  document.head.appendChild(link);
+};
+
+addFavicon('images/favicon.svg', 'image/svg+xml');
+addFavicon('images/favicon.ico', 'image/x-icon');
