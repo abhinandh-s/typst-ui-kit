@@ -3,6 +3,7 @@
     html.style(
       read("variables.css")
       + read("base.css")
+      + read("topbar.css")
       + read("theme-button.css")
       + read("comment-box.css")
       /*
@@ -12,7 +13,6 @@
       + read("figure.css")
       + read("blockquotes.css")
       + read("lists.css")
-      + read("topbar.css")
       + read("floating-toc.css")
       */
     )
