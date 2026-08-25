@@ -55,7 +55,7 @@ jobs:
         run: |
           ls
           ls examples/dist/
-          ls fonts/
+          ls examples/dist/fonts/
 
       - name: Set up Deno
         uses: denoland/setup-deno@v2
