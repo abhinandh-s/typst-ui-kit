@@ -128,3 +128,10 @@ main#content table {
 main#content p {
   /* text-align: justify; it sucks */
 }
+
+
+
+/* [custom checkbox] */
+li input {
+  list-style-type: none;
+}
