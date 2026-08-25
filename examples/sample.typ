@@ -2,7 +2,7 @@
 
 #webpage("index.html", [Home])[
   #title()
-  #outline(target: heading.where(bookmarked: false, outlined: true))
+  #outline(target: heading.where(bookmarked: false, outlined: true), depth: 2)
   #include "features.typ"
   #link(<pdf>)[single PDF].
 
