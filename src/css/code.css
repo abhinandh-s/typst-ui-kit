@@ -12,6 +12,7 @@ pre {
 }
 
 code {
+  font-size: 95%;
   font-family: "Fira Code", monospace;
   font-variant-ligatures: contextual;
   color: var(--accent);
