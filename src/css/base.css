@@ -28,3 +28,28 @@ body {
 p, h1, h2, h3, h4, h5 ,h6 {
    overflow-wrap: break-word;
 }
+
+a {
+  text-decoration: none;
+}
+
+ol ul {
+  padding-left: 7px;
+}
+
+/* Target's TOC H1 header entry's and make's it bold.
+
+Source - https://stackoverflow.com/a/37993820
+Posted by Stickers
+Retrieved 2026-08-24, License - CC BY-SA 3.0
+*/
+
+nav[role="doc-toc"] ol {
+  font-weight: bold;
+}
+
+/*
+nav[role="doc-toc"] ol ol {
+  font-weight: normal;
+}
+*/
