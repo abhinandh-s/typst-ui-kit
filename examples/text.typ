@@ -22,8 +22,9 @@ What is ```rust fn main()``` in Rust
 would be ```c int main()``` in C.
 
 ```rust
-fn main() {
+fn hello() -> Result<(), Error> {
     println!("Hello World!");
+    Ok(())
 }
 ```
 
