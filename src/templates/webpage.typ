@@ -10,7 +10,7 @@
     #css.init
     #js.init
     #html.elem("nav", attrs: (id: "sidebar"))[
-      #outline(target: heading.where(bookmarked: false, outlined: true))
+      #outline(target: heading.where(bookmarked: false, outlined: true), depth: 2)
     ]
     #floating-toc
     #html.elem("main", attrs: (id: "content"))[
