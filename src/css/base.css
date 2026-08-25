@@ -1,0 +1,29 @@
+/* Box sizing everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin on everything, then re-add sane ones below */
+* {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*
+body {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--fg);
+  background-color: var(--bg);
+  padding: 0 20px 20px 20px;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+*/
+
+p, h1, h2, h3, h4, h5 ,h6 {
+   overflow-wrap: break-word;
+}
