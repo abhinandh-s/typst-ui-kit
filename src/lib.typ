@@ -19,3 +19,8 @@
 #import "components/copyrights.typ" as copyright
 
 #import "templates/webpage.typ": webpage
+
+
+
+
+#asset("fonts/FiraCode-Regular.woff2", read("../fonts/FiraCode-Regular.woff2"))
