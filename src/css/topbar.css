@@ -79,12 +79,6 @@ body.sidebar-toggled #sidebar {
   transform: translateX(0);
 }
 
-.sidebar-header {
-  flex-shrink: 0;
-  padding: 18px 20px;
-  border-bottom: 1px solid var(--surface0);
-}
-
 // "TABLE OF CONTENTS"
 .sidebar-header h2 {
   margin: 0;
