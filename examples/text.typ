@@ -212,7 +212,7 @@ Today's date: #today.display("[month repr:long] [day], [year]")
 
 = Maths
 
-Share of profit - #underline[₹98.63]
+Share of profit = #underline[₹98.63]
 
 $ "₹1000" times frac("₹10000", "₹50000") times frac("180 days", "365 days") = "₹98.63" $
 
