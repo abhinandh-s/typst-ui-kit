@@ -1,0 +1,84 @@
+
+.markdown-alert {
+  border-left: 0.25em solid;
+  margin-bottom: 16px;
+  padding: 0.5rem 1em;
+  border-radius: 0.5em;
+}
+
+.markdown-alert-title {
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  margin-bottom: 8px;
+  /* font-size: 14px; */
+}
+
+.markdown-alert-title svg {
+  margin-right: 8px;
+  flex-shrink: 0; /* SVG icon won't get squeezed */
+}
+
+.markdown-alert-note {
+  border-left-color: #1e66f5;
+  background-color: #1e66f51a;
+}
+
+.markdown-alert-note .markdown-alert-title {
+  color: #1e66f5;
+}
+
+.markdown-alert-warning {
+  border-left-color: #df8e1d;
+  background-color: #df8e1d1a;
+}
+
+.markdown-alert-warning .markdown-alert-title {
+  color: #df8e1d;
+}
+
+.markdown-alert-important {
+  border-left-color: #8839ef;
+  background-color: #8839ef1a;
+}
+
+.markdown-alert-important .markdown-alert-title {
+  color: #8839ef;
+}
+
+.markdown-alert-tip {
+  border-left-color: #40a02b;
+  background-color: #40a02b1a;
+}
+
+.markdown-alert-tip .markdown-alert-title {
+  color: #40a02b;
+}
+
+.markdown-alert-caution {
+  border-left-color: #d20f39;
+  background-color: #d20f391a;
+}
+
+.markdown-alert-caution .markdown-alert-title {
+  color: #d20f39;
+}
+
+.markdown-alert-quote {
+  border-left-color: #656d76;
+  background-color: #656d761a;
+}
+
+.markdown-alert-quote .markdown-alert-title {
+  color: #656d76;
+}
+
+.markdown-alert-decree {
+  border-left-color: #dd7878;
+  background-color: #dd78781a;
+}
+
+.markdown-alert-decree .markdown-alert-title {
+  color: #dd7878;
+}
