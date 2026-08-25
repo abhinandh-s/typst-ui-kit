@@ -12,3 +12,11 @@ pre {
     word-wrap: break-word;
     max-width: 100%;
 }
+
+code {
+  font-family: monospace;
+  color: var(--accent);
+  background-color: var(--base);
+  padding: 2px;
+  border-radius: 2px;
+}
