@@ -22,7 +22,7 @@
   --surface1: #45475a;
   --surface0: #313244;
 
-  --text: #FFFFFF;
+  --text: #DEDEDE;
   --subtext1: #D4D4D4;
   --subtext0: #C2C2C2;
   --base: #1B1B1B;
@@ -57,7 +57,7 @@
   --text: #0E0E0E;
   --subtext1: #131313;
   --subtext0: #1B1B1B;
-  --base: #979797;
-  --mantle: #BCBCBC;
+  --base: #BEBEBE;
+  --mantle: #D2D2D2;
   --crust: #DEDEDE;
 }
