@@ -8,11 +8,11 @@
       + read("code.css")
       + read("figure.css")
       + read("blockquotes.css")
-      + read("lists.css") */
+      + read("lists.css")
       + read("topbar.css")
       + read("floating-toc.css")
       + read("theme-button.css")
-      + read("comment-box.css")
+      + read("comment-box.css") */
     )
   }
 }
