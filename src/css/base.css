@@ -29,12 +29,26 @@ p, h1, h2, h3, h4, h5 ,h6 {
    overflow-wrap: break-word;
 }
 
-a {
+a:not([class]) {
+  color: var(--accent);
   text-decoration: none;
 }
 
+a:visited:not([class]) {
+  color: var(--flamingo);
+}
+
+a:hover:not([class]) {
+  text-decoration: underline;
+}
+
+a:active:not([class]) {
+  font-weight: bold
+}
+
+
 ol ul {
-  padding-left: 7px;
+  padding-left: 2em; /* 2 fonts width */
 }
 
 /* Target's TOC H1 header entry's and make's it bold.
@@ -48,8 +62,7 @@ nav[role="doc-toc"] ol {
   font-weight: bold;
 }
 
-/*
+/* resets nested lists children's to normal weight */
 nav[role="doc-toc"] ol ol {
   font-weight: normal;
 }
-*/
