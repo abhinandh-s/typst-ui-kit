@@ -4,8 +4,8 @@
   justify-content: space-between;
   align-items: center;
   transition: transform 0.3s ease;
-  background: var(--bg);
-  border-bottom: 0.5px solid var(--fg);
+  background: var(--crust);
+  border-bottom: 0.5px solid var(--text);
 }
 
 .top-bar-right {
@@ -24,7 +24,7 @@
   background: transparent;
   border: none;
   border-radius: 8px;
-  color: var(--fg, #333);
+  color: var(--text);
   text-decoration: none;
   transition: background-color 0.2s, opacity 0.3s ease;
 }
@@ -52,7 +52,7 @@ body.sidebar-toggled .top-bar-right {
 }
 
 body.sidebar-toggled .top-bar-right a {
-  color: var(--fg);
+  color: var(--text);
 }
 
 /* ---------------- Sidebar ---------------- */
@@ -63,8 +63,8 @@ body.sidebar-toggled .top-bar-right a {
   position: fixed;
   left: 0;
   top: 0;
-  background: var(--sidebar-bg);
-  border-right: 1px solid var(--fg);
+  background: var(--base);
+  border-right: 1px solid var(--text);
   z-index: 999;
 
   display: flex;
