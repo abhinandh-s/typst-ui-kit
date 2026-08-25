@@ -46,6 +46,9 @@ a:active:not([class]) {
   font-weight: bold
 }
 
+nav[role="doc-toc"] a {
+  color: var(--subtext1);
+}
 
 ol ul {
   padding-left: 2em; /* 2 fonts width */
