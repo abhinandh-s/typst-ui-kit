@@ -11,7 +11,7 @@ img:not(figure img)  {
 
 figcaption {
   font-style: italic;
-  padding: 2px;
+  padding: tpx 2px 0px 2px;
   text-align: center;
 }
 
