@@ -14,6 +14,8 @@
 body {
   /* top right lelf bottom */
   padding: 0 20px 20px 20px;
+  width: 100%;
+  max-width: 600px;
   color: var(--text);
   background-color: var(--crust);
   overflow-x: hidden;
@@ -71,8 +73,6 @@ nav[role="doc-toc"] ol ol {
 }
 
 main#content {
-  width: 100%;
-  max-width: 600px;
   margin: 0 auto;
 }
 
