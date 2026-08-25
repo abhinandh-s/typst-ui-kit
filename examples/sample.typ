@@ -32,3 +32,6 @@ The sum of $4$ and $7$ is:
 - [ ] Unchecked item
 - [x] Checked item
 ] <pdf>
+
+
+#asset("fonts/FiraCode-Regular.woff2", read("../fonts/FiraCode-Regular.woff2", encoding: none))
