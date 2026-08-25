@@ -1,14 +1,13 @@
-img {
+img, figure img {
   max-width: 100%;
   height: auto;
-  border: 2px solid var(--mantle);
-  border-radius: 4px;
 }
 
-figure img {
-  max-width: 100%;
-  height: auto;
-}
+img {
+  background-color: var(--mantle);
+  padding: 3px 3px 3px 3px; /* t r b l */
+  border-radius: 2px;
+} 
 
 figcaption {
   font-style: italic;
