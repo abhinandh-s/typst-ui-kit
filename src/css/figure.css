@@ -1,13 +1,13 @@
 img {
   max-width: 100%;
-  height: auto !important;
+  height: auto;
   border: 2px solid var(--mantle);
   border-radius: 4px;
 }
 
 figure img {
   max-width: 100%;
-  height: auto !important;
+  height: auto;
 }
 
 figcaption {
