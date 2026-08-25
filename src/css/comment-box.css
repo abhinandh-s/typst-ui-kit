@@ -39,8 +39,8 @@
 .custom-comment-box button {
   align-self: flex-start;
   padding: 8px 16px;
-  background-color: #E05060;
-  color: #F8E0E0;
+  background-color: var(--base);
+  color: var(--text);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -49,7 +49,7 @@
 }
 
 .custom-comment-box button:hover {
-  opacity: 0.8;
+  background-color: #E05060;
 }
 
 .custom-comment-box button:disabled {
