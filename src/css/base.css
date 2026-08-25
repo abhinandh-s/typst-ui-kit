@@ -35,7 +35,7 @@ body {
 math {
   background-color: var(--mantle);
   padding: 1rem 1em 1em 1em; /* t r b l */
-  width: 100%
+  width: 100%;
   border-radius: 0.5em;
 }
 
