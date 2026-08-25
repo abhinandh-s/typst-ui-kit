@@ -3,7 +3,7 @@ img, figure img {
   height: auto;
 }
 
-img {
+img:not(figure img)  {
   background-color: var(--base);
   padding: 10px 10px 10px 10px; /* t r b l */
   border-radius: 5px;
