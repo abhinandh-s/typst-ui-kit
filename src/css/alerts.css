@@ -22,7 +22,8 @@
 
 .markdown-alert-note {
   border-left-color: #1e66f5;
-  background-color: #1e66f51a;
+  background-color: var(--mantle);
+ /* background-color: #1e66f51a; */
 }
 
 .markdown-alert-note .markdown-alert-title {
@@ -31,7 +32,8 @@
 
 .markdown-alert-warning {
   border-left-color: #df8e1d;
-  background-color: #df8e1d1a;
+  background-color: var(--mantle);
+ /* background-color: #df8e1d1a; */
 }
 
 .markdown-alert-warning .markdown-alert-title {
