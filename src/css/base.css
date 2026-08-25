@@ -45,7 +45,7 @@ nav[role="doc-toc"] a {
   color: var(--subtext1);
 }
 
-ol ul {
+ol, ul {
   padding-left: 20px; /* 2em 2 fonts width */
   list-style-position: inside;
 }
