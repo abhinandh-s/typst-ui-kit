@@ -6,7 +6,7 @@
       #html.elem("div", attrs: (class: "fw-progress-bar", id: "fwProgressBar"))
 ]
 #let _fw-body = html.elem("div", attrs: (class: "fw-body", id: "fwBody"))[
-        #outline(target: heading.where(bookmarked: false, outlined: true))
+        #outline(target: heading.where(bookmarked: false, outlined: true), depth: 2)
 ]
 #let _floating-window = html.elem("div", attrs: (class: "floating-window", id: "floatingWindow"))[
   #_fw-header
