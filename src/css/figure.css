@@ -5,12 +5,18 @@ img, figure img {
 
 img {
   background-color: var(--base);
-  padding: 6px 6px 6px 6px; /* t r b l */
-  border-radius: 4px;
+  padding: 10px 10px 10px 10px; /* t r b l */
+  border-radius: 5px;
 } 
 
 figcaption {
   font-style: italic;
   padding: 2px;
   text-align: center;
+}
+
+.figure-container {
+  background-color: var(--base);
+  padding: 10px 10px 10px 10px; /* t r b l */
+  border-radius: 5px;
 }
