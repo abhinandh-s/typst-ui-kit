@@ -71,4 +71,5 @@ nav[role="doc-toc"] ol ol {
 main#content {
   width: 100%;
   max-width: 600px;
+  margin: 0 auto;
 }
