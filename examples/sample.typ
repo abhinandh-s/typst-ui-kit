@@ -34,4 +34,4 @@ The sum of $4$ and $7$ is:
 ] <pdf>
 
 
-#asset("fonts/FiraCode-Regular.woff2", read("../fonts/FiraCode-Regular.woff2", encoding: none))
+#font.export("FiraCode-Regular")
