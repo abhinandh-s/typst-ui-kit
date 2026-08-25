@@ -2,7 +2,8 @@
   if target() == "html" {
     html.style(
       read("variables.css")
-      + read("body.css")
+      + read("base.css")
+   /* + read("body.css")
       + read("link.css")
       + read("code.css")
       + read("figure.css")
@@ -11,7 +12,7 @@
       + read("topbar.css")
       + read("floating-toc.css")
       + read("theme-button.css")
-      + read("comment-box.css")
+      + read("comment-box.css") */
     )
   }
 }
