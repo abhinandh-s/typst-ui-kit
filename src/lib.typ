@@ -12,6 +12,7 @@
 #import "colors.typ": *
 #import "css/mod.typ" as css
 #import "js/mod.typ" as js
+#import "fonts.typ" as font
 
 #import "components/floating-toc.typ": floating-toc
 #import "components/topbar.typ": topbar
