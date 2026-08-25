@@ -1,14 +1,6 @@
 :root, :root[data-theme="dark"] { 
   color-scheme: dark;
   --accent: #e05060;
-  --text-hl: var(--yellow);
-  --bg: var(--crust);
-  --fg: var(--text);
-  --secondary-bg: var(--base);
-  --sidebar-bg: var(--base);
-  --sidebar-fg: var(--subtext1);
-
-
   --rosewater: #f5e0dc;
   --flamingo: #f2cdcd;
   --pink: #f5c2e7;
@@ -41,14 +33,6 @@
 :root[data-theme="light"] {
   color-scheme: dark;
   --accent: #e05060;
-  --text-hl: var(--yellow);
-  --bg: var(--crust);
-  --fg: var(--text);
-  --secondary-bg: var(--base);
-  --sidebar-bg: var(--base);
-  --sidebar-fg: var(--subtext1);
-
-
   --rosewater: #dc8a78;
   --flamingo: #dd7878;
   --pink: #ea76cb;
