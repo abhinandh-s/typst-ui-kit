@@ -1,0 +1,9 @@
+/* Line Break in List
+
+Some of the text in list items are in <p> tag, which is a block-level element, causing linebreak. 
+
+Since we ain't gonna remove every single inner <p> tags from list items, this is the only fix */
+
+li > p:first-child {
+  display: inline;
+}
