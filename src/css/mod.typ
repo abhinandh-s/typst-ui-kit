@@ -10,12 +10,7 @@
       + read("theme-button.css")
       + read("comment-box.css")
       + read("floating-toc.css")
-      /*
-      + read("body.css")
-      + read("link.css")
-      + read("blockquotes.css")
-      + read("lists.css")
-      */
+      + read("bottom-nav.css")
     )
   }
 }
