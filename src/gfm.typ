@@ -17,14 +17,8 @@
 #let github-alert(kind, title, accent-color, bg-color, body) = context {
   let icon-data = get_icon_data(kind)
   if target() == "html" {
-    html.blockquote(
-      class: "markdown-alert markdown-alert-" + kind,
-      dir: auto,
-    )[
-      #html.p(
-        class: "markdown-alert-title",
-        dir: auto
-      )[
+    html.blockquote(class: "markdown-alert markdown-alert-" + kind, dir: auto,)[
+      #html.p(class: "markdown-alert-title", dir: auto)[
        #html.elem(
          "svg",
          attrs: (
@@ -32,12 +26,11 @@
            width: "16",
            height: "16",
            class: "octicon",
-           fill: "currentColor",
-           style: "margin-right: 8px;"
+           fill: "currentColor"
          ),
          html.elem(
            "path", 
-           attrs: (d: icon-data.path) // Uses dynamic path
+           attrs: (d: icon-data.path)
          )
        )
        #title
