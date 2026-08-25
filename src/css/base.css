@@ -34,7 +34,8 @@ body {
 math[display="block"] {
   text-align: center;
   background-color: var(--mantle);
-  padding: 1rem 1em 1em 1em; /* t r b l */
+  width: 100%;
+  padding: 1em 1em 1em 1em; /* t r b l */
   border-radius: 0.5em;
   margin: 1em 0;
   overflow-x: auto;
