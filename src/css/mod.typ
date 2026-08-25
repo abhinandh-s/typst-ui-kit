@@ -3,6 +3,7 @@
     html.style(
       read("variables.css")
       + read("base.css")
+      + read("fixes.css")
       + read("code.css")
       + read("figure.css")
       + read("alerts.css")
