@@ -14,3 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.appendChild(nav);
     }
   });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const figures = document.querySelectorAll("figure");
+  figures.forEach((figure) => {
+    const hasCaption = figure.querySelector("figcaption");
+    if (hasCaption) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "figure-container";
+      figure.parentNode.insertBefore(wrapper, figure);
+      wrapper.appendChild(figure);
+    }
+  });
+});
