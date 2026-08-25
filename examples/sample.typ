@@ -35,3 +35,6 @@ The sum of $4$ and $7$ is:
 
 
 #font.export("FiraCode-Regular")
+
+#asset("images/favicon.ico", read("/assets/images/favicon.ico", encoding: none))
+#asset("images/favicon.svg", read("/assets/images/favicon.svg"))
