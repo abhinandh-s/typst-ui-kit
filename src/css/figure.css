@@ -15,7 +15,9 @@ figcaption {
   text-align: center;
 }
 
-.figure-container {
+/* .figure-container */
+
+figure {
   background-color: var(--base);
   padding: 10px 10px 10px 10px; /* t r b l */
   border-radius: 5px;
