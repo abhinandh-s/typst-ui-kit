@@ -22,17 +22,19 @@
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--accent);
-  background-color: var(--mantle);
+  /* border: 1px solid var(--accent); */
+  background-color: var(--base);
   color: var(--text);
   border-radius: 5px;
   font-family: inherit;
   resize: vertical;
 }
 
+/*
 .custom-comment-box textarea:focus {
-  /* outline: 1px solid var(--accent); */
+  outline: 1px solid var(--accent);
 }
+*/
 
 .custom-comment-box button {
   align-self: flex-start;
@@ -58,11 +60,4 @@
 .comment-status {
   margin-left: 10px;
   font-size: 0.9em;
-}
-
-
-@media print {
-    .custom-comment-box {
-        display: none !important;
-    }
 }
