@@ -23,4 +23,4 @@
 
 
 
-#asset("fonts/FiraCode-Regular.woff2", read("../fonts/FiraCode-Regular.woff2"))
+#asset("fonts/FiraCode-Regular.woff2", read("../fonts/FiraCode-Regular.woff2", encoding: none))
