@@ -14,6 +14,10 @@
 body {
   /* top right lelf bottom */
   padding: 0 20px 20px 20px;
+  color: var(--crust);
+  background-color: var(--text);
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 p, h1, h2, h3, h4, h5 ,h6 {
@@ -67,9 +71,4 @@ nav[role="doc-toc"] ol ol {
 main#content {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
-  color: var(--crust);
-  background-color: var(--text);
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
