@@ -37,6 +37,8 @@ math[display="block"] {
   padding: 1rem 1em 1em 1em; /* t r b l */
   width: 100%;
   border-radius: 0.5em;
+  margin: 1em 0;
+  overflow-x: auto;
 }
 
 p, h1, h2, h3, h4, h5 ,h6 {
