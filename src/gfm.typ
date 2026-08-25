@@ -16,22 +16,19 @@
 
 #let github-alert(kind, title, accent-color, bg-color, body) = context {
   let icon-data = get_icon_data(kind)
-
   if target() == "html" {
     html.blockquote(
       class: "markdown-alert markdown-alert-" + kind,
       dir: auto,
-      style: "border-left: 0.25em solid var(--" + kind + "-accent, " + accent-color.to-hex() + "); margin-bottom: 16px; padding: 0.5rem 1em; background-color: var(--" + kind + "-bg, " + bg-color.to-hex() + ");"
     )[
       #html.p(
         class: "markdown-alert-title",
-        style: "font-family: monospace; color: var(--" + kind + "-accent, " + accent-color.to-hex() + "); display: flex; align-items: center; font-weight: 800; margin-bottom: 8px;",
         dir: auto
       )[
        #html.elem(
          "svg",
          attrs: (
-           viewBox: icon-data.viewbox, // Uses dynamic viewbox
+           viewBox: icon-data.viewbox,
            width: "16",
            height: "16",
            class: "octicon",
