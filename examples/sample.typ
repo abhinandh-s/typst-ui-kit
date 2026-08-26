@@ -1,6 +1,6 @@
 #import "/src/lib.typ": *
 
-#webpage("index.html", [Home])[
+#webpage("index.html", [Home], pdf-path: "ag.pdf")[
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true), depth: 2)
   #include "features.typ"
