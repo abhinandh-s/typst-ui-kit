@@ -12,8 +12,14 @@
 #webpage("text.html", [Text Formating])[
   #title()
   #include "text.typ"
-  #nav(<home>, none)
+  #nav(<home>, <extras>)
 ] <text>
+
+#webpage("extras.html", [Extras], pdf-path: "ag.pdf")[
+  #title()
+  #include "topbar.typ"
+  #nav(<text>, none)
+] <extras>
 
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
