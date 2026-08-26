@@ -131,9 +131,9 @@ hr {
 }
 
 main#content table {
-  display: block;
+ /* display: block; */
   overflow-x: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 main#content p {
