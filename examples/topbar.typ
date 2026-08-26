@@ -1,3 +1,8 @@
+// how do we do this. Is it possible in the first place?
+// #set rating-total: 10
+// #set rating-default: 7
+// #set rating-icon: star
+
 
 #let octicon(path, hw: "24", fill: "currentColor") = context {
   if target() == "html" {
@@ -47,32 +52,21 @@
   let icon-data = get_icon_data(shape) 
   let empty-icon = icon-data.icon
   let filled-icon = icon-data.fill
-     // or should we do it with a table? :)
       {
       for i in range(0, rating) {
-          [
-          #box(baseline: 0.25em)[
-            #filled-icon()
-          ]
+        [
+          #box(baseline: 0.25em)[#filled-icon()]
         ]
       }
       for i in range(0, total - rating) {
-          [
-          #box(baseline: 0.25em)[
-            #empty-icon()
-          ]
+        [
+          #box(baseline: 0.25em)[#empty-icon()]
         ]
       }
     }
   
 
 }
-
-// #set rating-total: 10
-// #set rating-default: 7
-// #set rating-icon: star
-
-
 
 
 #table(
