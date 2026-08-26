@@ -1,9 +1,3 @@
-// how do we do this. Is it possible in the first place?
-// #set rating-total: 10
-// #set rating-default: 7
-// #set rating-icon: star
-
-
 #let octicon(path, hw: "24", fill: "currentColor", frac: 1.0) = context {
    let percent = str(calc.round(frac * 100, digits: 1)) + "%"
   
@@ -16,15 +10,12 @@
       fill: fill,
     ))[
       #html.elem("defs")[
-        #html.elem("linearGradient", attrs: (
-          id: "grad"
-        )
-      )[
-        #html.elem("stop", attrs: (
+        #html.elem("linearGradient", attrs: (id: "grad"))[
+          #html.elem("stop", attrs: (
           offset: percent,
           "stop-color": fill,
         ))
-        #html.elem("stop", attrs: (
+          #html.elem("stop", attrs: (
           offset: percent,
           "stop-color": "transparent"
         ))
