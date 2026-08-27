@@ -25,6 +25,7 @@
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
   #include "features.typ"
+  #include "topbar.typ"
 
 = Addition Example
 
