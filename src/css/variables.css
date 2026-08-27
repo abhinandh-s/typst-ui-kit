@@ -28,6 +28,9 @@
   --base: #1B1B1B;
   --mantle: #131313;
   --crust: #0E0E0E;
+
+  --code-tab-header: var(--mantle);
+  --code-tab-content: var(--base);
 }
 
 :root[data-theme="light"] {
@@ -60,4 +63,7 @@
   --base: #BEBEBE;
   --mantle: #D2D2D2;
   --crust: #DEDEDE;
+ 
+  --code-tab-header: var(--base);
+  --code-tab-content: var(--mantle);
 }
