@@ -16,6 +16,15 @@
   padding: 0 12px;
   gap: 4px;
   overflow-x: auto;
+  overflow-y: hidden; 
+
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none; 
+}
+
+/* Hide scrollbar for Chrome, Edge, and Safari */
+.code-tab-header::-webkit-scrollbar {
+  display: none;
 }
 
 /* Individual Tab Buttons */
@@ -49,8 +58,6 @@
 /* Tab Content Panels */
 .code-tabcontent {
   display: none;
-  padding: 18px 20px;
-  background-color: var(--base);
 }
 
 .code-tabcontent.active {
