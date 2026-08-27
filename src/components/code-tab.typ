@@ -1,14 +1,35 @@
 
-  <div class="code-tab-wrapper">
-    <div class="code-tab-header">
-      <button class="code-tablinks">index.js</button>
-      <button class="code-tablinks">styles.css</button>
-    </div>
+#let codetabs(..files) = context {
+  let file-list = files.pos()
 
-    <div class="code-tabcontent">
-      <pre><code>console.log("Palette applied successfully!");</code></pre>
-    </div>
-    <div class="code-tabcontent">
-      <pre><code>body { background-color: var(--crust); }</code></pre>
-    </div>
-  </div>
+  if target() == "html" {
+    let header = html.elem("div", attrs: (class: "code-tab-header"))[
+    #for item in file-list [
+      #html.elem("button", attrs: (class: "code-tablinks"))[#item.name]
+    ]
+  ]
+
+  let contents = for item in file-list [
+    #html.elem("div", attrs: (class: "code-tabcontent"))[
+      #item.code
+    ]
+  ]
+
+  html.elem("div", attrs: (class: "code-tab-wrapper"))[
+    #header
+    #contents
+  ]
+  } else {
+    for item in file-list [
+    #html.elem("div", attrs: (class: "code-tabcontent"))[
+      #item.name
+      #item.code
+    ]
+  ]
+  }
+}
+
+
+  
+   
+  
