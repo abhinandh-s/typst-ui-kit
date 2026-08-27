@@ -64,12 +64,6 @@
   display: block;
 }
 
-/* Code Block Typography */
-.code-tabcontent pre {
-  margin: 0;
-  overflow-x: auto;
-}
-
 .code-tabcontent pre {
   color: var(--text);
   background: var(--base); 
