@@ -71,5 +71,6 @@
 }
 
 .code-tabcontent pre {
-  color: var(--base);
+  color: var(--text);
+  background: var(--base); 
 }
