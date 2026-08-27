@@ -55,23 +55,25 @@
 
 #let get_icon_path(name) = _icons.at(name, default: _icons.star)
 
-
-#let rating(rating: 0.0, total: 5, icon: "star") = context {
+/// rating: num. Default: 0.
+/// total: num. Default: 5.
+/// icon: any of ["star", "square", "dot", "heart", "sparkle"]. Default: "star"
+/// gutter: The gaps between icons. Default: 2pt
+#let rating(rating: 0.0, total: 5, icon: "star", gutter: 2pt) = context {
   let path = get_icon_path(icon)
 
-  // collect the generated icons
-  let stars = {
-    for i in range(0, total) {
-      let fraction = calc.min(1.0, calc.max(0.0, rating - i))
-      box(baseline: 0.25em)[
-        #octicon(path, frac: fraction)
-      ]
-    }
-  }
+  let star-array = range(0, total).map(i => {
+    let fraction = calc.min(1.0, calc.max(0.0, rating - i))
+    box(baseline: 0.25em)[
+      #octicon(path, frac: fraction)
+    ]
+  })
 
   if target() == "html" {
-    html.elem("span", attrs: (class: "rating-svg-container"))[#stars]
+    // No h() here! No warnings. We let CSS handle the gap.
+    html.elem("span", attrs: (class: "rating-svg-container"))[#star-array.join()]
   } else {
-    box(stars)
+    // Add the h(2pt) gap exclusively for PDF
+    box(star-array.join(h(gutter)))
   }
 }
