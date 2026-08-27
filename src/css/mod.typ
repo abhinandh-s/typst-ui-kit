@@ -13,6 +13,7 @@
       + read("floating-toc.css")
       + read("bottom-nav.css")
       + read("extras.css")
+      + read("code-tab.css")
     )
   }
 }
