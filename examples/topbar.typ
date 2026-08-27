@@ -1,4 +1,4 @@
-#import "/src/lib.typ": rating
+#import "/src/lib.typ": *
 
 #table(
   columns: (1fr, auto),
@@ -19,3 +19,20 @@
 #rating(rating: 4.8, icon: "heart") \
 #rating(rating: 1.5, icon: "sparkle") \
 #rating(rating: 7.8, total: 10, icon: "heart") \
+
+#codetabs(
+  (
+    name: "main.rs",
+    code: ```rust
+    fn main() {
+      println!("Hello World!");
+    }
+    ```
+  ),
+  (
+    name: "run.sh",
+    code: ```sh
+    cargo run --release
+    ```
+  ),
+)
