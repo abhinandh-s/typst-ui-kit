@@ -65,6 +65,6 @@
 
 .code-tabcontent pre {
   margin: 0;
-  color: var(--text);
-  background: var(--base); 
+  /* color: var(--text);
+  background: var(--base); */
 }
