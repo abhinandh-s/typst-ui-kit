@@ -3,14 +3,14 @@
   background-color: var(--base);
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin: 5px 0px 24px 0px;
  /* border: 1px solid var(--text); */
 }
 
 /* Tab Header Bar */
 .code-tab-header {
   display: flex;
-  background-color: var(--mantle);
+  background-color: var(--code-tab-header);
   border-bottom: 1px solid var(--surface0);
   padding: 0 12px;
   gap: 4px;
@@ -65,6 +65,5 @@
 
 .code-tabcontent pre {
   margin: 0;
-  /* color: var(--text);
-  background: var(--base); */
+  background: var(--code-tab-content);
 }
