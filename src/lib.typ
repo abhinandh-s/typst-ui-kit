@@ -18,6 +18,7 @@
 #import "components/topbar.typ": topbar
 #import "components/navigation.typ": *
 #import "components/copyrights.typ" as copyright
+#import "components/code-tab.typ": codetabs
 
 #import "templates/webpage.typ": webpage
 
