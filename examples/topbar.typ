@@ -15,7 +15,7 @@
   [Breaking Bad], [#rating(rating: 4.3, icon: "heart")],
 )
 
-#Lorem(25)
+#lorem(25)
 
 #codetabs(
   (
@@ -38,4 +38,4 @@
   ),
 )
 
-#Lorem(15)
+#lorem(15)
