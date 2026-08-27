@@ -21,6 +21,8 @@
 
 #import "templates/webpage.typ": webpage
 
+#import "extras/rating.typ": rating
+
 
 
 
