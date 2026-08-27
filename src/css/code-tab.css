@@ -4,7 +4,7 @@
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 24px;
-  border: 1px solid var(--text);
+ /* border: 1px solid var(--text); */
 }
 
 /* Tab Header Bar */
