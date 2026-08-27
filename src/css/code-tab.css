@@ -27,7 +27,7 @@
 /* Individual Tab Buttons */
 .code-tablinks {
   background: transparent;
-  color: var(--overlay1);
+  color: var(--subtext1);
   border: none;
   outline: none;
   cursor: pointer;
