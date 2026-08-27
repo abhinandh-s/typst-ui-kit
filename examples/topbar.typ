@@ -15,6 +15,8 @@
   [Breaking Bad], [#rating(rating: 4.3, icon: "heart")],
 )
 
+#Lorem(25)
+
 #codetabs(
   (
     name: "main.rs",
@@ -24,7 +26,7 @@
     }
 
     fn legendary() -> Result<&str, Error> {
-      "Ted! you are coming to Laser tags with me, and it's gonna be legen... wait for it... dary. Legendary."
+      Ok("Ted! you are coming to Laser tags with me, and it's gonna be legen... wait for it... dary. Legendary.")
     }
     ```
   ),
@@ -35,3 +37,5 @@
     ```
   ),
 )
+
+#Lorem(15)
