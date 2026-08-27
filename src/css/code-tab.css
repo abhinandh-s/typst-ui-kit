@@ -71,5 +71,5 @@
 }
 
 .code-tabcontent pre {
-  /* padding: 0; */
+  color: var(--base);
 }
