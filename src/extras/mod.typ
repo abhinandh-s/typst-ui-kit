@@ -1,0 +1,1 @@
+#import "extras/rating.typ": rating
