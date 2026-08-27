@@ -106,15 +106,15 @@ table {
 }
 
 th {
-  background-color: var(--code-tab-header);
+  background-color: var(--mantle);
 }
 
 tr {
-  background-color: var(--code-tab-content);
+  background-color: var(--crust);
 }
 
 tr:hover {
-  background-color: var(--surface1); 
+  background-color: var(--base); 
   transition: background-color 0.2s ease;
 }
 
@@ -123,7 +123,7 @@ th, td {
 }
 
 table, th, td {
-  border: 1px solid var(--subtext1); 
+  border: 1px solid var(--base); 
 }
 
 dl {
