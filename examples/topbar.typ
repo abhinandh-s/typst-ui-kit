@@ -27,6 +27,10 @@
     fn main() {
       println!("Hello World!");
     }
+
+    fn legendary() -> Result<&str, Error> {
+      "Ted! you are coming to Laser tags with me, and it's gonna be legen... wait for it... dary. Legendary."
+    }
     ```
   ),
   (
