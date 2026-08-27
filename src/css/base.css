@@ -105,12 +105,25 @@ table {
   border-collapse: collapse;
 }
 
+th {
+  background-color: var(--code-tab-header);
+}
+
+tr {
+  background-color: var(--code-tab-content);
+}
+
+tr:hover {
+  background-color: var(--surface1); 
+  transition: background-color 0.2s ease;
+}
+
 th, td {
   padding: 10px 5px;
 }
 
 table, th, td {
-  border: 1px solid var(--text);
+  border: 1px solid var(--subtext1); 
 }
 
 dl {
