@@ -12,6 +12,7 @@
       + read("comment-box.css")
       + read("floating-toc.css")
       + read("bottom-nav.css")
+      + read("extras.css")
     )
   }
 }
