@@ -59,17 +59,23 @@
 #let rating(rating: 0.0, total: 5, icon: "star") = context {
   let path = get_icon_path(icon)
 
-  box({
+  // collect the generated icons
+  let stars = {
     for i in range(0, total) {
-      // Calculate fraction for this specific icon (0.0 to 1.0)
       let fraction = calc.min(1.0, calc.max(0.0, rating - i))
-
       box(baseline: 0.25em)[
         #octicon(path, frac: fraction)
       ]
     }
-  })
+  }
+
+  if target() == "html" {
+    html.elem("span", attrs: (class: "rating-svg-container"))[#stars]
+  } else {
+    box(stars)
+  }
 }
+
 
 
 #table(
