@@ -1,0 +1,6 @@
+.rating-svg-container {
+  display: inline-flex;
+  align-items: center;  /* Vertically centers the stars */
+  gap: 4px;
+  color: #f59e0b;
+}
