@@ -15,11 +15,6 @@
   [Breaking Bad], [#rating(rating: 4.3, icon: "heart")],
 )
 
-#rating(rating: 3.4) \
-#rating(rating: 4.8, icon: "heart") \
-#rating(rating: 1.5, icon: "sparkle") \
-#rating(rating: 7.8, total: 10, icon: "heart") \
-
 #codetabs(
   (
     name: "main.rs",
