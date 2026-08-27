@@ -1,0 +1,64 @@
+/* Container Wrapper */
+.code-tab-wrapper {
+  background-color: var(--base);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 1px solid var(--surface0);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Tab Header Bar */
+.code-tab-header {
+  display: flex;
+  background-color: var(--mantle);
+  border-bottom: 1px solid var(--surface0);
+  padding: 0 12px;
+  gap: 4px;
+  overflow-x: auto;
+}
+
+/* Individual Tab Buttons */
+.code-tablinks {
+  background: transparent;
+  color: var(--overlay1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.code-tablinks:hover {
+  color: var(--subtext1);
+}
+
+/* Active Tab with your custom accent */
+.code-tablinks.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  font-weight: 500;
+}
+
+/* Tab Content Panels */
+.code-tabcontent {
+  display: none;
+  padding: 18px 20px;
+  background-color: var(--base);
+}
+
+.code-tabcontent.active {
+  display: block;
+}
+
+/* Code Block Typography */
+.code-tabcontent pre {
+  margin: 0;
+  overflow-x: auto;
+}
