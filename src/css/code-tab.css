@@ -62,3 +62,7 @@
   margin: 0;
   overflow-x: auto;
 }
+
+.code-tabcontent pre {
+   padding: 0;
+}
