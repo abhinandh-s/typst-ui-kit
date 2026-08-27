@@ -7,12 +7,12 @@
   table.header(
     [*Movies/Series*], [*Rating*],
   ),
-  [Breaking Bad], [#rating(rating: 4, icon: "sparkle")],
+  [El Camino], [#rating(rating: 4.5, icon: "sparkle")],
   [Better Call Soul],
-  [#rating(rating: 4)],
-  [Breaking Bad], [#rating(rating: 4.5, icon: "dot")],
-  [Breaking Bad], [#rating(rating: 4.9, icon: "square")],
-  [Breaking Bad], [#rating(rating: 4.3, icon: "heart")],
+  [#rating(rating: 5)],
+  [Shutter Island], [#rating(rating: 4.7, icon: "dot")],
+  [Shawshank Redemption], [#rating(rating: 5, icon: "square")],
+  [Breaking Bad], [#rating(rating: 5, icon: "heart")],
 )
 
 #lorem(25)
