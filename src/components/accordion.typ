@@ -25,7 +25,7 @@ fill: "none",
 
 #let _item(summary, ctx) = html.elem("div", attrs: (class: "accordion-item"))[
   #_button(summary)
-  #_pannel(ctx)
+  #_panel(ctx)
 ]
 
 // item = (heading: any, content: any)
