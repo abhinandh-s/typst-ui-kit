@@ -40,7 +40,7 @@
     ]    
   } else {
     for item in item-list [
-      #item.summary
+      == #item.summary
       #item.ctx
     ]
   }
