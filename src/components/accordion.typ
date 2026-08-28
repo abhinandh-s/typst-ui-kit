@@ -1,12 +1,6 @@
-#let _wrapper(..items) = #html.elem("div", attrs: (class: "accordion-wrapper"))[
-  #for i in item-lists {
-    #_item
-  }
-]
-
-#let _item = #html.elem("div", attrs: (class: "accordion-item"))[
-  #_button
-  #_pannel(content)
+#let _item(summary, ctx) = #html.elem("div", attrs: (class: "accordion-item"))[
+  #_button(summary: summary)
+  #_pannel(ctx: ctx)
 ]
 
 #let _icon = #html.elem("svg", attrs: (
@@ -21,13 +15,13 @@ fill: "none",
       ]
 
 
-#let _button(heading) = #html.elem("button", attrs: (
+#let _button(summary) = #html.elem("button", attrs: (
   class: "accordion-button",
   "aria-expanded": "false"
-))[#heading #_icon]
+))[#summary #_icon]
 
 #let _panel(content) = #html.elem("div", attrs: (class: "accordion-panel"))[
-  #_inner(content)
+  #_inner(ctx: ctx)
 ]
 
 #let _inner(content) = #html.elem("div", attrs: (class: "accordion-inner"))[
@@ -39,24 +33,15 @@ fill: "none",
   let item-list = items.pos()
 
   if target() == "html" {
-    let header = html.elem("div", attrs: (class: "code-tab-header"))[
-      #for item in file-list [
-        #html.elem("button", attrs: (class: "code-tablinks"))[#item.name]
+    html.elem("div", attrs: (class: "accordion-wrapper"))[
+      #for item in item-list [
+        #_item(item.summary, item.ctx)
       ]
-    ]
-    let contents = for item in file-list [
-      #html.elem("div", attrs: (class: "code-tabcontent"))[
-        #item.code
-      ]
-    ]
-    html.elem("div", attrs: (class: "code-tab-wrapper"))[
-      #header
-      #contents
-    ]
+    ]    
   } else {
     for item in item-list [
-      #item.heading
-      #item.content
+      #item.summary
+      #item.ctx
     ]
   }
 }
