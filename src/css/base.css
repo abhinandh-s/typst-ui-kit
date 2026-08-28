@@ -104,6 +104,7 @@ blockquote:not([class]) + p {
 table {
   border-collapse: collapse;
   border-radius: 4px;
+  width: 100%;
 }
 
 th {
