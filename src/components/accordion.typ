@@ -1,8 +1,3 @@
-#let _item(summary, ctx) = html.elem("div", attrs: (class: "accordion-item"))[
-  #_button(summary: summary)
-  #_pannel(ctx: ctx)
-]
-
 #let _icon = html.elem("svg", attrs: (
 class: "accordion-icon",
 viewBox: "0 0 24 24",
@@ -20,12 +15,17 @@ fill: "none",
   "aria-expanded": "false"
 ))[#summary #_icon]
 
+#let _inner(content) = html.elem("div", attrs: (class: "accordion-inner"))[
+  #content
+]
+
 #let _panel(content) = html.elem("div", attrs: (class: "accordion-panel"))[
   #_inner(ctx: ctx)
 ]
 
-#let _inner(content) = html.elem("div", attrs: (class: "accordion-inner"))[
-  #content
+#let _item(summary, ctx) = html.elem("div", attrs: (class: "accordion-item"))[
+  #_button(summary: summary)
+  #_pannel(ctx: ctx)
 ]
 
 // item = (heading: any, content: any)
