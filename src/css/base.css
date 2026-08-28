@@ -102,10 +102,19 @@ blockquote:not([class]) + p {
 }
 
 table {
+  display: block;
+  overflow-x: auto;
+  width: fit-content;    /* Shrinks to match content; avoids the pseudo-column */
+  max-width: 100%;       /* Caps at container width to enable scroll on wide tables */
   border-collapse: collapse;
   border-radius: 4px;
-  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
+
+main#content table {
+  margin-inline: auto;   /* centers narrow tables nicely */
+}
+
 
 th {
   background-color: var(--mantle);
@@ -144,20 +153,6 @@ hr {
   border: 0;
   height: 1px;
 }
-
-main#content table {
-  /* display: block; */     /* Required to make overflow work */
-  overflow-x: auto;    /* Enables horizontal scrolling */
-  max-width: 100%;     /* Prevents breaking the 600px page width */
-  /* width: max-content; */ /* Fixes the "empty border" issue on narrow tables */
-}
-
-
-main#content p {
-  /* text-align: justify; it sucks */
-}
-
-
 
 /* [custom checkbox] */
 li:has(> input[type="checkbox"]) {
