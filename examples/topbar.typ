@@ -43,15 +43,17 @@
 
 #accordion(
   (
-    summary: "section 01",
-    ctx: lorem(15)
+    summary: "Section 01",
+    ctx: lorem(25)
   ),
   (
-    summary: "section 02",
-    ctx: lorem(15)
+    summary: "Section 02",
+    ctx: lorem(25)
   ),
   (
-    summary: "section 03",
-    ctx: lorem(15)
+    summary: "Section 03",
+    ctx: lorem(25)
   ),
 )
+
+#lorem(15)
