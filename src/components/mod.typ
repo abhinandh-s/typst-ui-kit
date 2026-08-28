@@ -1,1 +1,1 @@
-import "./accordion.typ": accordion
+#import "accordion.typ": accordion
