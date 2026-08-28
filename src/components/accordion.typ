@@ -1,15 +1,3 @@
-<div class="accordion-item">
-    <button  aria-controls="panel-1">
-      Section 1
-      <svg >
-        <polyline ></polyline>
-      </svg>
-    </button>
-    >
-  </div>
-
-
-
 #let _wrapper(..items) = #html.elem("div", attrs: (class: "accordion-wrapper"))[
   #for i in item-lists {
     #_item
@@ -66,9 +54,9 @@ fill: "none",
       #contents
     ]
   } else {
-    for item in file-list [
-      #item.name
-      #item.code
+    for item in item-list [
+      #item.heading
+      #item.content
     ]
   }
 }
