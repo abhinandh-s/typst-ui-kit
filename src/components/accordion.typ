@@ -1,9 +1,9 @@
-#let _item(summary, ctx) = #html.elem("div", attrs: (class: "accordion-item"))[
+#let _item(summary, ctx) = html.elem("div", attrs: (class: "accordion-item"))[
   #_button(summary: summary)
   #_pannel(ctx: ctx)
 ]
 
-#let _icon = #html.elem("svg", attrs: (
+#let _icon = html.elem("svg", attrs: (
 class: "accordion-icon",
 viewBox: "0 0 24 24",
 fill: "none",
@@ -11,20 +11,20 @@ fill: "none",
 "stroke-linecap": "round",
 "stroke-linejoin": "round",
 ))[
-        #html.elem("polygon", attrs: (points: "6 9 12 15 18 9"))
-      ]
+  #html.elem("polygon", attrs: (points: "6 9 12 15 18 9"))
+]
 
 
-#let _button(summary) = #html.elem("button", attrs: (
+#let _button(summary) = html.elem("button", attrs: (
   class: "accordion-button",
   "aria-expanded": "false"
 ))[#summary #_icon]
 
-#let _panel(content) = #html.elem("div", attrs: (class: "accordion-panel"))[
+#let _panel(content) = html.elem("div", attrs: (class: "accordion-panel"))[
   #_inner(ctx: ctx)
 ]
 
-#let _inner(content) = #html.elem("div", attrs: (class: "accordion-inner"))[
+#let _inner(content) = html.elem("div", attrs: (class: "accordion-inner"))[
   #content
 ]
 
