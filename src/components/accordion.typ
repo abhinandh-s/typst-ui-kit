@@ -20,7 +20,7 @@ fill: "none",
 ]
 
 #let _panel(ctx) = html.elem("div", attrs: (class: "accordion-panel"))[
-  #_inner(ctx: ctx)
+  #_inner(ctx)
 ]
 
 #let _item(summary, ctx) = html.elem("div", attrs: (class: "accordion-item"))[
