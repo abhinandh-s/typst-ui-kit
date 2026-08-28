@@ -1,25 +1,24 @@
 <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false" aria-controls="panel-1">
+    <button  aria-controls="panel-1">
       Section 1
       <svg >
         <polyline ></polyline>
       </svg>
     </button>
-    <div class="accordion-panel" id="panel-1">
-      <div class="accordion-inner">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      </div>
-    </div>
+    >
   </div>
 
 
 
 #let _wrapper(..items) = #html.elem("div", attrs: (class: "accordion-wrapper"))[
-  #..items
+  #for i in item-lists {
+    #_item
+  }
 ]
 
 #let _item = #html.elem("div", attrs: (class: "accordion-item"))[
-  #..items
+  #_button
+  #_pannel(content)
 ]
 
 #let _icon = #html.elem("svg", attrs: (
@@ -34,9 +33,18 @@ fill: "none",
       ]
 
 
-#let _button = #html.elem("button", attrs: (class: "code-tablinks"))[#item.name]
-#let _panel =
-#let _inner = 
+#let _button(heading) = #html.elem("button", attrs: (
+  class: "accordion-button",
+  "aria-expanded": "false"
+))[#heading #_icon]
+
+#let _panel(content) = #html.elem("div", attrs: (class: "accordion-panel"))[
+  #_inner(content)
+]
+
+#let _inner(content) = #html.elem("div", attrs: (class: "accordion-inner"))[
+  #content
+]
 
 // item = (heading: any, content: any)
 #let accordion(..items) = context {
