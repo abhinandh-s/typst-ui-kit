@@ -1,9 +1,8 @@
 /* Safely encapsulate everything inside the wrapper */
 .accordion-wrapper {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
-  background-color: var(--mantle);
-  border: 1px solid var(--surface1);
+  /* background-color: var(--mantle); */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -17,7 +16,7 @@
 }
 
 .accordion-button {
-  background-color: var(--mantle);
+  background-color: var(--code-tab-header);
   color: var(--text);
   cursor: pointer;
   padding: 18px 20px;
@@ -35,7 +34,6 @@
 
 .accordion-button:hover, 
 .accordion-button.active {
-  background-color: var(--surface0);
   color: var(--accent);
 }
 
@@ -59,7 +57,7 @@
 }
 
 .accordion-panel {
-  background-color: var(--base);
+  background-color: var(--code-tab-content);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
