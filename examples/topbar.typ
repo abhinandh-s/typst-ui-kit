@@ -39,3 +39,19 @@
 )
 
 #lorem(15)
+
+
+#accordion(
+  (
+    summary: "section 01",
+    ctx: lorem(15)
+  ),
+  (
+    summary: "section 02",
+    ctx: lorem(15)
+  ),
+  (
+    summary: "section 03",
+    ctx: lorem(15)
+  ),
+)
