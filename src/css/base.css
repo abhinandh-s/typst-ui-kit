@@ -146,7 +146,7 @@ hr {
 }
 
 main#content table {
-  display: block;      /* Required to make overflow work */
+  /* display: block; */     /* Required to make overflow work */
   overflow-x: auto;    /* Enables horizontal scrolling */
   max-width: 100%;     /* Prevents breaking the 600px page width */
   /* width: max-content; */ /* Fixes the "empty border" issue on narrow tables */
