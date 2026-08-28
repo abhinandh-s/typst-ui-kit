@@ -15,11 +15,11 @@ fill: "none",
   "aria-expanded": "false"
 ))[#summary #_icon]
 
-#let _inner(content) = html.elem("div", attrs: (class: "accordion-inner"))[
-  #content
+#let _inner(ctx) = html.elem("div", attrs: (class: "accordion-inner"))[
+  #ctx
 ]
 
-#let _panel(content) = html.elem("div", attrs: (class: "accordion-panel"))[
+#let _panel(ctx) = html.elem("div", attrs: (class: "accordion-panel"))[
   #_inner(ctx: ctx)
 ]
 
