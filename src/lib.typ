@@ -19,6 +19,7 @@
 #import "components/navigation.typ": *
 #import "components/copyrights.typ" as copyright
 #import "components/code-tab.typ": codetabs
+#import "components/mod.typ": *
 
 #import "templates/webpage.typ": webpage
 
