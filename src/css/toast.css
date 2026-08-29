@@ -23,4 +23,20 @@
   from { bottom: 30px; opacity: 1; }
   to { bottom: 0; opacity: 0; }
 }
+
+.toast-button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: var(--base);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.toast-button:hover {
+  background-color: var(--accent);
+}
  
