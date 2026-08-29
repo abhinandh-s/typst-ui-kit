@@ -39,8 +39,8 @@
 .custom-comment-box button {
   align-self: flex-start;
   padding: 8px 16px;
-  background-color: var(--base);
-  color: var(--text);
+  background-color: var(--subtext1);
+  color: var(--crust);
   border: none;
   border-radius: 5px;
   cursor: pointer;
