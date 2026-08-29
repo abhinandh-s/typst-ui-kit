@@ -5,6 +5,7 @@
   + read("fixes.js")
   + read("code-tab.js")
   + read("accordion.js")
+  + read("toast.js")
   // must be last, position is important!
   + read("comment-box.js")
 )
