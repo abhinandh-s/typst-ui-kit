@@ -1,7 +1,7 @@
 .toast {
   min-width: 250px;  
-  background-color: #1b1b1b;
-  color: #dedede;
+  background-color: var(--base);
+  color: var(--text);
   text-align: center;
   border-radius: 4px;
   padding: 16px;
