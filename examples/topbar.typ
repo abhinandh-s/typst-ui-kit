@@ -59,7 +59,7 @@ Accordions are useful when you want to toggle between hiding and showing large a
 
 #lorem(15)
 
-#toast.trigger([Save], "Item saved successfully!")
-#toast.trigger([Error (5s)], "Network error occurred.", duration: 5000)
+#toast([Save], "Item saved successfully!")
+#toast([Error (5s)], "Network error occurred.", duration: 5000)
 
 #lorem(20)
