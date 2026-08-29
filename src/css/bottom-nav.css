@@ -19,9 +19,9 @@
   align-items: center;
   justify-content: center;
   padding: 12px 20px;
-  background-color: var(--base);
+  background-color: var(--subtext1);
   border-radius: 8px;
-  color: var(--text, #333);
+  color: var(--crust);
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
