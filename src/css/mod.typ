@@ -15,6 +15,7 @@
       + read("extras.css")
       + read("code-tab.css")
       + read("accordion.css")
+      + read("toast.css")
     )
   }
 }
